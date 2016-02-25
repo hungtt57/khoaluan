@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="Mosaddek">
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <link rel="shortcut icon" href="{{asset('public/img/favicon.png')}}">
+    <link rel="shortcut icon" href="{{asset('public/admin/img/favicon.png')}}">
 
     <title>FlatLab - Flat & Responsive Bootstrap Admin Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('public/css/bootstrap.css')}}" rel="stylesheet">
-    <link href="{{asset('public/css/bootstrap-reset.css')}}" rel="stylesheet">
+    <link href="{{asset('public/admin/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('public/admin/css/bootstrap-reset.css')}}" rel="stylesheet">
     <!--external css-->
-    <link href="{{asset('public/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
-    <link href="{{asset('public/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css')}}" rel="stylesheet" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="{{asset('public/css/owl.carousel.css')}}" type="text/css">
+    <link href="{{asset('public/admin/assets/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
+    <link href="{{asset('public/admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css')}}" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{{asset('public/admin/css/owl.carousel.css')}}" type="text/css">
     <!-- Custom styles for this template -->
-    <link href="{{asset('public/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('public/css/style-responsive.css')}}" rel="stylesheet" />
+    <link href="{{asset('public/admin/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('public/admin/css/style-responsive.css')}}" rel="stylesheet" />
     <link href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
@@ -37,27 +37,27 @@
   <body>
 
  <!-- js placed at the end of the document so the pages load faster -->
-    <script src="{{asset('public/js/jquery.js')}}"></script>
-    <script src="{{asset('public/js/jquery-1.8.3.min.js')}}"></script>
-    <script src="{{asset('public/js/bootstrap.min.js')}}"></script>
-    <script class="include" type="text/javascript" src="{{asset('public/js/jquery.dcjqaccordion.2.7.js')}}"></script>
-    <script src="{{asset('public/js/jquery.scrollTo.min.js')}}"></script>
-    <script src="{{asset('public/js/jquery.nicescroll.js')}}" type="text/javascript"></script>
-    <script src="{{asset('public/js/jquery.sparkline.js')}}" type="text/javascript"></script>
-    <script src="{{asset('public/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js')}}"></script>
-    <script src="{{asset('public/js/owl.carousel.js')}}" ></script>
-    <script src="{{asset('public/js/jquery.customSelect.min.js')}}" ></script>
-    <script src="{{asset('public/js/respond.min.js')}}" ></script>
+    <script src="{{asset('public/admin/js/jquery.js')}}"></script>
+    <script src="{{asset('public/admin/js/jquery-1.8.3.min.js')}}"></script>
+    <script src="{{asset('public/admin/js/bootstrap.min.js')}}"></script>
+    <script class="include" type="text/javascript" src="{{asset('public/admin/js/jquery.dcjqaccordion.2.7.js')}}"></script>
+    <script src="{{asset('public/admin/js/jquery.scrollTo.min.js')}}"></script>
+    <script src="{{asset('public/admin/js/jquery.nicescroll.js')}}" type="text/javascript"></script>
+    <script src="{{asset('public/admin/js/jquery.sparkline.js')}}" type="text/javascript"></script>
+    <script src="{{asset('public/admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js')}}"></script>
+    <script src="{{asset('public/admin/js/owl.carousel.js')}}" ></script>
+    <script src="{{asset('public/admin/js/jquery.customSelect.min.js')}}" ></script>
+    <script src="{{asset('public/admin/js/respond.min.js')}}" ></script>
 
-    <script class="include" type="text/javascript" src="{{asset('public/js/jquery.dcjqaccordion.2.7.js')}}"></script>
+    <script class="include" type="text/javascript" src="{{asset('public/admin/js/jquery.dcjqaccordion.2.7.js')}}"></script>
 
     <!--common script for all pages-->
-    <script src="{{asset('public/js/common-scripts.js')}}"></script>
+    <script src="{{asset('public/admin/js/common-scripts.js')}}"></script>
 
     <!--script for this page-->
-    <script src="{{asset('public/js/sparkline-chart.js')}}"></script>
-    <script src="{{asset('public/js/easy-pie-chart.js')}}"></script>
-    <script src="{{asset('public/js/count.js')}}"></script>
+    <script src="{{asset('public/admin/js/sparkline-chart.js')}}"></script>
+    <script src="{{asset('public/admin/js/easy-pie-chart.js')}}"></script>
+    <script src="{{asset('public/admin/js/count.js')}}"></script>
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
   <script>
 
