@@ -7,8 +7,11 @@ Website: http://thevectorlab.net/
 
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
-
+html{
+    height:100%;
+}
 body {
+    min-height: 100%;
     color: #797979;
     background: #f1f2f7;
     font-family: 'Open Sans', sans-serif;
@@ -4611,9 +4614,12 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
 /*footer*/
 
 .site-footer {
+    bottom: 0px;
     background: #5b6e84;
     color: #fff;
     padding: 10px 0;
+    position: absolute;
+    width: 100%;
 }
 
 .go-top {

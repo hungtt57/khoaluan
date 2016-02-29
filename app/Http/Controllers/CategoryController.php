@@ -32,7 +32,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.category.add');
+        $allCategories= Category::all();
+        return view('admin.pages.category.add',['allCategories'=>$allCategories]);
     }
 
     /**
@@ -44,7 +45,8 @@ class CategoryController extends Controller
     public function store(CheckCategoryRequest $request)
     {
         $category= new Category();
-        $category->name_category = $request->input('name_category');
+        $category->ten = $request->input('ten');
+        $category->parent_id = $request->input('parent_id');
         $category->save();
         return redirect('/admin/category/list')->with(['flash_message'=>'Tạo thành công']);
     }

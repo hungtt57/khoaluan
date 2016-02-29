@@ -22,22 +22,22 @@
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="icon-list-ul"></i>
-                          <span>Category</span>
+                          <span>Danh mục</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="{{asset('/admin/category/create')}}">New Category</a></li>
-                          <li><a  href="{{asset('/admin/category/list')}}">List Categories</a></li>
+                          <li><a  href="{{asset('/admin/category/create')}}">Tạo danh mục</a></li>
+                          <li><a  href="{{asset('/admin/category/list')}}">Danh sách danh mục</a></li>
                       </ul>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="icon-list-ul"></i>
-                          <span>Website</span>
+                          <span>Sản phẩm</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="{{ route('website_create') }}">New Website</a></li>
-                          <li><a  href="{{ route('website_list')}}">List Website</a></li>
+                          <li><a  href="{{asset('admin/product/create')}}">Đăng sản phẩm</a></li>
+                          <li><a  href="">Danh sách sản phẩm</a></li>
                       </ul>
                   </li>
 

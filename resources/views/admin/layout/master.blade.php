@@ -8,7 +8,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="{{asset('public/admin/img/favicon.png')}}">
 
-    <title>FlatLab - Flat & Responsive Bootstrap Admin Template</title>
+    <title>Admin Manager</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('public/admin/css/bootstrap.css')}}" rel="stylesheet">
@@ -32,8 +32,9 @@
       @include('admin.includes.header')
       @include('admin.includes.sidebar')
       @yield('content')
-      @include('admin.includes.footer')
+     
   </section>
+   @include('admin.includes.footer')
   <body>
 
  <!-- js placed at the end of the document so the pages load faster -->
@@ -55,8 +56,7 @@
     <script src="{{asset('public/admin/js/common-scripts.js')}}"></script>
 
     <!--script for this page-->
-    <script src="{{asset('public/admin/js/sparkline-chart.js')}}"></script>
-    <script src="{{asset('public/admin/js/easy-pie-chart.js')}}"></script>
+   
     <script src="{{asset('public/admin/js/count.js')}}"></script>
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
   <script>

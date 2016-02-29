@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+//front end
 Route::get('/', function () {
 	return view('frontend.pages.home');
 });
@@ -22,7 +22,7 @@ Route::get('/product', function () {
 });
 
 
-
+//admin
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'category'], function() {
         Route::get('/create','CategoryController@create');
@@ -34,16 +34,6 @@ Route::group(['prefix' => 'admin'], function () {
 		Route::get('/','CategoryController@index');
     });
 
-     Route::group(['prefix' => 'website'], function() {
-     	Route::get('/create', ['as' => 'website_create', 'uses' => 'WebsiteController@create']);
-     	Route::post('/create', ['as' => 'website_store', 'uses' =>  'WebsiteController@store']);
-     	Route::get('/list', ['as' => 'website_list', 'uses' =>  'WebsiteController@index']);
-     	Route::get('/{id}/edit', ['as' => 'website_edit', 'uses' =>  'WebsiteController@edit']);
-     	Route::post('/{id}/edit', ['as' => 'website_update', 'uses' =>  'WebsiteController@update']);
-     	Route::get('/{id}/delete', ['as' => 'website_destroy', 'uses' =>  'WebsiteController@destroy']);
-     	Route::get('/', 'WebsiteController@index');
-     });
-
      Route::group(['prefix' => 'user'], function() {
         Route::get('/create', ['as' => 'user_create', 'uses' => 'UserController@create']);
         Route::post('/create', ['as' => 'user_store', 'uses' =>  'UserController@store']);
@@ -52,5 +42,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/{id}/edit', ['as' => 'user_update', 'uses' =>  'UserController@update']);
         Route::get('/{id}/delete', ['as' => 'user_destroy', 'uses' =>  'UserController@destroy']);
         Route::get('/', 'UserController@index');
+     });
+
+     Route::group(['prefix' => 'product'],function(){
+        Route::get('/create','ProductController@create');
      });
 });
