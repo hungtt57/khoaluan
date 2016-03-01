@@ -11,9 +11,6 @@
 |
 */
 //front end
-Route::get('/', function () {
-	return view('frontend.pages.home');
-});
 Route::get('/category', function () {
     return view('frontend.pages.category');
 });
@@ -48,3 +45,5 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/create','ProductController@create');
      });
 });
+
+Route::get('/','HomeController@index');
