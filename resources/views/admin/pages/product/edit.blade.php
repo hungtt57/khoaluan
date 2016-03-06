@@ -5,8 +5,8 @@
 @section('content')
 <section id="main-content">
 	<section class="wrapper">
-		<h3 class="page-title">Đăng sản phẩm</h3>
-		<form class="form-horizontal" method="post" action="{{asset('/admin/product/create')}}" enctype="multipart/form-data">
+		<h3 class="page-title">Sửa </h3>
+		<form class="form-horizontal" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<div class="col-md-12">
 
@@ -23,49 +23,64 @@
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Tên sản phẩm</label>
 					<div class="col-md-6">
-						<input class="form-control" tabindex="1" placeholder="" type="text" name="ten" id="ten">
+						<input class="form-control" tabindex="1" value='{{$product->ten}}' type="text" name="ten" id="ten">
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Mã sản phẩm</label>
 					<div class="col-md-6">
-						<input class="form-control" tabindex="1" placeholder="" type="text" name="masp" id="masp">
+						<input class="form-control" tabindex="1" value='{{$product->masp}}' type="text" name="masp" id="masp">
 					</div>
 				</div>
 
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Giá</label>
 					<div class="col-md-6">
-						<input class="form-control" tabindex="1" placeholder="" type="number" name="masp" id="masp">
+						<input class="form-control" tabindex="1" value='{{$product->gia}}' type="number" name="masp" id="masp">
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Công dụng</label>
 					<div class="col-md-6">
-						<textarea class="form-control" tabindex="1" type="text" name="congdung" id="congdung"></textarea>
+						<textarea class="form-control" tabindex="1" type="text" name="congdung" id="congdung">{{$product->congdung}}</textarea>
 						<script>    CKEDITOR.replace('congdung')</script>
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Cách dùng</label>
 					<div class="col-md-6">
-						<textarea class="form-control" tabindex="1"  type="text" name="cachdung" id="cachdung">
-						</textarea>
-							<script>    CKEDITOR.replace('cachdung')</script>
+						<textarea class="form-control" tabindex="1"   type="text" name="cachdung" id="cachdung">
+						{{$product->cachdung}}</textarea>
+							<script> CKEDITOR.replace('cachdung')</script>
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Đóng gói</label>
 					<div class="col-md-6">
-						<input class="form-control"  name="donggoi" id="donggoi">
+						<input class="form-control" value='{{$product->donggoi}}' name="donggoi" id="donggoi">
 					</div>
 				</div>
 					<div class="form-group">
 						    	<label class="col-md-2 control-label" for="name_category">Chọn danh mục</label>
 						    <div class="col-md-6">
 						    	<select class="form-control" name='category_id'>
-						    
-			                            <?php cate_parent($category);?>
+						    	 <?php foreach ($categories as $key => $category): ?>
+                                          @if(isset($category['sub']))
+                                            <optgroup label="{{ $category['ten']}} ">
+                                              @if(isset($category['sub']))
+
+                                              @include('admin.includes.indexeditproduct', array('items' => $category['sub'],'id'=>$product->category_id,'count'=>'- -'))
+
+                                              @endif
+                                            </optgroup>
+                                          @else
+                                            <option <?php if($product->category_id==$category['id']) echo 'selected'; ?> value="{{$category['id']}}">{{$category['ten'] }}</option>
+
+                                          @endif
+
+
+                                     <?php endforeach ?>
+			                           
 			                       
 						    	</select>
 						    </div>
@@ -73,7 +88,12 @@
 
 
 				    	<div class="form-group">
-						    	<label class="col-md-2 control-label" for="name_category">Chọn ảnh đại diện</label>
+						    	<label class="col-md-2 control-label" for="name_category">Chọn ảnh đại diện
+
+						    	<img src="{{asset($product->anhdaidien)}}" width="75px" height="75px">
+
+
+						    	</label>
 						    <div class="col-md-6">
 						    	   <input id="image" class="form-control"  name="anhdaidien" type="file">
 						    </div>

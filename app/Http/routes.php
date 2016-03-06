@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin'], function () {
     });
     Route::get('/dashboard','AdminController@index'); // admin dashboard
     Route::get('/','AdminController@index');
+
      Route::group(['prefix' => 'user'], function() {
         Route::get('/create', ['as' => 'user_create', 'uses' => 'UserController@create']);
         Route::post('/create', ['as' => 'user_store', 'uses' =>  'UserController@store']);
@@ -48,6 +49,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/create','ProductController@create');
         Route::post('/create','ProductController@store');
         Route::get('/{id}/show','ProductController@show');
+        Route::get('/{id}/edit','ProductController@edit');
+        Route::post('/{id}/edit','ProductController@update');
+        Route::get('/{id}/delete','ProductController@destroy');
      });
 });
 
