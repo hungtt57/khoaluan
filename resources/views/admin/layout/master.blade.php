@@ -26,6 +26,7 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+     
     @yield('css')
   </head>
   <section id="container">
@@ -58,6 +59,8 @@
     <!--script for this page-->
    
     <script src="{{asset('public/admin/js/count.js')}}"></script>
+
+   
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
   <script>
 

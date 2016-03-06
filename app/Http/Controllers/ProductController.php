@@ -7,8 +7,9 @@ use App\Category;
 use App\Product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Slug;
 use DB;
+use Image;
 class ProductController extends Controller
 {
     /**
@@ -45,18 +46,30 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        
         $product= new Product;
         $product->ten = $request->input('ten');
-         $product->masp = $request->input('masp');
-          $product->congdung = $request->input('congdung');
-           $product->cachdung = $request->input('cachdung');
-           $product->donggoi = $request->input('donggoi');
-           $product->category_id = $request->input('category_id');
+        $product->masp = $request->input('masp');
+        $product->congdung = $request->input('congdung');
+        $product->cachdung = $request->input('cachdung');
+        $product->donggoi = $request->input('donggoi');
+        $product->category_id = $request->input('category_id');
+        $anhdaidien = $request->file('anhdaidien');
+
+         if($anhdaidien){
+              $filename = str_slug($product->ten).'.' . $anhdaidien->getClientOriginalExtension();
+            $path = public_path().'/image/product/anhdaidien/' . $filename;
+                Image::make($anhdaidien->getRealPath())->resize(400, 520)->save($path);
+                $product->anhdaidien= 'public/image/product/anhdaidien/' . $filename;
+
+            $paththumb= public_path().'/image/product/thumb/thumb' . $filename;
+             Image::make($anhdaidien->getRealPath())->resize(200, 200)->save($paththumb);
+              $product->thumb= 'public/image/product/thumb/thumb' . $filename;
+        }
 
 
-
-        $category->save();
-        return view('admin.pages.product.list')->with(['flash_message'=>'Tạo thành công']);
+        // $product->save();
+     //   return redirect('admin/product')->with(['flash_message'=>'Tạo thành công']);
     }
     /**
      * Display the specified resource.
