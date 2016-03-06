@@ -18,8 +18,8 @@ function countUp(count)
         }
     }, int_speed);
 }
-
-countUp(495);
+var count1= parseInt($('.count').html());
+countUp(count1);
 
 function countUp2(count)
 {
@@ -41,8 +41,8 @@ function countUp2(count)
         }
     }, int_speed);
 }
-
-countUp2(947);
+var count2= parseInt($('.count2').html());
+countUp2(count2);
 
 function countUp3(count)
 {
@@ -64,8 +64,8 @@ function countUp3(count)
         }
     }, int_speed);
 }
-
-countUp3(328);
+var count3= parseInt($('.count3').html());
+countUp3(count3);
 
 function countUp4(count)
 {
@@ -87,5 +87,5 @@ function countUp4(count)
         }
     }, int_speed);
 }
-
-countUp4(10328);
+var count4= parseInt($('.count4').html());
+countUp4(count4);

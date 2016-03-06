@@ -21,7 +21,7 @@ Route::get('/product', function () {
 
 //admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::group(['prefix' => 'category'], function() {
+    Route::group(['prefix' => 'category'], function() { // category
         Route::get('/create','CategoryController@create');
 		Route::post('/create','CategoryController@store');
 		Route::get('/list','CategoryController@index');
@@ -30,7 +30,8 @@ Route::group(['prefix' => 'admin'], function () {
 		Route::get('/{id}/delete','CategoryController@destroy');
 		Route::get('/','CategoryController@index');
     });
-
+    Route::get('/dashboard','AdminController@index'); // admin dashboard
+    Route::get('/','AdminController@index');
      Route::group(['prefix' => 'user'], function() {
         Route::get('/create', ['as' => 'user_create', 'uses' => 'UserController@create']);
         Route::post('/create', ['as' => 'user_store', 'uses' =>  'UserController@store']);
@@ -42,7 +43,11 @@ Route::group(['prefix' => 'admin'], function () {
      });
 
      Route::group(['prefix' => 'product'],function(){
+        Route::get('/','ProductController@index');
+        Route::get('/','ProductController@index');
         Route::get('/create','ProductController@create');
+        Route::post('/create','ProductController@store');
+        Route::get('/{id}/show','ProductController@show');
      });
 });
 

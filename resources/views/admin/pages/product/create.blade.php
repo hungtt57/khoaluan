@@ -33,7 +33,7 @@
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Giá</label>
 					<div class="col-md-4">
-						<input class="form-control" tabindex="1" placeholder="" type="text" name="masp" id="masp">
+						<input class="form-control" tabindex="1" placeholder="" type="number" name="masp" id="masp">
 					</div>
 				</div>
 				<div class="form-group">
@@ -49,10 +49,35 @@
 						</textarea>
 					</div>
 				</div>
+				<div class="form-group">
+				<label class="col-md-2 control-label" for="name_category">Đóng gói</label>
+					<div class="col-md-4">
+						<textarea class="form-control" tabindex="1" placeholder="" type="text" name="đóng gói" id="đóng gói">
+						</textarea>
+					</div>
+				</div>
+					<div class="form-group">
+						    	<label class="col-md-2 control-label" for="name_category">Chọn danh mục</label>
+						    <div class="col-md-4">
+						    	<select class="form-control" name='category_id'>
+						    
+			                            <?php cate_parent($category);?>
+			                       
+						    	</select>
+						    </div>
+				    	</div>
+
+
+				    	<div class="form-group">
+						    	<label class="col-md-2 control-label" for="name_category">Chọn ảnh đại diện</label>
+						    <div class="col-md-4">
+						    	   <input id="image" class="form-control"  name="anhdaidien" type="file">
+						    </div>
+				    	</div>
 
 
 				<div class="form-group">
-					<input type="submit" value="Create Category" class="btn btn-success" />
+					<input type="submit" value="Tạo sản phẩm" class="btn btn-success" />
 					<a type="button"  class="btn btn-info" href="{{asset('admin/category/list')}}">Back</a>
 				</div>
 			</div>

@@ -69,8 +69,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
+         $parent= Category::all();
         $category=Category::find($id);
-        return view('admin.pages.category.edit_category',compact('category'));
+        return view('admin.pages.category.edit_category',compact('category','parent'));
     }
 
     /**
@@ -82,12 +83,12 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = DB::table('categories')->where('id','=', $id)->first();
-        $category->name_category = $request->input('name_category');
-        DB::table('categories')
-            ->where('id','=', $id)
-            ->update(['name_category' => $category->name_category]);
-        return redirect('admin/category/list');
+        $category = Category::find($id);
+        $category->ten = $request->input('ten');
+           $category->parent_id = $request->input('parent_id');   
+
+           $category->save();
+        return redirect('admin/category/list')->with(['flash_message'=>'Sửa thành công']);
     }
 
     /**
@@ -99,6 +100,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
          Category::find($id)->delete();
-        return redirect('admin/category/list');
+        return redirect('admin/category/list')->with(['flash_message'=>'Xóa thành công']);
     }
 }

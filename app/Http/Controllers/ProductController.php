@@ -18,8 +18,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-       $allCategories= Category::all();
-       return view('admin.pages.category.list_category',['allCategories'=>$allCategories]);
+       $products= Product::all();
+       return view('admin.pages.product.list',['products'=>$products]);
     }
      /**
      * Show the form for creating a new resource.
@@ -33,7 +33,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.product.create');
+             $allCategories= Category::all();
+        return view('admin.pages.product.create',['category'=>$allCategories]);
     }
 
     /**
@@ -42,12 +43,20 @@ class ProductController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(CheckCategoryRequest $request)
+    public function store(Request $request)
     {
-        $category= new Category();
-        $category->name_category = $request->input('name_category');
+        $product= new Product;
+        $product->ten = $request->input('ten');
+         $product->masp = $request->input('masp');
+          $product->congdung = $request->input('congdung');
+           $product->cachdung = $request->input('cachdung');
+           $product->donggoi = $request->input('donggoi');
+           $product->category_id = $request->input('category_id');
+
+
+
         $category->save();
-        return redirect('/admin/category/list')->with(['flash_message'=>'Tạo thành công']);
+        return view('admin.pages.product.list')->with(['flash_message'=>'Tạo thành công']);
     }
     /**
      * Display the specified resource.
@@ -57,7 +66,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product= Product::find($id);
+        return view('admin.pages.product.show')->with('product',$product);
     }
 
     /**

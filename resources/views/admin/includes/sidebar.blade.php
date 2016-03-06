@@ -4,7 +4,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
                   <li>
-                      <a class="active" href="index.html">
+                      <a class="active" href="{{asset('admin/dashboard')}}">
                           <i class="icon-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -37,7 +37,7 @@
                       </a>
                       <ul class="sub">
                           <li><a  href="{{asset('admin/product/create')}}">Đăng sản phẩm</a></li>
-                          <li><a  href="">Danh sách sản phẩm</a></li>
+                          <li><a  href="{{asset('admin/product/')}}">Danh sách sản phẩm</a></li>
                       </ul>
                   </li>
 
