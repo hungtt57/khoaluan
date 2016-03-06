@@ -1,4 +1,7 @@
 <?php 
+use App\Category;
+use App\Product;
+
   function cate_parent($data,$parent= 0,$str='--', $select=0,$category_id=-1){
         foreach ($data as $key => $val) {
            $id=$val['id'];
@@ -22,5 +25,14 @@
         }
 
 
+    }
+
+    function get_category_name($category_id){
+
+      $category= Category::find($category_id);
+      if(!isset($category)){
+        return 'Chưa có danh mục hoặc danh mục bị xóa';
+      }
+      return $category->ten;
     }
  ?>
