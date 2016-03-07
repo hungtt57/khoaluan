@@ -145,7 +145,8 @@ return [
         App\Providers\RouteServiceProvider::class,
          // add these two at the bottom  
        
-        Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class,
+        'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
     ],
 
     /*
@@ -195,7 +196,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
          'Form'      => Illuminate\Html\FormFacade::class, 
         'HTML'      => Illuminate\Html\HtmlFacade::class,
-        'Image'     => Intervention\Image\Facades\Image::class
+        'Image'     => Intervention\Image\Facades\Image::class,
+        'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
     ],
 
 ];
