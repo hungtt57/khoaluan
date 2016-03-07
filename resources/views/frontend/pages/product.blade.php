@@ -50,20 +50,12 @@
                                                                 <div class="product-img-box">
                                                                     <div class="media-left">
                                                                         <p class="product-image">
-                                                                            <a class="cloud-zoom" id="image_zoom" rel="zoomWidth: 500,zoomHeight: 500,position: 'inside'" href="{{asset('public/frontend/images/product/1000x1000/5_1.jpg')}}"> <img class="em-product-main-img" src="{{asset('public/frontend/images/product/800x800/5_1.jpg')}}" alt='' title="WIASSI Version 1" /> </a> <a id="zoom-btn" rel="lightbox[em_lightbox]" href="{{asset('public/frontend/images/product/1000x1000/5_1.jpg')}}" title="WIASSI Version 1">Zoom</a>
+                                                                            <a > <img class="em-product-main-img" src="{{asset($product_detail->anhdaidien)}}" alt='' title="WIASSI Version 1" /> </a> 
                                                                         </p>
                                                                     </div><!-- /.media-left -->
                                                                     <div class="more-views">
                                                                         <ul class="em-moreviews-slider ">
-                                                                            <li class="item">
-                                                                                <a class="cloud-zoom-gallery" rel="useZoom:'image_zoom', smallImage:'images/product/800x800/4_1.jpg', adjustX:5, adjustY:-5, position:'inside'" onclick="return false" href="{{asset('public/frontend/images/product/1000x1000/4_1.jpg')}}"> <img src="{{asset('public/frontend/images/product/100x100/4_1.jpg')}}" alt="" /> </a> <a class="no-display" href="{{asset('public/frontend/images/product/1000x1000/4_1.jpg')}}" rel="lightbox[em_lightbox]">lightbox moreview</a>
-                                                                            </li>
-                                                                            <li class="item">
-                                                                                <a class="cloud-zoom-gallery" rel="useZoom:'image_zoom', smallImage:'images/product/800x800/6_1.jpg', adjustX:5, adjustY:-5, position:'inside'" onclick="return false" href="{{asset('public/frontend/images/product/1000x1000/6_1.jpg')}}"> <img src="{{asset('public/frontend/images/product/100x100/6_1.jpg')}}" alt="" /> </a> <a class="no-display" href="{{asset('public/frontend/images/product/1000x1000/6_1.jpg')}}" rel="lightbox[em_lightbox]">lightbox moreview</a>
-                                                                            </li>
-                                                                            <li class="item">
-                                                                                <a class="cloud-zoom-gallery" rel="useZoom:'image_zoom', smallImage:'images/product/800x800/5_1.jpg', adjustX:5, adjustY:-5, position:'inside'" onclick="return false" href="{{asset('public/frontend/images/product/1000x1000/5_1.jpg')}}"> <img src="{{asset('public/frontend/images/product/100x100/5_1.jpg')}}" alt="" /> </a> <a class="no-display" href="{{asset('public/frontend/images/product/1000x1000/5_1.jpg')}}" rel="">lightbox moreview</a>
-                                                                            </li>
+                                                                           
                                                                         </ul>
                                                                     </div><!-- /.more-views -->
                                                                 </div>
@@ -72,7 +64,7 @@
                                                                 <div class="product-shop  fix_menu">
                                                                     <div id="em-product-info-basic">
                                                                         <div class="product-name">
-                                                                            <h1>WIASSI Version 1</h1>
+                                                                            <h1>{{$product_detail->ten}}</h1>
                                                                         </div>
                                                                         <div class="em-review-email">
                                                                             <div class="ratings">
@@ -96,7 +88,7 @@
                                                                         </div>
                                                                         <div class="short-description">
                                                                             <h2>Quick Overview</h2>
-                                                                            <div class="std">Morbi at ex at arcu posuere luctus. Maecenas eu nulla libero. Duis vulputate blandit hendrerit. Vestibulum mollis mattis justo nec auctor. Morbi non libero felis. Praesent porttitor blandit dui, nec mollis risus tempus ut. Fusce tincidunt</div>
+                                                                            <div class="std">{{$product_detail->donggoi}}</div>
                                                                         </div>
                                                                         <div class="em-addthis-plug"> <span>Share</span>
                                                                             <a href="#" target="_blank"><img alt="Facebook" src="{{asset('public/frontend/images/social/facebook.png')}}" />
@@ -162,7 +154,7 @@
                                                                 <div class="em-details-tabs-content">
                                                                     <div class="box-collateral em-line-01 box-description">
                                                                         <div class="em-block-title">
-                                                                            <h2>Details</h2>
+                                                                            <h2>Cách dùng</h2>
                                                                         </div>
                                                                         <div class="box-collateral-content">
                                                                             <div class="std"> Morbi at ex at arcu posuere luctus. Maecenas eu nulla libero. Duis vulputate blandit hendrerit. Vestibulum mollis mattis justo nec auctor. Morbi non libero felis. Praesent porttitor blandit dui, nec mollis risus tempus ut. Fusce tincidunt</div>

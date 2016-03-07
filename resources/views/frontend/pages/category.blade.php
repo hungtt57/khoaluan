@@ -82,49 +82,12 @@
                                             </div><!-- /.toolbar-top -->
                                             <div id="em-grid-mode">
                                                 <ul class="emcatalog-grid-mode products-grid emcatalog-disable-hover-below-mobile">
-                                                    <!-- <li class="item first">
-                                                        <div class="product-item">
-                                                            <div class="product-shop-top">
-                                                                <a href="product-detail.html" title="WIASSI Version 1" class="product-image"> <img class="em-img-lazy img-responsive em-alt-hover" src="{{asset('public/frontend/images/product/220x220/5_1.jpg')}}" width="220" height="220" alt="WIASSI Version 1" /> <img id="product-collection-image-206" class="em-img-lazy img-responsive em-alt-org" src="{{asset('public/frontend/images/product/220x220/4_1.jpg')}}" width="220" height="220" alt="WIASSI Version 1" /><span class="bkg-hover"></span> </a>
-                                                                <div class="bottom">
-                                                                    <div class="em-btn-addto text-center ">
-                                                                        <button type="button" title="Add to Cart" class="button btn-cart" onclick="206"><span><span>Add to Cart</span></span>
-                                                                        </button>
-                                                                        <ul class="add-to-links">
-                                                                            <li><a href="#206" class="link-wishlist" title="Add to Wishlist">Add to Wishlist</a>
-                                                                            </li>
-                                                                            <li><a href="#206" class="link-compare" title="Add to Compare">Add to Compare</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="quickshop-link-container"> <a href="#" class="quickshop-link" title="Quickshop">Quickshop</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-shop">
-                                                                <div class="f-fix">
-                                                                    <h2 class="product-name text-center  "><a href="product-detail.html" title="WIASSI Version 1"> WIASSI Version 1 </a></h2>
-                                                                    <div class=" text-center">
-                                                                        <div class="ratings">
-                                                                            <div class="rating-box">
-                                                                                <div class="rating" style="width:%"></div>
-                                                                            </div> <span class="amount"><a href="#" onclick="206">(0)</a></span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="text-center ">
-                                                                        <div class="price-box"> <span class="regular-price" id="product-price-206"> <span class="price"  content="750">$750.00</span> </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="desc std text-center em-element-display-hover"> Morbi at ex at arcu posuere luctus. Maecenas eu nu...</div>
-                                                                </div>
-                                                            </div>
-                                                        </div><!-- /.product-item -->
-                                                    </li> -->
+                                          
                                                     @foreach($product_cate as $key => $product_cate)
                                                     <li class="item">
                                                         <div class="product-item">
                                                             <div class="product-shop-top">
-                                                                <a href="product-detail.html" title="{{$product_cate->ten}} " class="product-image"> <img class="em-img-lazy img-responsive em-alt-hover" src="{{asset($product_cate->anhdaidien)}}" width="220" height="220"/> 
+                                                                <a href="{{asset('/chitietsanpham/'.$product_cate->id.'/'.$product_cate->ten)}}" title="{{$product_cate->ten}} " class="product-image"> <img class="em-img-lazy img-responsive em-alt-hover" src="{{asset($product_cate->anhdaidien)}}" width="220" height="220"/> 
                                                                 <img id="product-collection-image-217" class="em-img-lazy img-responsive em-alt-org" src="{{asset($product_cate->anhdaidien)}}" width="220" height="220" alt="WIASSI Version 12" /><span class="bkg-hover"></span> </a>
                                                                 <div class="bottom">
                                                                     <div class="em-btn-addto text-center ">

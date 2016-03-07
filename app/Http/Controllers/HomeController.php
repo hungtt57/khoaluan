@@ -29,7 +29,7 @@ class HomeController extends Controller
     public function chitietsanpham($id){
         $product_detail  = DB::table('products')->where('id',$id)->first();
         $product_cate = DB::table('products')->where('category_id',$product_detail->category_id)->where('id','<>',$id)->take(6)->get();
-        return view('frontend.pages.product_detail',compact('product_detail','product_cate'));
+        return view('frontend.pages.product',compact('product_detail','product_cate'));
     }
     /**
      * Show the form for creating a new resource.

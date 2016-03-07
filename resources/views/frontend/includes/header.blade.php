@@ -2,7 +2,7 @@
                     <div id="em-mheader" class="visible-xs container">
                     <div id="em-mheader-top" class="row">
                         <div id="em-mheader-logo" class="col-xs-4">
-                            <div class="em-logo"><a href="index.html" title="Fashion Commerce" class="logo"><strong>Fashion Commerce</strong><img src="{{asset('public/frontend/images/logo_small.png')}}" alt="Fashion Commerce" /></a>
+                            <div class="em-logo"><a href="{{asset('/')}}" title="Fashion Commerce" class="logo"><strong>Chemmist's</strong><img src="{{asset('public/frontend/images/logo_small.png')}}" alt="Fashion Commerce" /></a>
                             </div>
                         </div><!-- /#em-mheader-logo -->
                         <div class="col-xs-20">
@@ -47,26 +47,17 @@
                                                         </li>
                                                     </ul>
                                                 </div><!-- /.form-language -->
-                                                <div class="em-currency-style-mobile">
-                                                    <ul class="list-inline">
-                                                        <li class=""> <a href="#"> AUD </a>
-                                                        </li>
-                                                        <li class=""> <a href="#"> EUR </a>
-                                                        </li>
-                                                        <li class=" selected"> <a href="#"> USD </a>
-                                                        </li>
-                                                    </ul>
-                                                </div><!-- /.em-currency-style-mobile -->
+                                                
                                             </div>
                                         </div><!-- /.em-language-currency -->
                                         <div class="em-top-links row">
                                             <div class="">
                                                 <ul class="top-header-link links">
-                                                    <li class="first col-xs-8"> <a title="Log In" class="login-link fa fa-user" href="#"><span>Log In</span></a>
+                                                    <li class="first col-xs-8"> <a title="Log In" class="login-link fa fa-user" href="#"><span>Đăng nhập</span></a>
                                                     </li>
-                                                    <li class="col-xs-8"> <a title="Sign up" class='signup-link fa fa-sign-out' href="#"><span>Sign up</span></a>
+                                                    <li class="col-xs-8"> <a title="Sign up" class='signup-link fa fa-sign-out' href="#"><span>Đăng ký</span></a>
                                                     </li>
-                                                    <li class="last col-xs-8"> <a href="#" class="checkout-link fa fa-shopping-cart"><span>Cart</span></a>
+                                                    <li class="last col-xs-8"> <a href="#" class="checkout-link fa fa-shopping-cart"><span>Giỏ hàng</span></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -80,7 +71,7 @@
                                                         <div class="em_nav" id="toogle_menu_7_5505">
                                                             <ul class="hnav em_menu_mobile">
                                                                 <li class="menu-item-link menu-item-depth-0 fa fa-home menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Home </span> </a>
+                                                                    <a class="em-menu-link" href="#"> <span> Trang chủ </span> </a>
                                                                     <ul class="menu-container">
                                                                         <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col9 grid_18 menu-item-parent" style="">
                                                                             <ul class="menu-container">
@@ -133,7 +124,7 @@
                                                                     </ul>
                                                                 </li><!-- /.menu-item-link -->
                                                                 <li class="menu-item-link menu-item-depth-0 dd-menu-link fa fa-bars menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Category </span> </a>
+                                                                    <a class="em-menu-link" href="#"> <span> Danh mục </span> </a>
                                                                     <ul class="menu-container">
                                                                         <li class="menu-item-text menu-item-depth-1  ">
                                                                             <ul class="em-catalog-navigation vertical">
@@ -256,7 +247,7 @@
                                                                     </ul>
                                                                 </li><!-- /.menu-item-link -->
                                                                 <li class="menu-item-link menu-item-depth-0 fa fa-file menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Products </span> </a>
+                                                                    <a class="em-menu-link" href="#"> <span> Sản phẩm </span> </a>
                                                                     <ul class="menu-container">
                                                                         <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col16 grid_16 menu-item-parent" style="">
                                                                             <ul class="menu-container">
@@ -349,20 +340,12 @@
                                             <div class="em-language-currency">
                                                 <div class="form-language toolbar-switch em-language-style01">
                                                     <div class="toolbar-title">
-                                                        <select id="em-hoverUl-language" title="Your Language">
-                                                            <option value="English" selected="selected">English</option>
-                                                            <option value="French">French</option>
-                                                            <option value="German">German</option>
-                                                        </select>
+                                                        
                                                     </div>
                                                 </div><!-- /.em-language-style01 -->
                                                 <div class="toolbar-switch em-currency-style01">
                                                     <div class="toolbar-title">
-                                                        <select id="em-hoverUl-currency" name="currency" title="Select Your Currency" onchange="setLocation(this.value)">
-                                                            <option value="AUD"> AUD</option>
-                                                            <option value="EUR"> EUR</option>
-                                                            <option value="USD" selected="selected"> USD</option>
-                                                        </select>
+                                                        
                                                     </div>
                                                 </div><!-- /.em-currency-style01 -->
                                             </div><!-- /.em-language-currency -->
@@ -396,10 +379,10 @@
                                                     </ul>
                                                 </div>
                                                 <ul class="list-inline f-right">
-                                                    <li><a class="em-register-link" href="register.html" title="Register">Register</a></li>
+                                                    <li><a class="em-register-link" href="register.html" title="Register">Đăng ký</a></li>
                                                 </ul>
                                                 <div id="em-login-link" class="account-link f-right em-non-login"> 
-                                                    <a href="login.html" class="link-account" id="link-login" title="Login">Login</a>
+                                                    <a href="login.html" class="link-account" id="link-login" title="Login">Đăng nhập</a>
                                                     <div class="em-account" id="em-account-login-form" style="display: none;">
                                                         <form method="post" id="top-login-form">
                                                             <input name="form_key" type="hidden" value="LqnwQyvcDpOju7G3" />
@@ -408,27 +391,27 @@
                                                                 <p class="login-desc">If you have an account with us, please log in.</p>
                                                                 <ul class="form-list">
                                                                     <li>
-                                                                        <label for="mini-login">Email Address<em>*</em>
+                                                                        <label for="mini-login">Địa chỉ email<em>*</em>
                                                                         </label>
                                                                         <input type="text" name="login[username]" id="mini-login" class="input-text required-entry validate-email" />
                                                                     </li>
                                                                     <li>
-                                                                        <label for="mini-password">Password<em>*</em>
+                                                                        <label for="mini-password">Mật khẩu<em>*</em>
                                                                         </label>
                                                                         <input type="password" name="login[password]" id="mini-password" class="input-text required-entry validate-password" />
                                                                     </li>
-                                                                    <li><span class="required">* Required Fields</span>
+                                                                    <li><span class="required">* Các trường bắt buộc </span>
                                                                     </li>
                                                                 </ul>
                                                                 <div class="action-forgot">
                                                                     <div class="login_forgotpassword">
-                                                                        <p><a href="#">Forgot Your Password?</a>
+                                                                        <p><a href="#">Quên mật khẩu</a>
                                                                         </p>
-                                                                        <p><span>Don't have an account?</span><a class="create-account-link-wishlist" href="h.html#" title="Sign Up">Sign Up</a>
+                                                                        <p><span>Chưa có tài khoản</span><a class="create-account-link-wishlist" href="h.html#" title="Sign Up">Đăng ký</a>
                                                                         </p>
                                                                     </div>
                                                                     <div class="actions">
-                                                                        <button type="submit" class="button"><span><span>Login</span></span>
+                                                                        <button type="submit" class="button"><span><span>Đăng nhập</span></span>
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -447,7 +430,7 @@
                             <div class="container em-menu-fix-pos">
                                 <div class="row">
                                     <div class="col-sm-24">
-                                        <div class="em-logo f-left"><a href="index.html" title="Fashion Commerce" class="logo"><strong>Fashion Commerce</strong><img class="retina-img" src="{{asset('public/frontend/images/logo.png')}}" alt="Fashion Commerce" /></a>
+                                        <div class="em-logo f-left"><a href="{{asset('/')}}" title="Fashion Commerce" class="logo"><strong>Chemist's</strong><img class="retina-img" src="{{asset('public/frontend/images/logo.png')}}" alt="Fashion Commerce" /></a>
                                         </div>
                                         <div class="em-logo-sticky f-left">
                                             <a href="index.html" title="Fashion Commerce" class="logo"><img src="{{asset('public/frontend/images/logo_small.png')}}" alt="Fashion Commerce" />
@@ -495,216 +478,12 @@
                                                         <div class="em_nav" id="toogle_menu_4_7164">
                                                             <ul class="hnav em_hoz_menu effect-menu">
                                                                 <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Home </span> </a>
-                                                                    <ul class="menu-container">
-                                                                        <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
-                                                                            <ul class="menu-container">
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-24 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="store-view">
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Fashion Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/main_fashion_store.jpg')}}" alt="Fashion Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Fashion Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="#/index.php/?___store=furniture_eng"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/furniture_store.jpg')}}" alt="Furniture Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Furniture Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Baby Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/baby_store.jpg')}}" alt="Baby Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Baby Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Beauty Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/beauty_store.jpg')}}" alt="Beauty Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Beauty Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Clothing Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/clothing_store.jpg')}}" alt="Clothing Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Clothing Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Garden Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/garden_store.jpg')}}" alt="Garden Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Garden Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div><!-- /.store-view -->
-                                                                                            <div class="store-view" style="padding-top:15px">
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Computer Store" href="#"><img class="img-responsive" src="{{asset('fontend/images/storeview/computer_store.jpg')}}" alt="Computer Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Computer Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Jewelry Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/jewelry_store.jpg')}}" alt="Jewelry Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Jewelry Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Shoes Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/shoes_store.jpg')}}" alt="Shoes Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Shoes Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Lingerie Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/lingerie_store.jpg')}}" alt="Lingerie Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Lingerie Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Sport Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/sport_store.jpg')}}" alt="Sport Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Sport Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Swatch Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/swatch_store.jpg')}}" alt="Swatch Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Swatch Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div><!-- /.store-view -->
-                                                                                            <div class="store-view" style="padding-top:15px">
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Supermarket Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/supermarket_store.jpg')}}" alt="Supermarket Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Supermarket Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Smartphone Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/smartphone_store.jpg')}}" alt="Smartphone Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Smartphone Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Glass Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/glass_store.jpg')}}" alt="Glass Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">Glass Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                                <div class="col-sm-4">
-                                                                                                    <div class="effect03">
-                                                                                                        <div>
-                                                                                                            <a title="Glass Store" href="#"><img class="img-responsive" src="{{asset('public/frontend/images/storeview/fashionnova_store.jpg')}}" alt="Glass Store" />
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <p class="h5"><a href="#">FashionNova Store</a>
-                                                                                                    </p>
-                                                                                                </div>
-                                                                                            </div><!-- /.store-view -->
-                                                                                        </li><!-- /.menu-item-text -->
-                                                                                    </ul>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul><!-- /.menu-container -->
+                                                                    <a class="em-menu-link" href="#"> <span>Trang chủ </span> </a>
+                                                                    
                                                                 </li><!-- /.menu-item-link -->
+                                                                
                                                                 <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Pages </span> </a>
-                                                                    <ul class="menu-container" style="dropdown-menu">
-                                                                        <li class="menu-item-vbox menu-item-depth-1 col-menu menu_col5 grid_6 menu-item-parent" style="">
-                                                                            <ul class="menu-container">
-                                                                                <li class="menu-item-text menu-item-depth-2  col-md-24 ">
-                                                                                    <div class="em-line-01">
-                                                                                        <h5 class="text-uppercasse">AJAXCART</h5>
-                                                                                        <div>
-                                                                                            <ul class="menu-container" style="">
-                                                                                                <li class="menu-item-link menu-item-depth-1 first"> <a class="em-menu-link" href="#"><span>Landing Page</span> </a>
-                                                                                                </li>
-                                                                                                <li class="menu-item-link menu-item-depth-1 "> <a class="em-menu-link" href="typography.html"><span>Typography Page</span> </a>
-                                                                                                </li>
-                                                                                                <li class="menu-item-link menu-item-depth-1 "> <a class="em-menu-link" href="#"><span>Widgets Page</span> </a>
-                                                                                                </li>
-                                                                                                <li class="menu-item-link menu-item-depth-1 label-new-menu "> <a class="em-menu-link" href="contact.html"><span>Contact Page</span> </a>
-                                                                                                </li>
-                                                                                                <li class="menu-item-link menu-item-depth-1 last "> <a class="em-menu-link" href="404.html"><span>404 Page</span> </a>
-                                                                                                </li>
-                                                                                            </ul><!-- /.menu-container -->
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul><!-- /.menu-container -->
-                                                                </li><!-- /.menu-item-link -->
-                                                                <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Category </span> </a>
+                                                                    <a class="em-menu-link" href="#"> <span> Danh mục </span> </a>
                                                                     <ul class="menu-container">
                                                                         <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
                                                                             <ul class="menu-container">
@@ -743,7 +522,7 @@
                                                                     </ul><!-- /.menu-container -->
                                                                 </li><!-- /.menu-item-link -->
                                                                 <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Products </span> </a>
+                                                                    <a class="em-menu-link" href="#"> <span> Sản phẩm </span> </a>
                                                                     <ul class="menu-container">
                                                                         <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
                                                                             <ul class="menu-container" style="padding:0 10px">
@@ -807,430 +586,16 @@
                                                                                 </li><!-- /.menu-item-vbox -->
                                                                             </ul>
                                                                         </li>
-                                                                    </ul><!-- /.menu-container -->
+                                                                    </ul>
                                                                 </li><!-- /.menu-item-link -->
-                                                                <li class="menu-item-link menu-item-depth-0 hidden-sm hidden-md menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Fashion </span> </a>
-                                                                    <ul class="menu-container" style="padding-bottom:130px;background-image:url(images/menu/bkg-menu.jpg) background-repeat:no-repeat; background-position: right bottom">
-                                                                        <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
-                                                                            <ul class="menu-container" style="padding:0 10px">
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-9 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <p class="img-center">
-                                                                                                <a href="#" title="em-sample-title"><img class="img-responsive" src="{{asset('public/frontend/images/menu/em_menu11.png')}}" alt="em-sample-alt" />
-                                                                                                </a>
-                                                                                            </p>
-                                                                                            <p>A friendly responsive design, adaptive screen with the new Bootstrap 3 is already very impressive. Besides that, Visual Content Editor allows you to edit content directly on front-end. Key features for an online market, such as Featured products, Promotions, Deals with Timing, are absolutely ready. It’s no doubt that Titanshop will get traffic for your site, and also help boosting sales.</p>
-                                                                                            <p>You can change visual appearance of almost every element of this HTML theme. You can set your favorite colors and generate css file from the admin.</p>
-                                                                                            <p>No coding needed, all can be edited directly in admin panel. Select colors of dozens of elements using color pickers, set hundreds of options, apply textures for header, footer and for the entire page, upload background image and configure its properties (position, repeating, attachment), change font and font-size, and many many more…</p>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-5 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Duis porttitor</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="first">
-                                                                                                            <a class="em-menu-link" href="#"> <span>Furniture</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="label-new-menu">
-                                                                                                            <a class="em-menu-link" href="#"> <span>Cell Phones</span> </a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a class="em-menu-link" href="#"> <span>Computers</span> </a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a class="em-menu-link" href="#"> <span>Shirts</span> </a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a class="em-menu-link" href="#"> <span>Shoes</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="label-sale-menu">
-                                                                                                            <a class="em-menu-link" href="#"><span>Sport</span> </a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a class="em-menu-link" href="#"><span>Shop Men</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="last">
-                                                                                                            <a class="em-menu-link" href="#"><span>Shop Women</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-5 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Fusce ligulani</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-5 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Fusce ligulani</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul><!-- /.menu-container -->
+                                                              
+                                                                <li class="menu-item-link menu-item-depth-0  menu-item-parent">
+                                                                    <a class="em-menu-link" href="#"> <span> About </span> </a>
+                                                                    
                                                                 </li><!-- /.menu-item-link -->
                                                                 <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                                    <a class="em-menu-link" href="#"> <span> Shoes </span> </a>
-                                                                    <ul class="menu-container" style="background-image:url(images/menu/bkg-menu.jpg); background-repeat:no-repeat; background-position: right bottom">
-                                                                        <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
-                                                                            <ul class="menu-container" style="padding:0 10px">
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-8 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <p class="img-center">
-                                                                                                <a href="#" title="em-sample-title"><img class="img-responsive" src="{{asset('public/frontend/images/menu/em_menu11.png')}}" alt="em-sample-alt" />
-                                                                                                </a>
-                                                                                            </p>
-                                                                                            <p>This theme looks great not only on desktops but also on devices. What means that there are no special requirements for your clients to browse your website. With EM Oswad, you can easily change the overall appearance of your site by editing your site’s layout, themes, colors, and fonts. Make your webstore look special! You can create as many custom color schemes as you need and easily apply to your webstore</p>
-                                                                                            <p>EM Oswad is optimized for all screen resolutions. If you resize web browser window, theme elements will be transformed smoothly on each breakpoint (from 320 to 1280 pixels) in order to adapt to the current screen size.</p>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-4 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Unlimited Colors</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-4 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Custom widgets</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-4 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Powerful admin</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul><!-- /.menu-container -->
-                                                                </li><!-- /.menu-item-link -->
-                                                                <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                                    <a class="em-menu-link" href="blog.html"> <span> Blog </span> </a>
-                                                                    <ul class="menu-container" style="background-image:url(images/menu/banner-menu01.jpg); background-repeat:no-repeat; background-position: right bottom">
-                                                                        <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
-                                                                            <ul class="menu-container" style="padding:0 10px">
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-4 grid_4 alpha menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Retina Ready</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-4 grid_4 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Fully Responsive</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation vertical">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-4 grid_4 menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Unlimited Colors</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-4 grid_4 omega menu-item-parent" style="">
-                                                                                    <ul class="menu-container">
-                                                                                        <li class="menu-item-text menu-item-depth-3  ">
-                                                                                            <div class="em-line-01">
-                                                                                                <h5 class="text-uppercase">Custom widgets</h5>
-                                                                                                <div>
-                                                                                                    <ul class="em-catalog-navigation ">
-                                                                                                        <li class="level0 nav-1 first">
-                                                                                                            <a href="#"> <span>Build Your Own</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-2">
-                                                                                                            <a href="#"> <span>Laptops</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-3">
-                                                                                                            <a href="#"> <span>Hard Drives</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-4">
-                                                                                                            <a href="#"> <span>Monitors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-5">
-                                                                                                            <a href="#"> <span>RAM / Memory</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-6">
-                                                                                                            <a href="#"> <span>Cases</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-7">
-                                                                                                            <a href="#"> <span>Processors</span> </a>
-                                                                                                        </li>
-                                                                                                        <li class="level0 nav-8 last">
-                                                                                                            <a href="#"> <span>Peripherals</span> </a>
-                                                                                                        </li>
-                                                                                                    </ul><!-- /.em-catalog-navigation -->
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </li><!-- /.menu-item-vbox -->
-                                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-24 " style=""></li><!-- /.menu-item-vbox -->
-                                                                            </ul>
-                                                                        </li>
-                                                                    </ul><!-- /.menu-container -->
+                                                                    <a class="em-menu-link" href="blog.html"> <span> Liên hệ </span> </a>
+                                                                    
                                                                 </li><!-- /.menu-item-link -->
                                                             </ul><!-- /.hnav em_hoz_menu -->
                                                         </div><!-- /.em_nav -->
