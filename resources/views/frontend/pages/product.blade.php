@@ -17,11 +17,11 @@
                             <div class="col-sm-24">
                                 <div class="breadcrumbs">
                                     <ul>
-                                        <li class="home"> <a href="index.html" title="Home"><span>Home</span></a> <span class="separator">/ </span>
+                                        <li class="home"> <a href="{{asset('/')}}" title="Home"><span>Trang chủ</span></a> <span class="separator">/ </span>
                                         </li>
-                                        <li class="category36"> <a href="category-one-column.html"><span>Shoes</span></a> <span class="separator">/ </span>
+                                        <li class="category36"> <a href="{{asset('/loaisanpham/'.$category->id.'/'.$category->alias)}}"><span>{{$category->ten}}</span></a> <span class="separator">/ </span>
                                         </li>
-                                        <li class="product"> <strong>WIASSI Version 1</strong>
+                                        <li class="product"> <strong>{{$product_detail->ten}}</strong>
                                         </li>
                                     </ul>
                                 </div>
@@ -67,22 +67,21 @@
                                                                             <h1>{{$product_detail->ten}}</h1>
                                                                         </div>
                                                                         <div class="em-review-email">
-                                                                            <div class="ratings">
+                                                                            <!-- <div class="ratings"> -->
                                                                                 
                                                                                 
                                                                                 
                                                                                 
-                                                                                <div class="rating-box">
-                                                                                    <div class="rating" style="width:67%"></div> <span>67</span>
-                                                                                </div>
-                                                                                <p class="rating-links"> <a href="#" class="r-lnk link_review_list">1 Review(s)</a> <span class="separator">|</span> <a href="#" class="r-lnk link_review_form">Add Your Review</a>
-                                                                                </p>
-                                                                            </div><!-- /.ratings -->
-                                                                            <p class="email-friend"><a href="#">Email to a Friend</a>
-                                                                            </p>
+                                                                                <!-- <div class="rating-box"> -->
+                                                                                    <!-- <div class="rating" style="width:67%"></div> <span>67</span> -->
+                                                                              <!--   </div> -->
+                                                                                <!-- <p class="rating-links"> <a href="#" class="r-lnk link_review_list">1 Review(s)</a> <span class="separator">|</span> <a href="#" class="r-lnk link_review_form">Add Your Review</a>
+                                                                                </p> -->
+                                                                            <!-- </div> --><!-- /.ratings -->
+                                                                            
                                                                         </div>
                                                                         <div class="em-sku-availability">
-                                                                            <p class="sku">SKU: Sho_1</p>
+                                                                          <!--   <p class="sku">SKU: Sho_1</p> -->
                                                                             <p class="availability in-stock"> Availability: <span class="value">In stock</span>
                                                                             </p>
                                                                         </div>
@@ -109,26 +108,26 @@
                                                                             <p class="availability in-stock">Availability: <span>In stock</span>
                                                                             </p>
                                                                             
-                                                                            <div class="price-box"> <span class="regular-price" id="product-price-206"> <span class="price"  content="750">$750.00</span> </span>
+                                                                            <div class="price-box"> <span class="regular-price" id="product-price-206"> <span class="price"  content="750">{{$product_detail->gia}}</span> </span>
                                                                             </div>
                                                                         </div>
                                                                         <div class="add-to-box">
                                                                             <div class="add-to-cart">
-                                                                                <label for="qty">Qty:</label>
+                                                                                <label for="qty">Số lượng</label>
                                                                                 <div class="qty_cart">
                                                                                     <div class="qty-ctl">
                                                                                         <button title="decrease" onclick="changeQty(0); return false;" class="decrease">decrease</button>
                                                                                     </div>
-                                                                                    <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Qty" class="input-text qty" />
+                                                                                    <input type="text" name="qty" id="qty" maxlength="15" value="1" title="Qty" class="input-text qty" />
                                                                                     <div class="qty-ctl">
                                                                                         <button title="increase" onclick="changeQty(1); return false;" class="increase">increase</button>
                                                                                     </div>
                                                                                 </div>
                                                                                 <ul class="add-to-links">
-                                                                                    <li><a title="Add to Wishlist" href="#" class="link-wishlist">Add to Wishlist</a>
+                                                                                    <!-- <li><a title="Add to Wishlist" href="#" class="link-wishlist">Add to Wishlist</a>
                                                                                     </li>
                                                                                     <li><span class="separator">|</span> <a href="#" title="Add to Compare" class="link-compare">Add to Compare</a>
-                                                                                    </li>
+                                                                                    </li> -->
                                                                                 </ul>
                                                                                 <div class="button_addto">
                                                                                     <button type="button" title="Buy Now" id="em-buy-now" class="button btn-em-buy-now"><span><span>Buy Now</span></span>
@@ -154,48 +153,22 @@
                                                                 <div class="em-details-tabs-content">
                                                                     <div class="box-collateral em-line-01 box-description">
                                                                         <div class="em-block-title">
-                                                                            <h2>Cách dùng</h2>
+                                                                            <h2>Công dụng</h2>
                                                                         </div>
                                                                         <div class="box-collateral-content">
-                                                                            <div class="std"> Morbi at ex at arcu posuere luctus. Maecenas eu nulla libero. Duis vulputate blandit hendrerit. Vestibulum mollis mattis justo nec auctor. Morbi non libero felis. Praesent porttitor blandit dui, nec mollis risus tempus ut. Fusce tincidunt</div>
+                                                                            <div class="std"><?php echo $product_detail->congdung; ?></div>
                                                                         </div>
                                                                     </div><!-- /.box-collateral -->
                                                                     <div class="box-collateral box-tags em-line-01">
                                                                         <div class="em-block-title">
-                                                                            <h2>Product Tags</h2>
+                                                                            <h2>Cách dùng</h2>
                                                                         </div>
                                                                         <div class="box-collateral-content">
-                                                                            <form id="addTagForm" method="get">
-                                                                                <div class="form-add">
-                                                                                    <label for="productTagName">Add Your Tags:</label>
-                                                                                    <div class="input-box">
-                                                                                        <input type="text" class="input-text required-entry" name="productTagName" id="productTagName" />
-                                                                                    </div>
-                                                                                    <button type="button" title="Add Tags" class="button"> <span> <span>Add Tags</span> </span>
-                                                                                    </button>
-                                                                                </div>
-                                                                            </form>
-                                                                            <p class="note">Use spaces to separate tags. Use single quotes (') for phrases.</p>
-                                                                        </div><!-- /.box-collateral-content -->
-                                                                    </div><!-- /.box-collateral -->
-                                                                    <div class="box-collateral  em-line-01">
-                                                                        <div class="em-block-title">
-                                                                            <h2>Custom Tab N</h2>
-                                                                        </div>
-                                                                        <div class="box">
-                                                                            <p>Sample Block Here ...</p>
-                                                                            <p>A sample of additional collateral tabs that you can insert in static the backend.</p>
+                                                                            <div class="std"><?php echo $product_detail->cachdung; ?> </div>
                                                                         </div>
                                                                     </div><!-- /.box-collateral -->
-                                                                    <div class="box-collateral em-line-01">
-                                                                        <div class="em-block-title">
-                                                                            <h2>Custom Tab 1</h2>
-                                                                        </div>
-                                                                        <div class="box">
-                                                                            <p>Sample Block Here ...</p>
-                                                                            <p>A sample of additional collateral tabs that you can insert in static the backend.</p>
-                                                                        </div>
-                                                                    </div><!-- /.box-collateral -->
+                                                                   
+                                                                    
                                                                 </div><!-- /.em-details-tabs-content -->
                                                             </div><!-- /.em-details-tabs -->
                                                             <div class="box-collateral box-reviews em-line-01" id="customer-reviews">

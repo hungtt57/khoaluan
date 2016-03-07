@@ -87,7 +87,7 @@
                                                     <li class="item">
                                                         <div class="product-item">
                                                             <div class="product-shop-top">
-                                                                <a href="{{asset('/chitietsanpham/'.$product_cate->id.'/'.$product_cate->ten)}}" title="{{$product_cate->ten}} " class="product-image"> <img class="em-img-lazy img-responsive em-alt-hover" src="{{asset($product_cate->anhdaidien)}}" width="220" height="220"/> 
+                                                                <a href="{{asset('/chitietsanpham/'.$product_cate->id.'/'.$product_cate->alias)}}" title="{{$product_cate->alias}} " class="product-image"> <img class="em-img-lazy img-responsive em-alt-hover" src="{{asset($product_cate->anhdaidien)}}" width="220" height="220"/> 
                                                                 <img id="product-collection-image-217" class="em-img-lazy img-responsive em-alt-org" src="{{asset($product_cate->anhdaidien)}}" width="220" height="220" alt="WIASSI Version 12" /><span class="bkg-hover"></span> </a>
                                                                 <div class="bottom">
                                                                     <div class="em-btn-addto text-center ">

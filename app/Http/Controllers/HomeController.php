@@ -22,14 +22,14 @@ class HomeController extends Controller
     }
     public function loaisanpham($id)
     {
-        $product_cate = DB::table('products')->select('id','ten','gia','anhdaidien','category_id')->where('category_id',$id)->get();
+        $product_cate = DB::table('products')->select('id','ten','alias','gia','anhdaidien','category_id')->where('category_id',$id)->get();
         $name_cate = DB::table('categories')->select('ten')->where('id',$id)->first();
         return view('frontend.pages.category',compact('product_cate','name_cate'));
     }
     public function chitietsanpham($id){
         $product_detail  = DB::table('products')->where('id',$id)->first();
-        $product_cate = DB::table('products')->where('category_id',$product_detail->category_id)->where('id','<>',$id)->take(6)->get();
-        return view('frontend.pages.product',compact('product_detail','product_cate'));
+       $category = DB::table('categories')->where('id',  $product_detail->category_id)->first();
+        return view('frontend.pages.product',compact('product_detail','category'));
     }
     /**
      * Show the form for creating a new resource.
