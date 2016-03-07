@@ -2378,7 +2378,7 @@
                                                                 <ul class="vnav em-menu-icon effect-menu em-menu-long">
                                                                 @foreach ($allCategories as $key => $category)
                                                                     <li class="menu-item-link menu-item-depth-0 fa fa-leaf hidden-sm ">
-                                                                        <a class="em-menu-link" href="#"> <span> {{ $category->ten }} </span> </a>
+                                                                        <a class="em-menu-link" href="{{asset('/loaisanpham/'.$category->id.'/'.$category->ten)}}"> <span> {{ $category->ten }} </span> </a>
                                                                     </li><!-- /.menu-item-link -->
                                                                 @endforeach   
                                                                 </ul><!-- /.vnav -->

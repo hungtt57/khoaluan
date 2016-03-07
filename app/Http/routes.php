@@ -52,3 +52,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/','HomeController@index');
+Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
+Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');

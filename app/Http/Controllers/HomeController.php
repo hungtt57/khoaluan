@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class HomeController extends Controller
 {
@@ -18,6 +19,17 @@ class HomeController extends Controller
     {
         $allCategories= Category::all();
        return view('frontend.pages.home',compact('allCategories'));
+    }
+    public function loaisanpham($id)
+    {
+        $product_cate = DB::table('products')->select('id','ten','gia','anhdaidien','category_id')->where('category_id',$id)->get();
+        $name_cate = DB::table('categories')->select('ten')->where('id',$id)->first();
+        return view('frontend.pages.category',compact('product_cate','name_cate'));
+    }
+    public function chitietsanpham($id){
+        $product_detail  = DB::table('products')->where('id',$id)->first();
+        $product_cate = DB::table('products')->where('category_id',$product_detail->category_id)->where('id','<>',$id)->take(6)->get();
+        return view('frontend.pages.product_detail',compact('product_detail','product_cate'));
     }
     /**
      * Show the form for creating a new resource.
