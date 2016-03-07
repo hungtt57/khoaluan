@@ -7,8 +7,11 @@ use App\Category;
 use App\Product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\CreateProductRequest;
+use Slug;
 use DB;
+use File;
+use Image;
 class ProductController extends Controller
 {
     /**
@@ -43,20 +46,32 @@ class ProductController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateProductRequest $request)
     {
+        
         $product= new Product;
         $product->ten = $request->input('ten');
-         $product->masp = $request->input('masp');
-          $product->congdung = $request->input('congdung');
-           $product->cachdung = $request->input('cachdung');
-           $product->donggoi = $request->input('donggoi');
-           $product->category_id = $request->input('category_id');
+        $product->masp = $request->input('masp');
+        $product->congdung = $request->input('congdung');
+        $product->cachdung = $request->input('cachdung');
+        $product->donggoi = $request->input('donggoi');
+        $product->category_id = $request->input('category_id');
+        $anhdaidien = $request->file('anhdaidien');
+
+         if($anhdaidien){
+              $filename = str_slug($product->ten).'.' . $anhdaidien->getClientOriginalExtension();
+            $path = public_path().'/image/product/anhdaidien/' . $filename;
+                Image::make($anhdaidien->getRealPath())->resize(400, 520)->save($path);
+                $product->anhdaidien= 'public/image/product/anhdaidien/' . $filename;
+
+            $paththumb= public_path().'/image/product/thumb/thumb' . $filename;
+             Image::make($anhdaidien->getRealPath())->resize(200, 200)->save($paththumb);
+              $product->thumb= 'public/image/product/thumb/thumb' . $filename;
+        }
 
 
-
-        $category->save();
-        return view('admin.pages.product.list')->with(['flash_message'=>'Tạo thành công']);
+         $product->save();
+        return redirect('admin/product')->with(['flash_message'=>'Tạo thành công']);
     }
     /**
      * Display the specified resource.
@@ -78,8 +93,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $category=Category::find($id);
-        return view('admin.pages.category.edit_category',compact('category'));
+         $mainCategories = Category::where('parent_id', 0)->get();
+        $allCategories = ProductController::getAllCategories($mainCategories);
+        $product=Product::find($id);
+        return view('admin.pages.product.edit',compact('product'))->with('categories',$allCategories);
     }
 
     /**
@@ -91,12 +108,35 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = DB::table('categories')->where('id','=', $id)->first();
-        $category->name_category = $request->input('name_category');
-        DB::table('categories')
-            ->where('id','=', $id)
-            ->update(['name_category' => $category->name_category]);
-        return redirect('admin/category/list');
+        $product=Product::find($id);
+        
+        $product->ten = $request->input('ten');
+        $product->masp = $request->input('masp');
+        $product->congdung = $request->input('congdung');
+        $product->cachdung = $request->input('cachdung');
+        $product->donggoi = $request->input('donggoi');
+        $product->category_id = $request->input('category_id');
+
+
+          if(!empty($request->file('anhdaidien'))){
+            $anhdaidien=$request->file('anhdaidien');
+                 File::delete($product->anhdaidien);
+                File::delete($product->thumb);
+
+                     $filename = str_slug($product->ten).'.' . $anhdaidien->getClientOriginalExtension();
+            $path = public_path().'/image/product/anhdaidien/' . $filename;
+                Image::make($anhdaidien->getRealPath())->resize(400, 520)->save($path);
+                $product->anhdaidien= 'public/image/product/anhdaidien/' . $filename;
+
+            $paththumb= public_path().'/image/product/thumb/thumb' . $filename;
+             Image::make($anhdaidien->getRealPath())->resize(200, 200)->save($paththumb);
+              $product->thumb= 'public/image/product/thumb/thumb' . $filename;
+        
+        }
+
+        $product->save();
+
+        return redirect('admin/product')->with(['flash_message'=>'Tạo thành công']);
     }
 
     /**
@@ -107,7 +147,37 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-         Category::find($id)->delete();
-        return redirect('admin/category/list');
+        $product=Product::find($id);
+       File::delete($product->anhdaidien);
+        File::delete($product->thumb);
+        $product->delete();
+        return redirect('admin/product/')->with(['flash_message'=>'Xóa thành công']);
+
+
+    }
+
+
+    private function getAllCategories($categories) {
+        $allCategories = array();
+
+        foreach ($categories as $category) {
+            $subArr = array();
+            $subArr['ten'] = $category->ten;
+            $subArr['id'] = $category->id;
+            $subArr['parent_id'] = $category->parent_id;
+
+
+            $subCategories = Category::where('parent_id', '=', $category->id)->get();
+
+            if (!$subCategories->isEmpty()) {
+                $result = ProductController::getAllCategories($subCategories);
+
+                $subArr['sub'] = $result;
+            }
+
+            $allCategories[] = $subArr;
+        }
+
+        return $allCategories;
     }
 }
