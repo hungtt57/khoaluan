@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Blog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CheckCategoryRequest;
+use App\Http\Requests\CheckBlogRequest;
 use DB;
+use Sunra\PhpSimple\HtmlDomParser;
+use File;
 class BlogController extends Controller
 {
     /**
@@ -17,15 +19,15 @@ class BlogController extends Controller
      */
     public function index()
     {
-       $blog= Blog::all()->first();
+       $blogs= Blog::all();
     
-       return view('admin.pages.blog.index',['blog'=>$blog]);
+       return view('admin.pages.blog.index',['blogs'=>$blogs]);
     }
      
     public function create()
     {
-        $allCategories= Category::all();
-        return view('admin.pages.category.add',['allCategories'=>$allCategories]);
+       
+        return view('admin.pages.blog.create');
     }
 
     /**
@@ -34,13 +36,22 @@ class BlogController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(CheckCategoryRequest $request)
+    public function store(CheckBlogRequest $request)
     {
-        $category= new Category();
-        $category->ten = $request->input('ten');
-        $category->parent_id = $request->input('parent_id');
-        $category->save();
-        return redirect('/admin/category/list')->with(['flash_message'=>'Tạo thành công']);
+        $blog=new Blog;
+        $blog->title=$request->input('title');
+        $blog->description=$request->input('description');
+        $blog->content=$request->input('content');
+        $anhdaidien=$request->file('image');
+        if($anhdaidien){
+              $filename = str_slug($blog->title).'.' . $anhdaidien->getClientOriginalExtension();
+            $path = public_path().'/image/blog/thumb/' . $filename;
+                Image::make($anhdaidien->getRealPath())->resize(380, 210)->save($path);
+                $blog->thumb= 'public/image/blog/thumb/' . $filename;
+
+        }
+        $blog->save();
+        return redirect('/admin/blog/list')->with(['flash_message'=>'Tạo thành công']);
     }
     /**
      * Display the specified resource.
@@ -50,7 +61,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+    $blog=Blog::find($id);
+    return view('admin/pages/blog/show')->with('blog',$blog);
     }
 
     /**
@@ -61,9 +73,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-         $parent= Category::all();
-        $category=Category::find($id);
-        return view('admin.pages.category.edit_category',compact('category','parent'));
+         
+        $blog=Blog::find($id);
+        return view('admin.pages.blog.edit',compact('blog'));
     }
 
     /**
@@ -75,12 +87,21 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = Category::find($id);
-        $category->ten = $request->input('ten');
-           $category->parent_id = $request->input('parent_id');   
+        $blog = Blog::find($id);
+        $blog->title=$request->input('title');
+        $blog->description=$request->input('description');
+        $blog->content=$request->input('content');
 
-           $category->save();
-        return redirect('admin/category/list')->with(['flash_message'=>'Sửa thành công']);
+        $anhdaidien=$request->file('image');
+        if($anhdaidien){
+              $filename = str_slug($blog->title).'.' . $anhdaidien->getClientOriginalExtension();
+            $path = public_path().'/image/blog/thumb/' . $filename;
+                Image::make($anhdaidien->getRealPath())->resize(380, 210)->save($path);
+                $blog->thumb= 'public/image/blog/thumb/' . $filename;
+
+        }
+        $blog->save();
+        return redirect('admin/blog/')->with(['flash_message'=>'Sửa thành công']);
     }
 
     /**
@@ -91,7 +112,17 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-         Category::find($id)->delete();
-        return redirect('admin/category/list')->with(['flash_message'=>'Xóa thành công']);
+        $blog=blog::find($id);
+        File::delete($blog->image);
+        $html=HtmlDomParser::str_get_html($blog->content);
+        foreach($html->find('img') as $img)
+        {
+           
+           File::delete(substr($img->src,1));
+        }
+        $blog->delete();
+        
+        return redirect('admin/blog/')->with(['flash_message'=>'Xóa thành công']);
+        
     }
 }
