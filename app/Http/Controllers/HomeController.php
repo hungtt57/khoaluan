@@ -7,6 +7,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use DB,Cart;
 use Request;
+use App\Blog;
 class HomeController extends Controller
 {
     /**
@@ -42,5 +43,24 @@ class HomeController extends Controller
         $total = Cart::total();
         return view('frontend.pages.cart',compact('content','total'));
     }
-    
+     public function xoasanpham($id){
+        Cart::remove($id);
+        return redirect('/giohang');
+    }
+    public function capnhatgiohang(){
+        if (Request::ajax()) {
+            $id = Request::get('id');
+            $qty = Request::get('qty');
+            Cart::update($id,array('qty'=>$qty));
+           return "123";
+        }
+    }
+    public function blog(){
+        $allBlogs=DB::table('blog')->paginate(10);
+       return view('frontend.pages.blog',compact('allBlogs'));
+    }
+    public function blog_detail($id){
+        $blog_detail = DB::table('blog')->where('id',$id)->first();
+        return view('frontend.pages.blog_detail',compact('blog_detail'));
+    }
 }

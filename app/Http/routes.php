@@ -21,6 +21,7 @@ Route::get('/cart', function () {
     return view('frontend.pages.cart');
 });
 
+
 //admin
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'category'], function() { // category
@@ -74,3 +75,7 @@ Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
 Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');
 Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');
 Route::get('/giohang','HomeController@giohang');
+Route::get('/xoasanpham/{id}','HomeController@xoasanpham');
+Route::get('capnhatgiohang/{id}/{qty}','HomeController@capnhatgiohang');
+Route::get('/blog','HomeController@blog');
+Route::get('/blog_detail/{id}/{ten}','HomeController@blog_detail');
