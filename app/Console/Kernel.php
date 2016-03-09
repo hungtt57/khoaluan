@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Commands\Inspire::class,
          \App\Console\Commands\CrawlerMuathuoc::class,
+          \App\Console\Commands\CrawlerTintuc::class,
     ];
 
     /**
@@ -28,6 +29,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('inspire')
                  ->hourly();
         $schedule->command('crawlermuathuoc')
+                 ->everyTenMinutes();
+                 $schedule->command('crawlertintuc')
                  ->everyTenMinutes();
     }
 }

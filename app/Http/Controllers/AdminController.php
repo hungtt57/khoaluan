@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
+use App\Blog;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -20,7 +21,8 @@ class AdminController extends Controller
     {
         $count_product=Product::count();
         $count_category=Category::count();
-       return view('admin.pages.dashboard',['count_product'=>$count_product,'count_category' => $count_category]);
+        $count_blog=Blog::count();
+       return view('admin.pages.dashboard',['count_product'=>$count_product,'count_category' => $count_category,'count_blog' => $count_blog]);
     }
     /**
      * Show the form for creating a new resource.

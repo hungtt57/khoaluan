@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin'], function () {
 
      Route::group(['prefix' => 'product'],function(){
         Route::get('/','ProductController@index');
-        Route::get('/','ProductController@index');
+      
         Route::get('/create','ProductController@create');
         Route::post('/create','ProductController@store');
         Route::get('/{id}/show','ProductController@show');
@@ -53,6 +53,18 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/{id}/edit','ProductController@update');
         Route::get('/{id}/delete','ProductController@destroy');
      });
+
+      Route::group(['prefix' => 'blog'],function(){
+        Route::get('/','BlogController@index');
+        
+        Route::get('/create','ProductController@create');
+        Route::post('/create','ProductController@store');
+        Route::get('/{id}/show','ProductController@show');
+        Route::get('/{id}/edit','ProductController@edit');
+        Route::post('/{id}/edit','ProductController@update');
+        Route::get('/{id}/delete','ProductController@destroy');
+     });
+
 });
 
 Route::get('/','HomeController@index');
