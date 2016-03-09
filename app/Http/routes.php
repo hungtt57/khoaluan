@@ -17,7 +17,9 @@ Route::get('/category', function () {
 Route::get('/product', function () {
     return view('frontend.pages.product');
 });
-
+Route::get('/cart', function () {
+    return view('frontend.pages.cart');
+});
 
 //admin
 Route::group(['prefix' => 'admin'], function () {

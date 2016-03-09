@@ -52,7 +52,7 @@
     <!-- Ajax Cart CSS -->
     <!-- <link rel="stylesheet" type="text/css')}}" href="{{asset('public/frontend/css/em_ajaxcart.css')}}" media="all" /> -->
     <!-- Blog Style CSS -->
-    <!-- <link rel="stylesheet" type="text/css')}}" href="{{asset('public/frontend/css/blog-styles.css')}}" media="all" /> -->
+    <link rel="stylesheet" type="text/css')}}" href="{{asset('public/frontend/css/blog-styles.css')}}" media="all" />
     <!-- Multi Deal Pro CSS -->
     <!-- <link rel="stylesheet" type="text/css')}}" href="{{asset('public/frontend/css/em_multidealpro.css')}}" media="all" /> -->
 
