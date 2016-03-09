@@ -54,10 +54,11 @@
                                            <form type="POST" action="">
                                             {!! csrf_field() !!}
                                             @foreach($content as $item)
+                                            
                                             <tr class="last even">
                                                 <td>
                                                     <div class="cart-product"><a href="{{asset('/xoasanpham/'.$item['rowid'])}}" title="Remove item" class="btn-remove btn-remove2">Remove item</a>
-                                                        <a href="product-detail.html" title=" Mommy's little sunshine graphic tee " class="product-image"><img src="{{asset($item['options']['image'])}}" style="height:80px;" width="100"/>
+                                                        <a href="#" title=" Mommy's little sunshine graphic tee " class="product-image"><img src="{{asset($item['options']['image'])}}" style="height:80px;" width="100"/>
                                                         </a>
                                                     </div>
                                                 </td>
@@ -83,7 +84,7 @@
                                                 <td class="a-center last"> <span class="cart-price"> <span class="price">{{$item["price"]*$item["qty"]}}</span> </span>
                                                 </td>
                                             </tr>
-                                            @endforeach
+                                           
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -96,6 +97,7 @@
                                                 </td>
                                             </tr>
                                         </tfoot>
+                                         @endforeach
                                     </form>
                                 </table>
                             </fieldset>
