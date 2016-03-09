@@ -101,7 +101,7 @@
 
 
 				<div class="form-group">
-					<input type="submit" value="Tạo sản phẩm" class="btn btn-success" />
+					<input type="submit" value="Sửa sản phẩm" class="btn btn-success" />
 					<a type="button"  class="btn btn-info" href="{{asset('admin/product/list')}}">Back</a>
 				</div>
 			</div>

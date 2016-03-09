@@ -59,12 +59,12 @@ Route::group(['prefix' => 'admin'], function () {
       Route::group(['prefix' => 'blog'],function(){
         Route::get('/','BlogController@index');
         
-        Route::get('/create','ProductController@create');
-        Route::post('/create','ProductController@store');
-        Route::get('/{id}/show','ProductController@show');
-        Route::get('/{id}/edit','ProductController@edit');
-        Route::post('/{id}/edit','ProductController@update');
-        Route::get('/{id}/delete','ProductController@destroy');
+        Route::get('/create','BlogController@create');
+        Route::post('/create','BlogController@store');
+        Route::get('/{id}/show','BlogController@show');
+        Route::get('/{id}/edit','BlogController@edit');
+        Route::post('/{id}/edit','BlogController@update');
+        Route::get('/{id}/delete','BlogController@destroy');
      });
 
 });
