@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Category;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use DB;
 
+use App\Category;
+use App\Http\Controllers\Controller;
+use DB,Cart;
+use Request;
 class HomeController extends Controller
 {
     /**
@@ -30,6 +29,18 @@ class HomeController extends Controller
         $product_detail  = DB::table('products')->where('id',$id)->first();
        $category = DB::table('categories')->where('id',  $product_detail->category_id)->first();
         return view('frontend.pages.product',compact('product_detail','category'));
+    }
+    public function muahang($id){
+        $qty = Request::get("qty");
+        $product_buy = DB::table('products')->where('id',$id)->first();
+        Cart::add(array('id'=> $id,'name'=> $product_buy->alias,'qty'=>$qty,'price'=> $product_buy->gia, 'options' => array('image' => $product_buy->anhdaidien)));
+        $content=Cart::content();
+        return redirect()->back();
+    }
+     public function giohang(){
+        $content = Cart::content();
+        $total = Cart::total();
+        return view('frontend.cart',compact('content','total'));
     }
     /**
      * Show the form for creating a new resource.

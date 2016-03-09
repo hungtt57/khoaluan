@@ -41,7 +41,8 @@
                                         <div id="messages_product_view"></div>
                                         <div class="product-view">
                                             <div class="product-essential">
-                                                <form method="post" id="product_addtocart_form">
+                                                <form method="post" id="product_addtocart_form" action="{{asset('/muahang/'.$product_detail->id.'/'.$product_detail->alias)}}">
+                                                {!! csrf_field() !!}
                                                     <input name="form_key" type="hidden" value="N4DL2crX27DuHSDk" />
                                                     <div class="product-view-detail">
                                                         <div class="em-product-view row">
@@ -130,10 +131,9 @@
                                                                                     </li> -->
                                                                                 </ul>
                                                                                 <div class="button_addto">
-                                                                                    <button type="button" title="Buy Now" id="em-buy-now" class="button btn-em-buy-now"><span><span>Buy Now</span></span>
+                                                                                    <button  title="Add to Cart" type ="Submit" id="em-buy-now" class="button btn-em-buy-now"><span><span>Add to Cart</span></span>
                                                                                     </button>
-                                                                                    <button type="button" title="Add to Cart" id="product-addtocart-button" class="button btn-cart btn-cart-detail"><span><span>Add to Cart</span></span>
-                                                                                    </button>
+                                                                                    
                                                                                 </div>
                                                                             </div><!-- /.add-to-cart -->
                                                                         </div><!-- /.add-to-box -->
