@@ -6,11 +6,11 @@
                   <div class="col-lg-3 col-sm-6">
                       <section class="panel">
                           <div class="symbol terques">
-                              <i class="icon-user"></i>
+                              <i class="icon-file-text"></i>
                           </div>
                           <div class="value">
-                              <h1 class="count">900</h1>
-                              <p>Tài khoản</p>
+                              <h1 class="count">{{$count_blog}}</h1>
+                              <p>Tin tức</p>
                           </div>
                       </section>
                   </div>
