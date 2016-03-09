@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use App\Category;
 use App\Http\Controllers\Controller;
 use DB,Cart;
-<<<<<<< HEAD
 use App\Product;
-=======
 use Request;
->>>>>>> e92611673e733a5e9c6d8268a3052795496e8704
 use App\Blog;
 class HomeController extends Controller
 {
@@ -56,7 +53,6 @@ class HomeController extends Controller
         $total = Cart::total();
         return view('frontend.pages.cart',compact('content','total'));
     }
-<<<<<<< HEAD
 
 
 
@@ -75,7 +71,6 @@ class HomeController extends Controller
        return view('frontend.pages.search',compact('products','blogs','key'));
     }
     
-=======
      public function xoasanpham($id){
         Cart::remove($id);
         return redirect('/giohang');
@@ -96,5 +91,4 @@ class HomeController extends Controller
         $blog_detail = DB::table('blog')->where('id',$id)->first();
         return view('frontend.pages.blog_detail',compact('blog_detail'));
     }
->>>>>>> e92611673e733a5e9c6d8268a3052795496e8704
 }
