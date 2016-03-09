@@ -6,9 +6,9 @@
                             <div class="col-sm-24">
                                 <div class="breadcrumbs">
                                     <ul>
-                                        <li class="home"> <a href="index.html" title="Go to Home Page"><span >Trang chu</span></a> <span class="separator">/ </span>
+                                        <li class="home"> <a href="{{asset('/')}}" title="Go to Home Page"><span >Trang chủ</span></a> <span class="separator">/ </span>
                                         </li>
-                                        <li class="cms_page"> <strong>Shopping Cart</strong>
+                                        <li class="cms_page"> <strong>Giỏ hàng của bạn</strong>
                                         </li>
                                     </ul>
                                 </div>
@@ -25,7 +25,7 @@
                                     <div class="em-col-main col-sm-24">
                                         <div class="cart">
                                             <div class="page-title title-buttons">
-                                                <h1>Shopping Cart</h1>
+                                                <h1>Giỏ hàng của bạn</h1>
                                                 <ul class="checkout-types">
                                                     <li>
                                                         <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout"><span><span>Proceed to Checkout</span></span>
@@ -39,16 +39,14 @@
                                                     <table id="shopping-cart-table" class="data-table cart-table">
                                                         <thead>
                                                             <tr class="em-block-title">
-                                                                <th><span class="nobr">Product Name</span>
+                                                                <th><span class="nobr">Tên thuốc</span>
                                                                 </th>
                                                                 <th>&nbsp;</th>
-                                                                <th></th>
-                                                                <th class="a-center"><span class="nobr">Move to Wishlist</span>
+                                                             
+                                                                <th class="a-center" colspan="1"><span class="nobr">Đơn giá</span>
                                                                 </th>
-                                                                <th class="a-center" colspan="1"><span class="nobr">Unit Price</span>
-                                                                </th>
-                                                                <th class="a-center">Qty</th>
-                                                                <th class="a-center last" colspan="1">Subtotal</th>
+                                                                <th class="a-center">Số lượng</th>
+                                                                <th class="a-center last" colspan="1">Tổng tiền</th>
                                                             </tr>
                                                         </thead>
                                                         <tfoot>
@@ -64,68 +62,37 @@
                                                             </tr>
                                                         </tfoot>
                                                         <tbody>
-                                                            <tr class="first odd">
-                                                                <td>
-                                                                    <div class="cart-product"><a href="#" title="Remove item" class="btn-remove btn-remove2">Remove item</a>
-                                                                        <a href="product-detail.html" title=" baby dino baller graphic tee " class="product-image"><img src="images/product/100x100/thumbnail.jpg" width="100" alt=" baby dino baller graphic tee " />
-                                                                        </a>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <h2 class="product-name"> <a href="product-detail.html"> baby dino baller graphic tee </a></h2>
-                                                                    <p class="sku">Ba_7</p>
-                                                                </td>
-                                                                <td class="a-center"> <a href="#" title="Edit item parameters">Edit</a>
-                                                                </td>
-                                                                <td class="a-center"> <a href="#" class="link-wishlist use-ajax" title="Move">Move</a>
-                                                                </td>
-                                                                <td class="a-center"> <span class="cart-price"> <span class="price">$4.85</span> </span>
-                                                                </td>
-                                                                <td class="a-center">
-                                                                    <div class="qty_cart">
-                                                                        <div class="qty-ctl">
-                                                                            <button title="Decrease Qty" onclick="qtyDown(296); return false;" class="decrease">decrease</button>
-                                                                        </div>
-                                                                        <input id="cart[296][qty]" name="cart[296][qty]" value="1" size="4" title="Qty" class="input-text qty" maxlength="12" />
-                                                                        <div class="qty-ctl">
-                                                                            <button title="Increase Qty" onclick="qtyUp(296); return false;" class="increase">increase</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="a-center last"> <span class="cart-price"> <span class="price">$4.85</span> </span>
-                                                                </td>
-                                                            </tr>
+                                                             @foreach($content as $item)
                                                             <tr class="last even">
                                                                 <td>
                                                                     <div class="cart-product"><a href="#" title="Remove item" class="btn-remove btn-remove2">Remove item</a>
-                                                                        <a href="product-detail.html" title=" Mommy's little sunshine graphic tee " class="product-image"><img src="images/product/100x100/thumbnail.jpg" width="100" alt=" Mommy's little sunshine graphic tee " />
+                                                                        <a href="product-detail.html" title=" Mommy's little sunshine graphic tee " class="product-image"><img src="{{asset($item['options']['image'])}}" style="height:80px;" width="100"/>
                                                                         </a>
                                                                     </div>
                                                                 </td>
                                                                 <td>
-                                                                    <h2 class="product-name"> <a href="product-detail.html"> Mommy's little sunshine graphic tee </a></h2>
+                                                                    <h2 class="product-name"> <a href="product-detail.html"> {{$item['name']}} </a></h2>
                                                                     <p class="sku">Ba_13</p>
                                                                 </td>
-                                                                <td class="a-center"> <a href="#" title="Edit item parameters">Edit</a>
-                                                                </td>
-                                                                <td class="a-center"> <a href="#" class="link-wishlist use-ajax" title="Move">Move</a>
-                                                                </td>
-                                                                <td class="a-center"> <span class="cart-price"> <span class="price">$4.85</span> </span>
+                                                                
+                                                               
+                                                                <td class="a-center"> <span class="cart-price"> <span class="price">{{$item['price']}}</span> </span>
                                                                 </td>
                                                                 <td class="a-center">
                                                                     <div class="qty_cart">
                                                                         <div class="qty-ctl">
                                                                             <button title="Decrease Qty" onclick="qtyDown(302); return false;" class="decrease">decrease</button>
                                                                         </div>
-                                                                        <input id="cart[302][qty]" name="cart[302][qty]" value="1" size="4" title="Qty" class="input-text qty" maxlength="12" />
+                                                                        <input id="cart[302][qty]" name="cart[302][qty]" value="{{$item['qty']}}" size="4" title="Qty" class="input-text qty" maxlength="12" />
                                                                         <div class="qty-ctl">
                                                                             <button title="Increase Qty" onclick="qtyUp(302); return false;" class="increase">increase</button>
                                                                         </div>
                                                                     </div>
                                                                 </td>
-                                                                <td class="a-center last"> <span class="cart-price"> <span class="price">$4.85</span> </span>
+                                                                <td class="a-center last"> <span class="cart-price"> <span class="price">{{$item["price"]*$item["qty"]}}</span> </span>
                                                                 </td>
                                                             </tr>
+                                                            @endforeach
                                                         </tbody>
                                                     </table>
                                                 </fieldset>

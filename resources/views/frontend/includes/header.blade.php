@@ -24,7 +24,7 @@
                     <div class="em-wrapper-topcart-mobile em-no-quickshop">
                         <div class="em-container-topcart">
                             <div class="em-summary-topcart">
-                                <a id="em-amount-cart-link" title="Shopping Cart" class="em-amount-topcart" href="cart.html"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
+                                <a id="em-amount-cart-link" title="Shopping Cart" class="em-amount-topcart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
                             </div>
                         </div>
                     </div>
@@ -460,7 +460,7 @@
                                     <?php $giohang = Cart::content();?>
                                     @if(isset($giohang) && count($giohang)>0)
                                     <div class="em-summary-topcart">
-                                        <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="cart.html"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty"><?php echo count($giohang);?></span> </a>
+                                        <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty"><?php echo count($giohang);?></span> </a>
                                     </div>
                                     <div class="em-container-js-topcart topcart-popup" style="display:none">
                                         <div class="topcart-popup-content">
@@ -491,7 +491,7 @@
                                 </div>
                                 @else
                                 <div class="em-summary-topcart">
-                                    <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="cart.html"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
+                                    <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
                                 </div>
                                 <div class="em-container-js-topcart topcart-popup" style="display:none">
                                     <div class="topcart-popup-content">
