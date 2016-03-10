@@ -33,6 +33,7 @@ Route::get('/timkiem','HomeController@timkiem');
 
 // end frontend
 
+
 //admin
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'category'], function() { // category
@@ -81,3 +82,15 @@ Route::group(['prefix' => 'admin'], function () {
 
 });
 
+<<<<<<< HEAD
+=======
+Route::get('/','HomeController@index');
+Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
+Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');
+Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');
+Route::get('/giohang','HomeController@giohang');
+Route::get('/xoasanpham/{id}','HomeController@xoasanpham');
+Route::get('capnhatgiohang/{id}/{qty}','HomeController@capnhatgiohang');
+Route::get('/blog','HomeController@blog');
+Route::get('/blog_detail/{id}/{ten}','HomeController@blog_detail');
+>>>>>>> e92611673e733a5e9c6d8268a3052795496e8704
