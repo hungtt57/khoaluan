@@ -20,6 +20,8 @@ Route::get('/cart', function () {
     return view('frontend.pages.cart');
 });
 Route::get('/timkiem','HomeController@timkiem');
+Route::post('xoaspcart','HomeController@xoaspcart');
+Route::post('capnhatcart','HomeController@capnhatcart');
 // end frontend
 //admin
 Route::group(['prefix' => 'admin'], function () {

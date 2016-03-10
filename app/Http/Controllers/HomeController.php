@@ -59,14 +59,7 @@ class HomeController extends Controller
         Cart::remove($id);
         return redirect('/giohang');
     }
-    public function capnhatgiohang(){
-        if (Request::ajax()) {
-            $id = Request::get('id');
-            $qty = Request::get('qty');
-            Cart::update($id,array('qty'=>$qty));
-           return "123";
-        }
-    }
+   
     public function blog(){
         $allBlogs=DB::table('blog')->paginate(10);
        return view('frontend.pages.blog',compact('allBlogs'));
@@ -75,4 +68,35 @@ class HomeController extends Controller
         $blog_detail = DB::table('blog')->where('id',$id)->first();
         return view('frontend.pages.blog_detail',compact('blog_detail'));
     }
+
+    public function xoaspcart(){
+        if(Request::ajax()){
+             $id=Request::get('rowid');
+              Cart::remove($id);
+              echo 'oke';
+        }
+    }
+
+    public function capnhatcart(){
+         if(Request::ajax()){
+             $rowid=Request::get('rowid');
+            
+            $qty = Request::get('qty');
+            Cart::update($rowid,array('qty'=>$qty));
+
+              echo 'oke';
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }

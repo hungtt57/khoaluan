@@ -37,7 +37,7 @@
                             <form method="post">
                                 <input name="form_key" type="hidden" value="inYgLvzSpOOWWVoP" />
                                 <fieldset>
-                                 
+
                                     <table id="shopping-cart-table" class="data-table cart-table">
                                         <thead>
                                             <tr class="em-block-title">
@@ -52,14 +52,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           
+
                                             {!! csrf_field() !!}
                                             <?php $count = 0;?>
                                             @foreach($content as $item)
                                             
-                                            <tr class="last even">
+                                            <tr class="last even {{$item['rowid']}}">
                                                 <td>
-                                                    <div class="cart-product"><a href="{{asset('/xoasanpham/'.$item['rowid'])}}" title="Remove item" class="btn-remove btn-remove2">Remove item</a>
+                                                    <div class="cart-product"><a title="Remove item" class="btn-remove btn-remove2 " value="{{$item['rowid']}}">Remove item</a>
+
                                                         <a href="#" title=" Mommy's little sunshine graphic tee " class="product-image"><img src="{{asset($item['options']['image'])}}" style="height:80px;" width="100"/>
                                                         </a>
                                                     </div>
@@ -81,31 +82,36 @@
                                                         <div class="qty-ctl">
                                                             <button title="Increase Qty" onclick="qtyUp(<?php echo $count;?>); return false;" class="increase">increase</button>
                                                         </div>
+                                                        <div title="Cập nhật sản phẩm" value="{{$item['rowid']}}" class="updatecart button btn-continue" style="
+                                                        display: block;
+                                                        clear: both;
+                                                        margin-top: 55px;
+                                                        cursor: pointer;
+                                                        ">Cập nhật</div>
                                                     </div>
                                                 </td>
                                                 <td class="a-center last"> <span class="cart-price"> <span class="price">{{$item["price"]*$item["qty"]}}</span> </span>
                                                 </td>
                                             </tr>
-                                           
+
+
+                                            <?php $count++;?>
+                                            @endforeach
                                         </tbody>
-                                        <?php $count++;?>
-                                          @endforeach
                                         <tfoot>
                                             <tr>
                                                 <td colspan="7" class="a-right">
                                                     <button type="button" title="Continue Shopping" class="button btn-continue"><span><span>Continue Shopping</span></span>
-                                                    </button>
-                                                    <button type="submit" name="update_cart_action" value="update_qty" title="Update Shopping Cart" class="button btn-update updatecart" id = "{{$item['rowid']}}"><span><span>Update Shopping Cart</span></span>
                                                     </button>
 
                                                 </td>
                                             </tr>
                                         </tfoot>
 
-                                      
-                                   
 
-                                       
+
+
+
                                     </form>
 
                                 </table>
@@ -116,10 +122,10 @@
                         @endif
                         <div class="cart-collaterals row">
 
-                         
+
 
                             <div class="first col-md-16 col-sm-24">
-                               
+
                             </div><!-- /first -->
 
                             <div class="last totals col-md-8 col-sm-24">
@@ -169,28 +175,53 @@
 @section('js')
 <script type="text/javascript">
     $(document).ready(function() {
-      $(".updatecart").click(function(){
-        var rowid = $(this).attr('id');
-        var qty = $(this).parent().parent().find(".qty").val();
-        var token = $("input[name='_token']").val();
-        $.ajax({
-          url:'capnhatgiohang/'+ rowid +'/'+ qty ,
-          type:'GET',
-          async:false,
-          data:{"_token":token,"id":rowid,"qty":qty},
-          success:function (data) {
-            if(data == 123){
-              alert('Cập nhật giỏ hàng thành công');
-          }
-      }
 
-  });
+        $(".btn-remove").click(function(){
+            var token = $("input[name='_token']").val();
+            var rowid= $(".btn-remove").attr('value');
+
+            $.ajax({
+                url: 'xoaspcart',
+                type:'POST',
+                data:{"_token":token,"rowid":rowid},
+                dataType:'text',
+                success:function(data){
+                  if(data="oke"){
+                      $('.'+rowid).remove();
+                      alert('Xóa thành công!!!');
+                  }
+              }
+          });
+
+        });
+
+
+        $(".updatecart").click(function(){
+            
+            var rowid = $(this).attr('value');
+
+            var qty = $(this).parent().parent().find(".qty").val();
+
+            var token = $("input[name='_token']").val();
+
+            $.ajax({
+              url:'capnhatcart',
+              type:'POST',
+              data:{"_token":token,"rowid":rowid,"qty":qty},
+            dataType:'text',
+              success:function (data) {
+                if(data == 'oke'){
+                  alert('Cập nhật giỏ hàng thành công');
+              }
+          }
+
+      });
+        });
     });
-  });
 </script>
 <script type="text/javascript">
     function qtyDown(id) {
-       
+
         var qty_el = document.getElementById('cart[' + id + '][qty]');
         var qty = qty_el.value;
         if (!isNaN(qty) && qty > 1) {
