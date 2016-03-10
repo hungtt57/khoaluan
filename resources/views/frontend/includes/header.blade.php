@@ -71,7 +71,7 @@
                                             <div class="em_nav" id="toogle_menu_7_5505">
                                                 <ul class="hnav em_menu_mobile">
                                                     <li class="menu-item-link menu-item-depth-0 fa fa-home menu-item-parent">
-                                                        <a class="em-menu-link" href="#"> <span> Trang chủ </span> </a>
+                                                        <a class="em-menu-link" href="{{asset('/')}}"> <span> Trang chủ </span> </a>
                                                         <ul class="menu-container">
                                                             <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col9 grid_18 menu-item-parent" style="">
                                                                 <ul class="menu-container">
@@ -467,7 +467,7 @@
                                         <div class="em_nav" id="toogle_menu_4_7164">
                                             <ul class="hnav em_hoz_menu effect-menu">
                                                 <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                    <a class="em-menu-link" href="#"> <span>Trang chủ </span> </a>
+                                                    <a class="em-menu-link" href="{{asset('/')}}"> <span>Trang chủ </span> </a>
 
                                                 </li><!-- /.menu-item-link -->
 

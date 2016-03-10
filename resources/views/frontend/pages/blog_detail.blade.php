@@ -26,10 +26,7 @@
                             <div class="em-main-container em-col2-left-layout">
                                 <div class="row">
                                     <div class="col-sm-18 col-sm-push-6 em-col-main">
-                                        <div class="em_post-action-top">
-                                            <a class="prev-button" href="#"> <img alt="" src="images/em_prev.gif" /> </a>
-                                            <a class="next-button null" href="#"> <img alt="" src="images/em_next-null.gif" /> </a>
-                                        </div>
+                                        
                                         <div class="em_post-item">
                                             <div class="post-title">
                                                 <h2>{{$blog_detail->title}}</h2>
@@ -98,42 +95,7 @@
                                                 </div>
                                                 <div class="form-comment-container"> <span id="new"><h3>Leave Your Comment</h3> </span>
                                                     <div id="0_comment_box" class="form-comment">
-                                                        <form method="post" id="comform" enctype="multipart/form-data" onsubmit="return processForm();">
-                                                            <div class="field" id="username">
-                                                                <label class="required" for="name">Username<em>*</em>
-                                                                </label>
-                                                                <div class="input-box">
-                                                                    <input type="text" class="input-text required-entry" value="" title="Name" id="name" name="username">
-                                                                </div>
-                                                            </div>
-                                                            <div class="field" id="email">
-                                                                <label class="required" for="email1">Your Email<em>*</em>
-                                                                </label>
-                                                                <div class="input-box">
-                                                                    <input type="text" class="input-text required-entry validate-email" value="" title="Email" id="email1" name="email">
-                                                                </div>
-                                                            </div>
-                                                            <div class="input-box">
-                                                                <label class="required" for="comment">Comment<em>*</em>
-                                                                </label>
-                                                                <textarea rows="2" cols="10" class="required-entry input-text" style="width:306px;height:200px" title="Comment" id="comment" name="comment_content"></textarea>
-                                                            </div>
-                                                            <script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6Ld1Z-MSAAAAAGsU_aFn8G72FhHBsPAID4loAEnh"></script>
-                                                            <noscript>
-                                                                <iframe src="http://api.recaptcha.net/noscript?k=6Ld1Z-MSAAAAAGsU_aFn8G72FhHBsPAID4loAEnh" height="300" width="500" frameborder="0"></iframe>
-                                                                <br/>
-                                                                <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
-                                                                <input type="hidden" name="recaptcha_response_field" value="manual_challenge" /> </noscript>
-                                                            <label class="required-1 " for="recaptcha">Required Field<em>*</em>
-                                                            </label>
-                                                            <div class="blog_submit">
-                                                                <button class="button" type="submit" name="submit" value="Post"><span><span>Submit</span></span>
-                                                                </button>
-                                                                <input type="hidden" name="parent_id" value="0" id="parent_id" />
-                                                                <input type="hidden" name="post_id" id="post_id" value="9" />
-                                                                <input type="hidden" name="uri" id="uri" value="/blog/pineapples-mermaids-and-more-kooks-hit-secret-garden-festival.html" />
-                                                            </div>
-                                                        </form>
+                                                        
                                                     </div><!-- /#0_comment_box -->
                                                 </div><!-- /.form-comment-container -->
                                             </div><!-- /.comments -->
@@ -206,40 +168,7 @@
                                                 </ul>
                                             </div>
                                         </div><!-- /.block -->
-                                        <div class="block em_block-tag-cloud em-line-01">
-                                            <div class="block-title"> <strong><span>Tag Cloud</span></strong>
-                                            </div>
-                                            <div class="block-content">
-                                                <ul>
-                                                    <li class="item"><a href="#" style="font-size:32px;">shoes</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">fashion</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">kid</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">sport</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">style</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">comestic</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">aging</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">jewelry</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">you</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">garden</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">mistakes</a>
-                                                    </li>
-                                                    <li class="item"><a href="#" style="font-size:12px;">your</a>
-                                                    </li>
-                                                </ul>
-                                                <div class="actions"> <a class="button-link" href="#"><span><span>View All Tags</span></span></a>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.block -->
+                                        
                                     </div><!-- /. em-sidebar -->
                                 </div>
                             </div><!-- /.em-main-container -->
