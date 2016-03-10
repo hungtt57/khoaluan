@@ -66,43 +66,23 @@
                                             </div>
                                             <div class="block-content">
                                                 <ul class="em-recent-post">
+                                                @foreach($recent_blogs as $key => $recent_blog)
                                                     <li class="item">
-                                                        <a href="blog-detail.html"> <img alt="" src="images/blog/em_ads_07_15.jpg" /> </a> <a class="post-title em-blog-title" href="blog-detail.html">Pineapples, Mermaids and More Kooks Hit Secret Garden Festival</a>
+                                                        <a href="{{asset('/blog_detail/'.$recent_blog->id.'/'.$recent_blog->alias)}}"> <img alt="" src="{{asset($recent_blog->image)}}" /> </a> <a class="post-title em-blog-title" href="blog-detail.html">{{$recent_blog->title}}</a>
                                                         <p class="intro">
-                                                            <p><span>Boutique festival Secret Garden went down in Sydney&rsquo;s&nbsp;Camden over the weekend, and all the free-spirited kids came out to play in a mix of creative and outlandish ensembles. Seriously, if you didn&rsquo;t scream eccentric and quirky, you would&rsquo;ve felt like the odd one out amongst the aliens, mermaids and glittery hippies dripping in face paint, flash tatts, tiaras, and clangling gypsy necklaces.</span>
+                                                            <p><span>{{$recent_blog->description}}</span>
                                                             </p>
                                                         </p>
                                                         <div class="post-header">
-                                                            <p class="post-by"> <span class="post-user"><span>admin</span></span>
-                                                            </p> <span class="post-time"><small class="time-stamp">Jul 21 2015</small></span>
+                                                           
+                                                            </p> <span class="post-time"><small class="time-stamp">{{$recent_blog->created_at}}</small></span>
                                                         </div>
                                                     </li>
+                                                @endforeach
                                                 </ul>
                                             </div>
                                         </div><!-- /.block -->
-                                        <div class="block em_block-recent-comments em-line-01">
-                                            <div class="block-title"> <strong><span>Recent Comments</span></strong>
-                                            </div>
-                                            <div class="block-content">
-                                                <ul class="em-blog-recent-comment">
-                                                    <li class="recent-comment-item"> <a class="comment-title" href="blog-detail.html">Pineapples, Mermaids and More Kooks Hit Secret Garden Festival</a>
-                                                        <div class="recent-comment-content"> We are particularly excited about this transaction...</div>
-                                                        <div class="comment-header"> <span class="comment-by"> <span>Ben Sherman</span> </span> <span class="post-time"><small class="time-stamp">Jul 22 2015</small></span>
-                                                        </div>
-                                                    </li>
-                                                    <li class="recent-comment-item"> <a class="comment-title" href="blog-detail.html">Pineapples, Mermaids and More Kooks Hit Secret Garden Festival</a>
-                                                        <div class="recent-comment-content"> It will be interesting to see which firms seize...</div>
-                                                        <div class="comment-header"> <span class="comment-by"> <span>Drappers</span> </span> <span class="post-time"><small class="time-stamp">Jul 22 2015</small></span>
-                                                        </div>
-                                                    </li>
-                                                    <li class="recent-comment-item"> <a class="comment-title" href="blog-detail.html">Pineapples, Mermaids and More Kooks Hit Secret Garden Festival</a>
-                                                        <div class="recent-comment-content"> s the fashion business as guilty as any other...</div>
-                                                        <div class="comment-header"> <span class="comment-by"> <span>Musgrave</span> </span> <span class="post-time"><small class="time-stamp">Jul 22 2015</small></span>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div><!-- /.block -->
+                                      
                                         
                                     </div><!-- /. em-sidebar -->
                                 </div>

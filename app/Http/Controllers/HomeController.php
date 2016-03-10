@@ -17,7 +17,7 @@ class HomeController extends Controller
     {
         $allCategories= Category::all();
         $new_products = DB::table('products')->select('id','ten','anhdaidien','gia','alias')->orderBy('id','DESC')->paginate(8);
-        $blogs = DB::table('blog')->select('id','title','description','image','alias')->orderBy('id','DESC')->paginate(2);
+        $blogs = DB::table('blog')->select('id','title','description','image','alias')->orderBy('id','ASC')->paginate(2);
        return view('frontend.pages.home',compact('allCategories','new_products','blogs'));
     }
     public function loaisanpham($id)
@@ -64,7 +64,8 @@ class HomeController extends Controller
    
     public function blog(){
         $allBlogs=DB::table('blog')->paginate(10);
-       return view('frontend.pages.blog',compact('allBlogs'));
+        $recent_blogs = DB::table('blog')->orderBy('id','DESC')->paginate(2); 
+       return view('frontend.pages.blog',compact('allBlogs','recent_blogs'));
     }
     public function blog_detail($id){
         $blog_detail = DB::table('blog')->where('id',$id)->first();
