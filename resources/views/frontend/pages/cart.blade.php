@@ -67,11 +67,11 @@
                                                 </td>
                                                 <td>
                                                     <h2 class="product-name"> <a href="product-detail.html"> {{$item['name']}} </a></h2>
-                                                    <p class="sku">Ba_13</p>
+                                                    
                                                 </td>
 
 
-                                                <td class="a-center"> <span class="cart-price"> <span class="price">{{$item['price']}}</span> </span>
+                                                <td class="a-center"> <span class="cart-price"> <span class="price price_{{$item['rowid']}} ">{{$item['price']}}</span> </span>
                                                 </td>
                                                 <td class="a-center">
                                                     <div class="qty_cart">
@@ -90,7 +90,7 @@
                                                         ">Cập nhật</div>
                                                     </div>
                                                 </td>
-                                                <td class="a-center last"> <span class="cart-price"> <span class="price">{{$item["price"]*$item["qty"]}}</span> </span>
+                                                <td class="a-center last"> <span class="cart-price"> <span class="price  price_total{{$item['rowid']}}">{{$item["price"]*$item["qty"]}}</span> </span>
                                                 </td>
                                             </tr>
 
@@ -101,7 +101,7 @@
                                         <tfoot>
                                             <tr>
                                                 <td colspan="7" class="a-right">
-                                                    <button type="button" title="Continue Shopping" class="button btn-continue"><span><span>Continue Shopping</span></span>
+                                                    <button type="button" href="javascript:history.back()" title="Continue Shopping" class="button btn-continue"><span><span>Continue Shopping</span></span>
                                                     </button>
 
                                                 </td>
@@ -203,7 +203,10 @@
             var qty = $(this).parent().parent().find(".qty").val();
 
             var token = $("input[name='_token']").val();
+            var str_price = 'price_'+rowid;
 
+            var price = parseInt($('.'+str_price).text());
+          
             $.ajax({
               url:'capnhatcart',
               type:'POST',
@@ -211,6 +214,9 @@
             dataType:'text',
               success:function (data) {
                 if(data == 'oke'){
+                    total_price= price*parseInt(qty);
+                $('.price_total'+rowid).text(total_price); //cap nhat lai gia
+                $('.qty_header'+rowid).text(qty);
                   alert('Cập nhật giỏ hàng thành công');
               }
           }

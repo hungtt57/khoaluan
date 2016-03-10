@@ -126,7 +126,7 @@ class CrawlerMuathuoc extends Command
        $linkanh=$html->find('.image .lazy',0)->src;
         $sanpham=Product::where('alias','=',$alias)->first();
        if($sanpham){
-            $sanpham->gia=$gia;
+            $sanpham->gia=format_gia($gia);
             $sanpham->masp=$masp;
             $sanpham->congdung=$congdung;
             $sanpham->cachdung=$cachdung;
@@ -141,7 +141,7 @@ class CrawlerMuathuoc extends Command
         $sanpham=new Product;
         $sanpham->ten=$tensp;
         $sanpham->alias=$alias;
-        $sanpham->gia=$gia;
+        $sanpham->gia=format_gia($gia);
             $sanpham->masp=$masp;
             $sanpham->donggoi=$donggoi;
             $sanpham->congdung=$congdung;

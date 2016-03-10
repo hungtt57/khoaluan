@@ -22,6 +22,17 @@ Route::get('/checkout', function () {
 Route::get('/timkiem','HomeController@timkiem');
 Route::post('xoaspcart','HomeController@xoaspcart');
 Route::post('capnhatcart','HomeController@capnhatcart');
+
+
+Route::get('/','HomeController@index');
+Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
+Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');
+Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');
+Route::get('/giohang','HomeController@giohang');
+Route::get('/xoasanpham/{id}','HomeController@xoasanpham');
+Route::get('capnhatgiohang/{id}/{qty}','HomeController@capnhatgiohang');
+Route::get('/blog','HomeController@blog');
+Route::get('/blog_detail/{id}/{ten}','HomeController@blog_detail');
 // end frontend
 //admin
 Route::group(['prefix' => 'admin'], function () {
@@ -66,12 +77,3 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/{id}/delete','BlogController@destroy');
      });
 });
-Route::get('/','HomeController@index');
-Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
-Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');
-Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');
-Route::get('/giohang','HomeController@giohang');
-Route::get('/xoasanpham/{id}','HomeController@xoasanpham');
-Route::get('capnhatgiohang/{id}/{qty}','HomeController@capnhatgiohang');
-Route::get('/blog','HomeController@blog');
-Route::get('/blog_detail/{id}/{ten}','HomeController@blog_detail');

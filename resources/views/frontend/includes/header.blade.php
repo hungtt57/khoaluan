@@ -420,68 +420,68 @@
                                             <div class="topcart-content">
                                                 <table class="table">
                                                     <thead>
-                                                    <tr>
-                                                       
-                                                        <th>Tên thuốc</th>
-                                                        <th>Số Lượng</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @foreach($giohang as $value)
-                                                    <tr>
-                                                        
-                                                        <td>{{$value["name"]}}</td>
-                                                        <td>{{$value["qty"]}}</td>
-                                                    </tr>
-                                            <!-- <p class="amount-content ">{{$value->name}}</p> -->
-                                            @endforeach
-                                                </tbody>
-                                            </table>
-                                            
+                                                        <tr>
+
+                                                            <th>Tên thuốc</th>
+                                                            <th>Số Lượng</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach($giohang as $value)
+                                                        <tr>
+
+                                                            <td>{{$value["name"]}}</td>
+                                                            <td class="qty_header{{$value['rowid']}}">{{$value["qty"]}}</td>
+                                                        </tr>
+                                                        <!-- <p class="amount-content ">{{$value->name}}</p> -->
+                                                        @endforeach
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                @else
-                                <div class="em-summary-topcart">
-                                    <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
-                                </div>
-                                <div class="em-container-js-topcart topcart-popup" style="display:none">
-                                    <div class="topcart-popup-content">
-                                        <p class="em-block-subtitle">Giỏ hàng</p>
-                                        <div class="topcart-content">
+                                    @else
+                                    <div class="em-summary-topcart">
+                                        <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
+                                    </div>
+                                    <div class="em-container-js-topcart topcart-popup" style="display:none">
+                                        <div class="topcart-popup-content">
+                                            <p class="em-block-subtitle">Giỏ hàng</p>
+                                            <div class="topcart-content">
 
-                                            <p class="amount-content ">Bạn không có sản phẩm nào trong giỏ hàng</p>
+                                                <p class="amount-content ">Bạn không có sản phẩm nào trong giỏ hàng</p>
 
+                                            </div>
                                         </div>
                                     </div>
+                                    @endif
                                 </div>
-                                @endif
-                            </div>
-                        </div><!-- /.em-wrapper-js-topcart -->
-                    </div><!-- /.em-top-cart -->
+                            </div><!-- /.em-wrapper-js-topcart -->
+                        </div><!-- /.em-top-cart -->
 
-                    <div class="em-menu-hoz f-right">
-                        <div id="em-main-megamenu">
-                            <div class="em-menu">
-                                <div class="megamenu-wrapper wrapper-4_7164">
-                                    <div class="em_nav" id="toogle_menu_4_7164">
-                                        <ul class="hnav em_hoz_menu effect-menu">
-                                            <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                <a class="em-menu-link" href="#"> <span>Trang chủ </span> </a>
+                        <div class="em-menu-hoz f-right">
+                            <div id="em-main-megamenu">
+                                <div class="em-menu">
+                                    <div class="megamenu-wrapper wrapper-4_7164">
+                                        <div class="em_nav" id="toogle_menu_4_7164">
+                                            <ul class="hnav em_hoz_menu effect-menu">
+                                                <li class="menu-item-link menu-item-depth-0  menu-item-parent">
+                                                    <a class="em-menu-link" href="#"> <span>Trang chủ </span> </a>
 
-                                            </li><!-- /.menu-item-link -->
+                                                </li><!-- /.menu-item-link -->
 
-                                            <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                <a class="em-menu-link" href="#"> <span> Danh mục </span> </a>
-                                                <ul class="menu-container">
-                                                    <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
-                                                        <ul class="menu-container">
-                                                         <?php $categories = category_menu();?>
-                                                         @foreach($categories as $key => $value)
-                                                            <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent" style="">
+                                                <li class="menu-item-link menu-item-depth-0  menu-item-parent">
+                                                    <a class="em-menu-link" href="#"> <span> Danh mục </span> </a>
+                                                    <ul class="menu-container">
+                                                        <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
+                                                            <ul class="menu-container">
+                                                               <?php $categories = category_menu();?>
+                                                               @foreach($categories as $key => $value)
+                                                               <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent" style="">
                                                                 <a href="{{asset('/loaisanpham/'.$value->id.'/'.$value->alias)}}}">{{$value->ten}}</a>
                                                             </li><!-- /.menu-item-vbox -->
-                                                         @endforeach
+                                                            @endforeach
                                                         </ul><!-- /.menu-container -->
                                                     </li>
                                                 </ul><!-- /.menu-container -->
