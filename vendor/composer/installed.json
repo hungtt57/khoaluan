@@ -3882,8 +3882,6 @@
             "thumbnail",
             "watermark"
         ]
-<<<<<<< HEAD
-=======
     },
     {
         "name": "gloudemans/shoppingcart",
@@ -4048,6 +4046,6 @@
             "rest",
             "web service"
         ]
->>>>>>> 07a10be2a04972bf6ae02ad504dc828771ab4876
+
     }
 ]
