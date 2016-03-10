@@ -356,12 +356,12 @@
                                     <div class="em-wrapper-js-search em-search-style01">
                                         <div class="em-wrapper-search em-no-category-search"> <a class="em-search-icon" title="Search" href="javascript:void(0);"><span>Search</span></a>
                                             <div class="em-container-js-search" style="display: none;">
-                                                <form id="search_mini_form" method="get">
+                                                <form id="search_mini_form" method="get" action="{{asset('timkiem')}}">
                                                     <div class="form-search no_cate_search">
                                                         <div class="text-search">
                                                             <label for="search">Search:</label>
-                                                            <input id="search" type="text" name="q" value="" class="input-text" maxlength="128" placeholder="Search entire store here..." />
-                                                            <button type="submit" title="Search" class="button"><span><span>Search</span></span>
+                                                            <input id="search" type="text" name="search"  class="input-text" maxlength="128" placeholder="Nhập từ khóa" />
+                                                            <button type="submit" title="Search" class="button"><span><span>Tìm kiếm</span></span>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -371,55 +371,7 @@
                                     </div><!-- /.em-wrapper-js-search -->
                                 </div>
                             </div><!-- /.em-search -->
-                            <div class="em-top-links">
-                                <div class="f-right"></div>
-                                <div class="f-right">
-                                    <ul class="em-links-wishlist">
-                                        <li class="first last"><a href="wishlist.html" title="Wishlist">Wishlist</a></li>
-                                    </ul>
-                                </div>
-                                <ul class="list-inline f-right">
-                                    <li><a class="em-register-link" href="register.html" title="Register">Đăng ký</a></li>
-                                </ul>
-                                <div id="em-login-link" class="account-link f-right em-non-login"> 
-                                    <a href="login.html" class="link-account" id="link-login" title="Login">Đăng nhập</a>
-                                    <div class="em-account" id="em-account-login-form" style="display: none;">
-                                        <form method="post" id="top-login-form">
-                                            <input name="form_key" type="hidden" value="LqnwQyvcDpOju7G3" />
-                                            <div class="block-content">
-                                                <p class="login-title h6 primary">Login</p>
-                                                <p class="login-desc">If you have an account with us, please log in.</p>
-                                                <ul class="form-list">
-                                                    <li>
-                                                        <label for="mini-login">Địa chỉ email<em>*</em>
-                                                        </label>
-                                                        <input type="text" name="login[username]" id="mini-login" class="input-text required-entry validate-email" />
-                                                    </li>
-                                                    <li>
-                                                        <label for="mini-password">Mật khẩu<em>*</em>
-                                                        </label>
-                                                        <input type="password" name="login[password]" id="mini-password" class="input-text required-entry validate-password" />
-                                                    </li>
-                                                    <li><span class="required">* Các trường bắt buộc </span>
-                                                    </li>
-                                                </ul>
-                                                <div class="action-forgot">
-                                                    <div class="login_forgotpassword">
-                                                        <p><a href="#">Quên mật khẩu</a>
-                                                        </p>
-                                                        <p><span>Chưa có tài khoản</span><a class="create-account-link-wishlist" href="h.html#" title="Sign Up">Đăng ký</a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="actions">
-                                                        <button type="submit" class="button"><span><span>Đăng nhập</span></span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form><!-- /#top-login-form -->
-                                    </div><!-- /#em-account-login-form -->
-                                </div><!-- /#em-login-link -->
-                            </div><!-- /.em-top-links -->
+                            
                         </div>
                     </div>
                 </div>
@@ -543,7 +495,7 @@
                                                                     <li class="menu-item-text menu-item-depth-3  ">
                                                                         <div class="menu-cate effect03 zoom-img">
                                                                             <div>
-                                                                                <a title="em-sample-title" href="category-two-columns-left.html"><img class="img-responsive" src="{{asset('public/frontend/images/menu/img-cate2.jpg')}}" alt="em-sample-alt" />
+                                                                                <a title="em-sample-title" hrĐef="category-two-columns-left.html"><img class="img-responsive" src="{{asset('public/frontend/images/menu/img-cate2.jpg')}}" alt="em-sample-alt" />
                                                                                 </a>
                                                                             </div>
                                                                             <p class="h5"><a href="http://demo.emthemes.com/everything/index.php/fashion.html">Two Columns Left</a>

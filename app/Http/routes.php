@@ -20,6 +20,18 @@ Route::get('/product', function () {
 Route::get('/cart', function () {
     return view('frontend.pages.cart');
 });
+Route::get('/','HomeController@index');
+Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
+Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');
+Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');
+Route::get('/giohang','HomeController@giohang');
+
+Route::get('/timkiem','HomeController@timkiem');
+
+
+
+
+// end frontend
 
 //admin
 Route::group(['prefix' => 'admin'], function () {
@@ -69,8 +81,3 @@ Route::group(['prefix' => 'admin'], function () {
 
 });
 
-Route::get('/','HomeController@index');
-Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
-Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');
-Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');
-Route::get('/giohang','HomeController@giohang');

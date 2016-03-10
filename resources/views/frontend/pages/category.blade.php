@@ -52,9 +52,7 @@
                                                         </div>
                                                     </div><!-- /.pager -->
                                                     <div class="sorter">
-                                                        <p class="view-mode">
-                                                            <label>View as:</label> <strong title="Grid" class="grid">Grid</strong> <a href="category-one-column-list.html" title="List" class="list">List</a>
-                                                        </p>
+                                                     
                                                         <div class="sort-by toolbar-switch">
                                                             <div class="toolbar-title">
                                                                 <label>Sort By</label>
