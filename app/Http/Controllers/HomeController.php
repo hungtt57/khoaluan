@@ -1,14 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Category;
 use App\Http\Controllers\Controller;
 use DB,Cart;
-
 use App\Product;
-
+use Request;
 use App\Blog;
 class HomeController extends Controller
 {
@@ -28,15 +24,11 @@ class HomeController extends Controller
         $name_cate = DB::table('categories')->select('ten')->where('id',$id)->first();
         return view('frontend.pages.category',compact('product_cate','name_cate'));
     }
-
-
     public function chitietsanpham($id){
         $product_detail  = DB::table('products')->where('id',$id)->first();
        $category = DB::table('categories')->where('id',  $product_detail->category_id)->first();
         return view('frontend.pages.product',compact('product_detail','category'));
     }
-
-
     public function muahang($id){
         $qty = Request::get("qty");
         $product_buy = DB::table('products')->where('id',$id)->first();
@@ -44,21 +36,11 @@ class HomeController extends Controller
         $content=Cart::content();
         return redirect()->back();
     }
-
-
-
-
-
      public function giohang(){
         $content = Cart::content();
         $total = Cart::total();
         return view('frontend.pages.cart',compact('content','total'));
     }
-
-
-
-
-
     public function timkiem(Request $request){
         $key=$request->input('search');
          if($key=="" || $key==" "){
@@ -69,11 +51,9 @@ class HomeController extends Controller
      
         $blogs = Blog::where('title','like','%'.$key.'%')->paginate(5);
         
-
        return view('frontend.pages.search',compact('products','blogs','key'));
     }
     
-
      public function xoasanpham($id){
         Cart::remove($id);
         return redirect('/giohang');
@@ -94,5 +74,4 @@ class HomeController extends Controller
         $blog_detail = DB::table('blog')->where('id',$id)->first();
         return view('frontend.pages.blog_detail',compact('blog_detail'));
     }
-
 }
