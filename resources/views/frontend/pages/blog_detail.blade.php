@@ -35,25 +35,15 @@
                                                 <h2>{{$blog_detail->title}}</h2>
                                             </div>
                                             <div class="post-content">
-                                                <p><span></span>
+                                                <p><span><?php echo $blog_detail->content;?></span>
                                                 </p>
                                                 
                                             </div>
                                             <div class="post-header">
-                                                <p class="post-by"> <span class="post-user"><span>admin</span></span>
-                                                </p> <span class="post-time"><small class="time-stamp">Jul 21 2015</small></span>
+                                                
+                                                </p> <span class="post-time"><small class="time-stamp">{{$blog_detail->created_at}}</small></span>
                                             </div>
-                                            <div class="em_post-action">
-                                                <div class="tags"> <span>Tags: </span>
-                                                    <ul>
-                                                        <li class="item"><a href="#" style="font-size:px;">garden</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="post-share"> <span>Share this post</span>
-                                                    
-                                                </div>
-                                            </div>
+                                            
                                             <div class="comments">
                                                 <div class="post-footer"> <span class="comment-count"> 3 Comments </span> <span class="separator">|</span> <span class="post-by">Posted by <span>admin</span></span>
                                                 </div>
@@ -151,36 +141,7 @@
                                     </div><!-- /.em-col-main -->
 
                                     <div class="col-sm-6 col-sm-pull-18 em-col-left em-sidebar">
-                                        <div class="block em_blog-cat em-line-01">
-                                            <div class="block-title"> <strong><span>Blog Categories</span></strong>
-                                            </div>
-                                            <div class="block-content">
-                                                <ul class="nav-blog">
-                                                    <li class=' level0 first parent'><a href='#'><span>Fashion</span></a>
-                                                        <ul class='level0'>
-                                                            <li class=' level1 first '><a href='#'><span>Men Fashion</span></a>
-                                                            </li>
-                                                            <li class=' level1 last '><a href='#'><span>Woman Fashion</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class=' level0  '><a href='#'><span>Shoes</span></a>
-                                                    </li>
-                                                    <li class=' level0  '><a href='#'><span>Glass</span></a>
-                                                    </li>
-                                                    <li class=' level0  '><a href='#'><span>Baby</span></a>
-                                                    </li>
-                                                    <li class=' level0  '><a href='#'><span>Sport</span></a>
-                                                    </li>
-                                                    <li class=' level0  '><a href='#'><span>Swatch</span></a>
-                                                    </li>
-                                                    <li class=' level0  '><a href='#'><span>Jewelry</span></a>
-                                                    </li>
-                                                    <li class=' level0 last '><a href='#'><span>Garden</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div><!-- /.block -->
+                                       
                                         <div class="block em_block-recent-post em-line-01">
                                             <div class="block-title"> <strong><span>Recent Posts</span></strong>
                                             </div>
