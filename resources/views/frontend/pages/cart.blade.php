@@ -54,6 +54,7 @@
                                         <tbody>
                                            
                                             {!! csrf_field() !!}
+                                            <?php $count = 0;?>
                                             @foreach($content as $item)
                                             
                                             <tr class="last even">
@@ -74,11 +75,11 @@
                                                 <td class="a-center">
                                                     <div class="qty_cart">
                                                         <div class="qty-ctl">
-                                                            <button title="Decrease Qty" onclick="qtyDown(302); return false;" class="decrease">decrease</button>
+                                                            <button title="Decrease Qty" onclick="qtyDown(<?php echo $count;?>); return false;" class="decrease">decrease</button>
                                                         </div>
-                                                        <input id="cart[302][qty]" class="qty" name="cart[302][qty]" value="{{$item['qty']}}" size="4" title="Qty" class="input-text qty" maxlength="12" />
+                                                        <input id="cart[<?php echo $count;?>][qty]" class="qty" name="cart[<?php echo $count;?>][qty]" value="{{$item['qty']}}" size="4" title="Qty" class="input-text qty" maxlength="12" />
                                                         <div class="qty-ctl">
-                                                            <button title="Increase Qty" onclick="qtyUp(302); return false;" class="increase">increase</button>
+                                                            <button title="Increase Qty" onclick="qtyUp(<?php echo $count;?>); return false;" class="increase">increase</button>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -87,6 +88,8 @@
                                             </tr>
                                            
                                         </tbody>
+                                        <?php $count++;?>
+                                          @endforeach
                                         <tfoot>
                                             <tr>
                                                 <td colspan="7" class="a-right">
@@ -98,8 +101,13 @@
                                                 </td>
                                             </tr>
                                         </tfoot>
-                                         @endforeach
+
+                                      
                                    
+
+                                       
+                                    </form>
+
                                 </table>
                             </fieldset>
                         </form><!-- /form -->
@@ -107,7 +115,13 @@
                         <h1>Giỏ hàng trống</h1>
                         @endif
                         <div class="cart-collaterals row">
+
                          
+
+                            <div class="first col-md-16 col-sm-24">
+                               
+                            </div><!-- /first -->
+
                             <div class="last totals col-md-8 col-sm-24">
                                 <div class="em-box-cart">
                                     <h2>Order Total</h2>
@@ -143,7 +157,7 @@
                                 </div><!-- /.em-box-cart -->
                             </div><!-- /.last -->
                         </div><!-- /.cart-collaterals -->
-                    
+
                     </div>
                 </div>
             </div>
@@ -176,7 +190,7 @@
 </script>
 <script type="text/javascript">
     function qtyDown(id) {
-        alert(302);
+       
         var qty_el = document.getElementById('cart[' + id + '][qty]');
         var qty = qty_el.value;
         if (!isNaN(qty) && qty > 1) {

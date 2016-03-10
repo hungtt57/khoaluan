@@ -476,108 +476,11 @@
                                                 <ul class="menu-container">
                                                     <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
                                                         <ul class="menu-container">
-                                                            <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent" style="">
-                                                                <ul class="menu-container">
-                                                                    <li class="menu-item-text menu-item-depth-3  ">
-                                                                        <div class="menu-cate effect03 zoom-img">
-                                                                            <div>
-                                                                                <a title="em-sample-title" href="category-one-column.html"><img class="img-responsive" src="{{asset('public/frontend/images/menu/img-cate1.jpg')}}" alt="em-sample-alt" />
-                                                                                </a>
-                                                                            </div>
-                                                                            <p class="h5"><a href="http://demo.emthemes.com/everything/index.php/shoe.html">One Column</a>
-                                                                            </p>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </li><!-- /.menu-item-vbox -->
-                                                            <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent" style="">
-                                                                <ul class="menu-container">
-                                                                    <li class="menu-item-text menu-item-depth-3  ">
-                                                                        <div class="menu-cate effect03 zoom-img">
-                                                                            <div>
-                                                                                <a title="em-sample-title" hrĐef="category-two-columns-left.html"><img class="img-responsive" src="{{asset('public/frontend/images/menu/img-cate2.jpg')}}" alt="em-sample-alt" />
-                                                                                </a>
-                                                                            </div>
-                                                                            <p class="h5"><a href="http://demo.emthemes.com/everything/index.php/fashion.html">Two Columns Left</a>
-                                                                            </p>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </li><!-- /.menu-item-vbox -->
-
-
+                                                        
                                                         </ul><!-- /.menu-container -->
                                                     </li>
                                                 </ul><!-- /.menu-container -->
                                             </li><!-- /.menu-item-link -->
-                                            <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                <a class="em-menu-link" href="#"> <span> Sản phẩm </span> </a>
-                                                <ul class="menu-container">
-                                                    <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
-                                                        <ul class="menu-container" style="padding:0 10px">
-                                                            <li class="menu-item-vbox menu-item-depth-2 col-sm-6 grid_6 alpha menu-item-parent" style="">
-                                                                <ul class="menu-container">
-                                                                    <li class="menu-item-text menu-item-depth-3  ">
-                                                                        <div class="em-line-01">
-                                                                            <h5 class="text-uppercase">Product Types</h5>
-                                                                            <div>
-                                                                                <ul class="menu-container">
-                                                                                    <li class="menu-item-link menu-item-depth-1 first label-hot-menu"><a class="em-menu-link" href="#-fringe-dress.html">Simple product</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1"><a class="em-menu-link" href="product-virtual.html">Virtual Product</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1"><a class="em-menu-link" href="product-downloadable.html">Downloadable Product</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1"><a class="em-menu-link" href="product-configurable.html">Configurable Product</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1"><a class="em-menu-link" href="product-grouped.html">Grouped Product</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1 last"><a class="em-menu-link" href="product-bundle.html">Bundle Product</a>
-                                                                                    </li>
-                                                                                </ul><!-- /.menu-container -->
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </li><!-- /.menu-item-vbox -->
-                                                            <li class="menu-item-vbox menu-item-depth-2 col-sm-6 grid_6  menu-item-parent" style="">
-                                                                <ul class="menu-container">
-                                                                    <li class="menu-item-text menu-item-depth-3  ">
-                                                                        <div class="em-line-01">
-                                                                            <h5 class="text-uppercase">PRODUCT COLUMNS</h5>
-                                                                            <div>
-                                                                                <ul class="menu-container">
-                                                                                    <li class="menu-item-link menu-item-depth-1 first"><a class="em-menu-link" href="product-1-column.html">1 Column</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1 "><a class="em-menu-link" href="product-2-columns-left.html">2 Columns Left</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1 "><a class="em-menu-link" href="product-2-columns-right.html">2 Columns Right</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1 "><a class="em-menu-link" href="product-3-columns.html">3 Columns</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1 "><a class="em-menu-link" href="product-upsell.html">Upsell</a>
-                                                                                    </li>
-                                                                                    <li class="menu-item-link menu-item-depth-1 last"><a class="em-menu-link" href="product-related.html">Related Product</a>
-                                                                                    </li>
-                                                                                </ul><!-- /.menu-container -->
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </li><!-- /.menu-item-vbox -->
-                                                            <li class="menu-item-vbox menu-item-depth-2 col-sm-12 grid_12 omega menu-item-parent" style="">
-                                                                <ul class="menu-container">
-                                                                    <li class="menu-item-text menu-item-depth-3  ">
-                                                                        <p class="img-banner-menu pull-right"><img class="img-responsive" src="{{asset('public/frontend/images/wysiwyg/em_ads01.jpg')}}" alt="menu_adv" />
-                                                                        </p>
-                                                                    </li>
-                                                                </ul>
-                                                            </li><!-- /.menu-item-vbox -->
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li><!-- /.menu-item-link -->
-
                                             <li class="menu-item-link menu-item-depth-0  menu-item-parent">
                                                 <a class="em-menu-link" href="#"> <span> About </span> </a>
 
