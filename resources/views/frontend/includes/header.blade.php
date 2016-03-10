@@ -32,24 +32,7 @@
                 <div id="em-mheader-wrapper-menu"> <span class="visible-xs fa fa-bars" id="em-mheader-menu-icon"></span>
                     <div id="em-mheader-menu-content" style="display: none;">
                         <div class="em-wrapper-top">
-                            <div class="em-language-currency row">
-                                <div class="col-sm-24">
-                                    <div class="form-language em-language-style-mobile">
-                                        <ul>
-                                            <li class="selected">
-                                                <a href="#" title="English"> <img alt="english" src="{{asset('public/frontend/images/language/english.png')}}" /> </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="#" title="French"> <img alt="french" src="{{asset('public/frontend/images/language/french.png')}}" /> </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="#" title="German"> <img alt="german" src="{{asset('public/frontend/images/language/german.png')}}" /> </a>
-                                            </li>
-                                        </ul>
-                                    </div><!-- /.form-language -->
-
-                                </div>
-                            </div><!-- /.em-language-currency -->
+                           
                             <div class="em-top-links row">
                                 <div class="">
                                     <ul class="top-header-link links">
@@ -312,20 +295,7 @@
                                 </div><!-- /.em-top-menu -->
                             </div>
                         </div><!-- /.mobile-main-menu -->
-                        <div class="row mobile-block">
-                            <div class="col-sm-24">
-                                <ul class="em-mobile-help">
-                                    <li><a href="#" target="_blank"><span class="fa fa-download">&nbsp;</span>Download App</a>
-                                    </li>
-                                    <li><a href="#"><span class="fa fa-question-circle">&nbsp;</span>Help Center</a>
-                                    </li>
-                                    <li><a href="#"><span class="fa fa-star">&nbsp;</span>Feedback</a>
-                                    </li>
-                                    <li><a href="#"><span class="fa fa-comment-o">&nbsp;</span>Blog</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div><!-- /.mobile-block -->
+                        
                     </div>
                 </div><!-- /.em-mheader-wrapper-menu -->
             </div>
