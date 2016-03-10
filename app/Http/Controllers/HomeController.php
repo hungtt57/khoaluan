@@ -4,7 +4,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use DB,Cart;
 use App\Product;
-use Request;
+use Illuminate\Http\Request;
 use App\Blog;
 class HomeController extends Controller
 {
