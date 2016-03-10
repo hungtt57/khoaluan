@@ -476,6 +476,10 @@
                                                 <ul class="menu-container">
                                                     <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
                                                         <ul class="menu-container">
+                                                         
+                                                            <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent" style="">
+                                                                <a href="{{asset('/loaisanpham/'.$value->id.'/'.$value->alias)}}}"></a>
+                                                            </li><!-- /.menu-item-vbox -->
                                                         
                                                         </ul><!-- /.menu-container -->
                                                     </li>
