@@ -4,7 +4,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use DB,Cart;
 use App\Product;
-use Illuminate\Http\Request;
+use Request;
 use App\Blog;
 class HomeController extends Controller
 {
@@ -30,6 +30,7 @@ class HomeController extends Controller
         return view('frontend.pages.product',compact('product_detail','category'));
     }
     public function muahang($id){
+
         $qty = Request::get("qty");
         $product_buy = DB::table('products')->where('id',$id)->first();
         Cart::add(array('id'=> $id,'name'=> $product_buy->alias,'qty'=>$qty,'price'=> $product_buy->gia, 'options' => array('image' => $product_buy->anhdaidien)));
@@ -42,7 +43,7 @@ class HomeController extends Controller
         return view('frontend.pages.cart',compact('content','total'));
     }
     public function timkiem(Request $request){
-        $key=$request->input('search');
+        $key=Request::get('search');
          if($key=="" || $key==" "){
             return redirect()->back();
          }
