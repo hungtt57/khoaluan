@@ -75,7 +75,7 @@ class HomeController extends Controller
         if(Request::ajax()){
              $id=Request::get('rowid');
               Cart::remove($id);
-              echo 'oke';
+              echo Cart::total();
         }
     }
 
@@ -86,7 +86,7 @@ class HomeController extends Controller
             $qty = Request::get('qty');
             Cart::update($rowid,array('qty'=>$qty));
 
-              echo 'oke';
+            echo Cart::total();
         }
     }
 

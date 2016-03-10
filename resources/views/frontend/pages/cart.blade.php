@@ -101,8 +101,9 @@
                                         <tfoot>
                                             <tr>
                                                 <td colspan="7" class="a-right">
-                                                    <button type="button" href="javascript:history.back()" title="Continue Shopping" class="button btn-continue"><span><span>Continue Shopping</span></span>
-                                                    </button>
+                                                    <a type="button" href="javascript:history.back()" title="Continue Shopping" class="button btn-continue"><span><span style="
+    font-size: 16px;"> >>>Tiếp tục đặt hàng</span></span>
+                                                    </a>
 
                                                 </td>
                                             </tr>
@@ -127,41 +128,39 @@
                             <div class="first col-md-16 col-sm-24">
 
                             </div><!-- /first -->
-
-                            <div class="last totals col-md-8 col-sm-24">
+                            @if(Cart::count()!=0)
+                            <div class="last totals col-md-8 col-sm-24" id="divthanhtoan">
                                 <div class="em-box-cart">
-                                    <h2>Order Total</h2>
+                                    <h2>Thanh toán</h2>
                                     <div class="em-box">
                                         <table id="shopping-cart-totals-table">
                                             <col />
                                             <col style="width: 1%;" />
                                             <tfoot>
                                                 <tr>
-                                                    <td style="" class="a-right" colspan="1"> <strong>Grand Total</strong>
+                                                    <td style="" class="a-right" colspan="1"> <strong>Tổng tiền</strong>
                                                     </td>
-                                                    <td style="" class="a-right"> <strong><span class="price">$9.70</span></strong>
+                                                    <td style="" class="a-right"> <strong><span class="price price_tongtien">{{Cart::total()}}</span></strong>
                                                     </td>
                                                 </tr>
                                             </tfoot>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="" class="a-right" colspan="1"> Subtotal</td>
-                                                    <td style="" class="a-right"> <span class="price">$9.70</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
+                                           
                                         </table>
                                         <ul class="checkout-types">
                                             <li>
-                                                <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout"><span><span>Proceed to Checkout</span></span>
+                                            <a href="{{asset('/thanhtoan')}}">
+                                                <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout"><span><span>Đặt Hàng</span></span>
                                                 </button>
+                                                </a>
                                             </li>
-                                            <li><a href="checkout.html" title="Checkout with Multiple Addresses">Checkout with Multiple Addresses</a>
-                                            </li>
+                                           
                                         </ul>
                                     </div>
                                 </div><!-- /.em-box-cart -->
                             </div><!-- /.last -->
+                            @endif
+
+
                         </div><!-- /.cart-collaterals -->
 
                     </div>
@@ -172,13 +171,14 @@
 </div>
 </div><!-- /.em-wrapper-main -->
 @endsection
+
 @section('js')
 <script type="text/javascript">
     $(document).ready(function() {
 
         $(".btn-remove").click(function(){
             var token = $("input[name='_token']").val();
-            var rowid= $(".btn-remove").attr('value');
+            var rowid= $(this).attr('value');
 
             $.ajax({
                 url: 'xoaspcart',
@@ -186,10 +186,15 @@
                 data:{"_token":token,"rowid":rowid},
                 dataType:'text',
                 success:function(data){
-                  if(data="oke"){
-                      $('.'+rowid).remove();
+                 
+                    if(data==0){
+                        $('#divthanhtoan').remove();
+                        $('.'+ rowid).remove();
+                    }else{
+                      $('.'+ rowid).remove();
+                        $('.price_tongtien').text(data);
                       alert('Xóa thành công!!!');
-                  }
+                    }
               }
           });
 
@@ -213,12 +218,14 @@
               data:{"_token":token,"rowid":rowid,"qty":qty},
             dataType:'text',
               success:function (data) {
-                if(data == 'oke'){
-                    total_price= price*parseInt(qty);
-                $('.price_total'+rowid).text(total_price); //cap nhat lai gia
+              
+
+                total_price= price*parseInt(qty);
+                $('.price_total'+rowid).text(total_price); //cap nhat lai gia cho 1 sản phẩm
                 $('.qty_header'+rowid).text(qty);
+                $('.price_tongtien').text(data);
                   alert('Cập nhật giỏ hàng thành công');
-              }
+            
           }
 
       });

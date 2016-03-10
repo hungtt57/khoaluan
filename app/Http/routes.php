@@ -10,14 +10,9 @@
 |
 */
 //front end
-Route::get('/category', function () {
-    return view('frontend.pages.category');
-});
-Route::get('/product', function () {
-    return view('frontend.pages.product');
-});
-Route::get('/checkout', function () {
-    return view('frontend.pages.checkout');
+
+Route::get('/thanhtoan', function () {
+    return view('frontend.pages.checkout'); // thanh toan
 });
 Route::get('/timkiem','HomeController@timkiem');
 Route::post('xoaspcart','HomeController@xoaspcart');
