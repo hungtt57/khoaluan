@@ -36,7 +36,7 @@ use App\Product;
       return $category->ten;
     }
 
-     public function category_menu()
+     function category_menu()
     {
         $allCategories = Category::all();
         return $allCategories;

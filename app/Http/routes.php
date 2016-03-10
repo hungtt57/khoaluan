@@ -16,8 +16,8 @@ Route::get('/category', function () {
 Route::get('/product', function () {
     return view('frontend.pages.product');
 });
-Route::get('/cart', function () {
-    return view('frontend.pages.cart');
+Route::get('/checkout', function () {
+    return view('frontend.pages.checkout');
 });
 Route::get('/timkiem','HomeController@timkiem');
 // end frontend

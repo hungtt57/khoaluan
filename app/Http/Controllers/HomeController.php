@@ -16,7 +16,9 @@ class HomeController extends Controller
     public function index()
     {
         $allCategories= Category::all();
-       return view('frontend.pages.home',compact('allCategories'));
+        $new_products = DB::table('products')->select('id','ten','anhdaidien','gia','alias')->orderBy('id','DESC')->paginate(8);
+        $blogs = DB::table('blog')->select('id','title','description','image','alias')->orderBy('id','DESC')->paginate(2);
+       return view('frontend.pages.home',compact('allCategories','new_products','blogs'));
     }
     public function loaisanpham($id)
     {
