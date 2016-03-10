@@ -35,7 +35,7 @@ class HomeController extends Controller
 
         $qty = Request::get("qty");
         $product_buy = DB::table('products')->where('id',$id)->first();
-        Cart::add(array('id'=> $id,'name'=> $product_buy->alias,'qty'=>$qty,'price'=> $product_buy->gia, 'options' => array('image' => $product_buy->anhdaidien)));
+        Cart::add(array('id'=> $id,'name'=> $product_buy->ten,'qty'=>$qty,'price'=> format_gia($product_buy->gia), 'options' => array('image' => $product_buy->anhdaidien)));
         $content=Cart::content();
         return redirect()->back();
     }
