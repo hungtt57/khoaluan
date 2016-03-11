@@ -26,8 +26,11 @@ Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');
 Route::get('/giohang','HomeController@giohang');
 Route::get('/xoasanpham/{id}','HomeController@xoasanpham');
 Route::get('capnhatgiohang/{id}/{qty}','HomeController@capnhatgiohang');
+Route::post('/thanhtoan','HomeController@thanhtoan');
 Route::get('/blog','HomeController@blog');
 Route::get('/blog_detail/{id}/{ten}','HomeController@blog_detail');
+
+
 // end frontend
 //admin
 Route::group(['prefix' => 'admin'], function () {

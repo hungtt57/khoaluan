@@ -6,6 +6,7 @@ use DB,Cart;
 use App\Product;
 use Request;
 use App\Blog;
+use App\Http\Requests\CheckThanhtoanRequest;
 class HomeController extends Controller
 {
     /**
@@ -93,7 +94,9 @@ class HomeController extends Controller
 
 
 
-
+    public function thanhtoan(CheckThanhtoanRequest $request){
+    
+    }
 
 
 
