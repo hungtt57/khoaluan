@@ -7,6 +7,8 @@ use App\Product;
 use Request;
 use App\Blog;
 use App\Http\Requests\CheckThanhtoanRequest;
+use App\Order;
+use App\Order_detail;
 class HomeController extends Controller
 {
     /**
@@ -95,7 +97,60 @@ class HomeController extends Controller
 
 
     public function thanhtoan(CheckThanhtoanRequest $request){
+        
+        $content=Cart::content();
+            
+        $tenkh=$request->input('tenkh');
+        $emailkh=$request->input('emailkh');
+        $sdtkh=$request->input('sdtkh');
+        $ngaynhankh=$request->input('ngaynhankh');
+        $diachikh=$request->input('diachikh');
+        $ghichukh=$request->input('ghichukh');
+        
+        $order= new Order;
+        $order->sdtkh=$sdtkh;
+        $order->emailkh=$emailkh;
+        $order->tenkh=$tenkh;
+        $order->ghichukh=$ghichukh;
+        $order->ngaydatkh=date('Y-m-d');
+        $order->ngaynhankh=$ngaynhankh;
+        $order->diachikh=$diachikh;
+        $order->tongtien=Cart::total();
+        $order->save();
+        
+        foreach ($content as $key => $item) {
+              
+                $orderdetail=new Order_detail;
+                $orderdetail->order_id=$order->id;
+                $orderdetail->tensp=$item['name'];
+                $orderdetail->giasp=$item['price'];
+
+                $orderdetail->soluong=$item['qty'];
+               
+                $orderdetail->anh=$item['options']['image'];
     
+                $orderdetail->tongtien=$item['subtotal'];
+                
+                $orderdetail->save();
+        }
+        dd($order);
+        
+        // $info=DB::table('orderdetails')->where('order_id',$order->id)->get();
+        
+        //   $data = array(
+        //           'order' => $order,
+        //           'orderdetail'=>$info
+        //           );
+        
+        //   Mail::send('emails.order', $data, function ($message) use ($order){
+
+        //   $message->from('hin1471994@gmail.com', 'Mail Confirm Your Order');
+
+        //    $message->to($order->customer_email)->subject('Confirm Your Information Order');
+
+        //    });
+        //  Cart::destroy();
+        // return redirect('home')->with('message','Checkout successed!!Please check mail to know more info order!!');
     }
 
 

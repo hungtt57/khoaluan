@@ -60,13 +60,13 @@
                                                                     <div class="field name-firstname">
                                                                         <label for="billing:firstname" class="required"><em>*</em>Tên Khách Hàng</label>
                                                                         <div class="input-box">
-                                                                            <input type="text" id="" name="tenkh" value="" title="Tên khách hàng" maxlength="255" class="input-text required-entry" />
+                                                                            <input type="text" id="" name="tenkh" value="{{Input::old('tenkh')}}" title="Tên khách hàng" maxlength="255" class="input-text required-entry" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="field name-middlename">
                                                                         <label for="billing:middlename">Địa chỉ E-mail</label>
                                                                         <div class="input-box">
-                                                                            <input type="text" id="" name="emailkh" value="" title="Email" class="input-text " />
+                                                                            <input type="text" id="" name="emailkh" value="{{Input::old('emailkh')}}" title="Email" class="input-text " />
                                                                         </div>
                                                                     </div>
 
@@ -76,7 +76,7 @@
                                                                 <div class="field">
                                                                     <label for="billing:telephone" class="required"><em>*</em>Điện Thoại</label>
                                                                     <div class="input-box">
-                                                                        <input type="text" name="sdtkh" value="" title="Số điện thoại" class="input-text  required-entry" id="billing:telephone" />
+                                                                        <input type="text" name="sdtkh" value="{{Input::old('sdtkh')}}" title="Số điện thoại" class="input-text  required-entry" id="billing:telephone" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="field">
@@ -89,13 +89,13 @@
                                                             <li class="wide">
                                                                 <label for="billing:street1" class="required"><em>*</em>Địa chỉ nhận hàng</label>
                                                                 <div class="input-box">
-                                                                    <textarea type="text" title="Street Address" name="diachikh" id="billing:street1" value="" class="input-text  required-entry" /></textarea>
+                                                                    <textarea type="text" title="Địa chỉ khách hàng" name="diachikh" id="billing:street1" value="{{Input::old('diachikh')}}" class="input-text  required-entry" /></textarea>
                                                                 </div>
                                                             </li>
                                                              <li class="wide">
                                                                 <label for="billing:street1" class="required">Ghi chú</label>
                                                                 <div class="input-box">
-                                                                    <textarea  type="text" title="Street Address" name="ghichukh" id="billing:street1" value="" class="input-text  required-entry" /></textarea>
+                                                                    <textarea  type="text" title="Ghi chú" name="ghichukh" id="billing:street1" value="Input::old('ghichukh');" class="input-text  required-entry" /></textarea>
                                                                 </div>
                                                             </li>
 
