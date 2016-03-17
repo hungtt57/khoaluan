@@ -116,6 +116,7 @@ class HomeController extends Controller
         $order->ngaynhankh=$ngaynhankh;
         $order->diachikh=$diachikh;
         $order->tongtien=Cart::total();
+        $order->trangthai=0;
         $order->save();
         
         foreach ($content as $key => $item) {
@@ -133,7 +134,7 @@ class HomeController extends Controller
                 
                 $orderdetail->save();
         }
-        dd($order);
+    
         
         // $info=DB::table('orderdetails')->where('order_id',$order->id)->get();
         

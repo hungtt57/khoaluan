@@ -52,6 +52,17 @@
                       </ul>
                   </li>
 
+                    <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="icon-list-ul"></i>
+                          <span>Đơn Hàng</span>
+                      </a>
+                      <ul class="sub">
+                       
+                          <li><a  href="{{asset('admin/order/')}}">Danh sách đặt hàng</a></li>
+                      </ul>
+                  </li>
+
                   
 
               </ul>

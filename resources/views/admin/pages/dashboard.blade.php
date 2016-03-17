@@ -43,8 +43,8 @@
                               <i class="icon-shopping-cart"></i>
                           </div>
                           <div class="value">
-                              <h1 class=" count3">328</h1>
-                              <p>New Order</p>
+                              <h1 class=" count3">{{$count_order}}</h1>
+                              <p>Đơn Hàng</p>
                           </div>
                       </section>
                   </div>

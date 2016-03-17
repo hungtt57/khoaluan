@@ -17,7 +17,6 @@ class CreateOrderDetailTable extends Migration
             $table->timestamps();
             $table->integer('order_id')->unsigned();
             $table->foreign('order_id')->references('id')->on('order')->onDelete('cascade');
-            
             $table->string('tensp');
             $table->decimal('giasp');
             $table->decimal('tongtien');

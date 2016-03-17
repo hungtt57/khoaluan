@@ -23,6 +23,7 @@ class CreateOrderTable extends Migration
             $table->string('diachikh');
             $table->decimal('tongtien');
             $table->string('ghichukh');
+            $table->string('trangthai');
 
         });
     }
