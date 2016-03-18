@@ -77,5 +77,8 @@ Route::group(['prefix' => 'admin'], function () {
       Route::group(['prefix' => 'order'],function(){
           Route::get('/','OrderController@index');
           Route::get('/list','OrderController@index');
+          Route::get('/{id}/delete','OrderController@destroy');
+           Route::get('/{id}/edit','OrderController@edit');
+        Route::post('/{id}/edit','OrderController@update');
       });
 });

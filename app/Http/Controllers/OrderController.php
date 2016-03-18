@@ -68,8 +68,9 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        $user=User::find($id);
-        return view('admin.pages.user.edit_user',compact('user'));
+        $order=Order::find($id);
+     
+        return view('admin.pages.order.edit',compact('order'));
     }
 
     /**
@@ -99,7 +100,7 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
-   return redirect('admin/user/list');
+        Order::find($id)->delete();
+            return redirect('admin/order')->with(['flash_message'=>'Xóa thành công']);
     }
 }
