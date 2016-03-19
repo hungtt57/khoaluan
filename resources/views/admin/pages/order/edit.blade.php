@@ -4,9 +4,11 @@
 <section id="main-content">
 	<section class="wrapper">
 		<h3 class="page-title">Sửa </h3>
+		<div class="col-md-6">
+		<h4>Thông tin khách hàng</h4>
 		<form class="form-horizontal" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
-			<div class="col-md-12">
+			
 
 				@if ($errors->any())
 				<div class="alert alert-danger"> 
@@ -19,41 +21,41 @@
 				@endif
 
 				<div class="form-group">
-				<label class="col-md-2 control-label" for="name_category">Tên khách hàng</label>
-					<div class="col-md-6">
+				<label class="col-md-3 control-label" for="name_category">Tên khách hàng</label>
+					<div class="col-md-9">
 						<input class="form-control" tabindex="1" value='{{$order->tenkh}}' type="text" name="tenkh" id="tenkh">
 					</div>
 				</div>
 				
 
 				<div class="form-group">
-				<label class="col-md-2 control-label" for="name_category">Email</label>
-					<div class="col-md-6">
+				<label class="col-md-3 control-label" for="name_category">Email</label>
+					<div class="col-md-9">
 						<input class="form-control" tabindex="1" value='{{$order->emailkh}}' type="text" name="emailkh" id="emailkh">
 					</div>
 				</div>
 				<div class="form-group">
-				<label class="col-md-2 control-label" for="name_category">Số điện thoại</label>
-					<div class="col-md-6">
+				<label class="col-md-3 control-label" for="name_category">Số điện thoại</label>
+					<div class="col-md-9">
 						<input class="form-control" type="number" value='{{$order->sdtkh}}' name="sdtkh" id="sdtkh">
 					</div>
 				</div>
 		
 				<div class="form-group">
-				<label class="col-md-2 control-label" for="name_category">Địa Chỉ</label>
-					<div class="col-md-6">
+				<label class="col-md-3 control-label" for="name_category">Địa Chỉ</label>
+					<div class="col-md-9">
 						<input class="form-control" value='{{$order->diachikh}}' name="diachikh" id="diachikh">
 					</div>
 				</div>
 				<div class="form-group">
-				<label class="col-md-2 control-label" for="name_category">Ghi Chú</label>
-					<div class="col-md-6">
+				<label class="col-md-3 control-label" for="name_category">Ghi Chú</label>
+					<div class="col-md-9">
 						<input class="form-control" value='{{$order->ghichukh}}' name="ghichukh" id="ghichukh">
 					</div>
 				</div>
 					<div class="form-group">
-				<label class="col-md-2 control-label" for="name_category">Ngày Ship</label>
-					<div class="col-md-6">
+				<label class="col-md-3 control-label" for="name_category">Ngày Ship</label>
+					<div class="col-md-9">
 						  <input type="date" class="form-control" min="{{date('Y-m-d')}}" name="ngaynhankh" id="ngaynhankh" value="{{$order->ngaynhankh}}" > 
 					</div>
 				</div>
@@ -63,8 +65,107 @@
 					<input type="submit" value="Sửa sản phẩm" class="btn btn-success" />
 					<a type="button"  class="btn btn-info" href="{{asset('admin/order/')}}">Back</a>
 				</div>
-			</div>
+		
 		</form>
+			</div> <!-- end col md 6 -->
+			<div class="col-md-6">
+			<h4>Thông tin sản phẩm</h4>
+				
+				<table class="table table-bordered table-striped table-condensed">
+					<thead>
+						<tr>
+							
+							<td>Ảnh</td>
+							<td>Tên</td>
+							<td>Giá</td>
+							<td>Số lượng</td>
+							<td>Thành tiền</td>
+							<td>Cập nhật</td>
+							<td>Xóa</td>
+						</tr>
+					</thead>
+
+					<tbody>
+				
+						@foreach($order_details as $key =>$order_detail)
+							<tr value="{{$order_detail->id}}">
+								
+								<td><img src="{{asset($order_detail->anh)}}" width="50px" height="50px" /></td>
+								<td>{{ $order_detail->tensp}}</td>
+								<td>{{number_format($order_detail->giasp,0,",",".")}}</td>
+								<td><input type='number' class="qty_order_detail" value='{{$order_detail->soluong}}' style="width: 50px;"></input></td>
+								<td>{{number_format($order_detail->tongtien,0,",",".")}}</td>
+								<td> <i style="width: 50px;height: 50px;display: block;text-align: center;font-size: 20px;"class='icon-retweet capnhat_button'></i></td>
+								<td> <i style="width: 50px;height: 50px;display: block;text-align: center;font-size: 20px;"class='icon-remove remove_button'></i></td>
+							</tr> 
+						@endforeach
+						<tr>
+							<td colspan="7"><em>*</em>Ấn cập nhật để sửa số lượng <br>
+
+							</td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</div> <!-- end col md 4 -->
 	</section>
 </section>
+@endsection
+@section('js')
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $(".capnhat_button").click(function(){
+            var tr = $(this).parent().parent();
+            var id = tr.attr('value');
+         	var qty = $(this).parent().parent().find('.qty_order_detail').val();
+
+            $.ajax({
+                url: '/admin/order/capnhat_order_detail',
+                type:'get',
+                data:{"qty":qty,"id":id},
+                dataType:'text',
+                success:function(data){
+
+                    if(data=='oke'){
+                       tr.remove();
+                        $('.'+ rowid).remove();
+                    }
+              }
+          });
+
+        });
+
+
+        $(".updatecart").click(function(){
+            
+            var rowid = $(this).attr('value');
+
+            var qty = $(this).parent().parent().find(".qty").val();
+
+            var token = $("input[name='_token']").val();
+            var str_price = 'price_'+rowid;
+
+            var price = parseInt($('.'+str_price).text());
+          
+            $.ajax({
+              url:'capnhatcart',
+              type:'POST',
+              data:{"_token":token,"rowid":rowid,"qty":qty},
+            dataType:'text',
+              success:function (data) {
+              
+
+                total_price= price*parseInt(qty);
+                $('.price_total'+rowid).text(total_price); //cap nhat lai gia cho 1 sản phẩm
+                $('.qty_header'+rowid).text(qty);
+                $('.price_tongtien').text(data);
+                  alert('Cập nhật giỏ hàng thành công');
+            
+          }
+
+      });
+        });
+    });
+</script>
 @endsection

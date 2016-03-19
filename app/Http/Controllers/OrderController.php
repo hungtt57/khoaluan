@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use App\Order;
 use App\Http\Controllers\Controller;
 use DB;
-
+use Request;
+use App\Order_detail;
 class OrderController extends Controller
 {
     
@@ -69,8 +70,9 @@ class OrderController extends Controller
     public function edit($id)
     {
         $order=Order::find($id);
+        $order_details=Order::find($id)->order_detail;
      
-        return view('admin.pages.order.edit',compact('order'));
+        return view('admin.pages.order.edit',compact('order'))->with('order_details',$order_details);
     }
 
     /**
@@ -102,5 +104,27 @@ class OrderController extends Controller
     {
         Order::find($id)->delete();
             return redirect('admin/order')->with(['flash_message'=>'Xóa thành công']);
+    }
+
+
+    //ajax
+    public function capnhat_order_detail(){
+        if(Request::ajax()){
+             $id=Request::get('id');
+            
+            $qty = (int) Request::get('qty');
+            $orderdetail=Order_detail::find($id);
+
+            if(!empty($orderdetail)){
+                $orderdetail->soluong=$qty;
+                $orderdetail->tongtien=$orderdetail->giasp*$qty;
+                $orderdetail->save();
+                return 'oke';
+            }
+            return 'loi';
+          
+
+          
+        }
     }
 }
