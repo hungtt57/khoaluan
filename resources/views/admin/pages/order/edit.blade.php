@@ -92,9 +92,9 @@
 								
 								<td><img src="{{asset($order_detail->anh)}}" width="50px" height="50px" /></td>
 								<td>{{ $order_detail->tensp}}</td>
-								<td>{{number_format($order_detail->giasp,0,",",".")}}</td>
+								<td class="giasp">{{number_format($order_detail->giasp,0,",",".")}}</td>
 								<td><input type='number' class="qty_order_detail" value='{{$order_detail->soluong}}' style="width: 50px;"></input></td>
-								<td>{{number_format($order_detail->tongtien,0,",",".")}}</td>
+								<td class="tongtiensp">{{number_format($order_detail->tongtien,0,",",".")}}</td>
 								<td> <i style="width: 50px;height: 50px;display: block;text-align: center;font-size: 20px;"class='icon-retweet capnhat_button'></i></td>
 								<td> <i style="width: 50px;height: 50px;display: block;text-align: center;font-size: 20px;"class='icon-remove remove_button'></i></td>
 							</tr> 
@@ -119,7 +119,8 @@
             var tr = $(this).parent().parent();
             var id = tr.attr('value');
          	var qty = $(this).parent().parent().find('.qty_order_detail').val();
-
+         	var tongtien = $(this).parent().parent().find('.tongtiensp');
+         	
             $.ajax({
                 url: '/admin/order/capnhat_order_detail',
                 type:'get',
@@ -127,9 +128,9 @@
                 dataType:'text',
                 success:function(data){
 
-                    if(data=='oke'){
-                       tr.remove();
-                        $('.'+ rowid).remove();
+                    if(data!='loi'){
+                     tongtien.html(data);
+                     alert('Cập nhật thành công');
                     }
               }
           });

@@ -119,7 +119,7 @@ class OrderController extends Controller
                 $orderdetail->soluong=$qty;
                 $orderdetail->tongtien=$orderdetail->giasp*$qty;
                 $orderdetail->save();
-                return 'oke';
+                return number_format($orderdetail->tongtien,0);
             }
             return 'loi';
           
