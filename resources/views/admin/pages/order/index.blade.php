@@ -71,13 +71,13 @@ font-size: 13px !important;
 			<td>{{$order->ngaynhankh}}</td>
 			<td>
       @if($order->trangthai==1)
-      <span class="label label-info">Đang ship</span>
+      <span style="cursor: pointer;" class="label label-info">Đang ship</span>
        @endif
       @if($order->trangthai==0)
-      <span class="label label-danger">Chưa Ship</span>
+      <span  style="cursor: pointer;" class="label label-danger">Chưa Ship</span>
        @endif
       @if($order->trangthai==2)
-        <span class="label label-success">Đã Ship</span>
+        <span style="cursor: pointer;" class="label label-success">Đã Ship</span>
       @endif
 
 

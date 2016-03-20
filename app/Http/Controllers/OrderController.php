@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use Request;
 use App\Order_detail;
+use App\Http\Requests\EditOrderRequest;
 class OrderController extends Controller
 {
     
@@ -23,32 +24,8 @@ class OrderController extends Controller
         return view('admin.pages.order.index')->with('orders',$orders);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        return view('admin.pages.user.add_user');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-    public function store(CheckUserRequest $request)
-    {
-        $user= new User();
-        $user->name = $request -> input('fullname');
-        $user->email = $request->input('email');
-        $user->password = bcrypt($request->input('password'));
-        $user->user_name = $request->input('user_name');
-        $user->save();
-        return redirect('/admin/user/list')->with(['flash_message'=>'Tạo thành công']);
-    }
+   
+   
 
     /**
      * Display the specified resource.
@@ -82,16 +59,19 @@ class OrderController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(EditOrderRequest $request, $id)
     {
-        $user = DB::table('users')->where('id','=', $id)->first();
-        $user->user_name = $request->input('user_name');
-        $user->email = $request->input('email');
-        DB::table('users')
-            ->where('id','=', $id)
-            ->update(['user_name' => $user->user_name, 'email' => $user->email]);
+        $order=Order::find($id);
+        $order->tenkh = $request->input('tenkh');
+         $order->sdtkh = $request->input('sdtkh');
 
-        return redirect('admin/user/list');
+          $order->emailkh = $request->input('emailkh');
+           $order->ngaynhankh = $request->input('ngaynhankh');
+            $order->diachikh = $request->input('diachikh');
+         $order->ghichukh = $request->input('ghichukh');
+           $order->trangthai = $request->input('trangthai');
+         $order->save();
+          return redirect('admin/order')->with(['flash_message'=>'Sửa thành công']);
     }
 
     /**
@@ -117,9 +97,35 @@ class OrderController extends Controller
 
             if(!empty($orderdetail)){
                 $orderdetail->soluong=$qty;
+                $tongtien=$orderdetail->tongtien;
                 $orderdetail->tongtien=$orderdetail->giasp*$qty;
                 $orderdetail->save();
+                $order=Order::find($orderdetail->order_id);
+                $order->tongtien=$order->tongtien- $tongtien + $orderdetail->tongtien;
+                $order->save();
                 return number_format($orderdetail->tongtien,0);
+            }
+            return 'loi';
+          
+
+          
+        }
+    }
+
+    public function xoa_order_detail(){
+        if(Request::ajax()){
+
+             $id=Request::get('id');
+            
+          
+            $orderdetail=Order_detail::find($id);
+
+            if(!empty($orderdetail)){
+                  $order=Order::find($orderdetail->order_id);
+                  $order->tongtien=$order->tongtien-$orderdetail->tongtien;
+                  $order->save(); //update lại giá
+               $orderdetail->delete();
+               return 'oke';
             }
             return 'loi';
           

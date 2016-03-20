@@ -53,13 +53,28 @@
 						<input class="form-control" value='{{$order->ghichukh}}' name="ghichukh" id="ghichukh">
 					</div>
 				</div>
-					<div class="form-group">
+				<div class="form-group">
 				<label class="col-md-3 control-label" for="name_category">Ngày Ship</label>
 					<div class="col-md-9">
 						  <input type="date" class="form-control" min="{{date('Y-m-d')}}" name="ngaynhankh" id="ngaynhankh" value="{{$order->ngaynhankh}}" > 
 					</div>
 				</div>
 
+				<div class="form-group">
+				<label class="col-md-3 control-label" for="name_category">Trạng Thái</label>
+					<div class="col-md-9">
+						 <select  class="form-control" name='trangthai'>
+						 	<option value='0' <?php if($order->trangthai==0) echo 'selected'; ?>> Chưa Ship</option>
+						 		<option value='1' <?php if($order->trangthai==1) echo 'selected'; ?>> Đang Ship</option>
+						 			<option value='2' <?php if($order->trangthai==2) echo 'selected'; ?>> Đã Giao</option>
+						 </select>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+			
+				</div>
 
 				<div class="form-group">
 					<input type="submit" value="Sửa sản phẩm" class="btn btn-success" />
@@ -71,7 +86,7 @@
 			<div class="col-md-6">
 			<h4>Thông tin sản phẩm</h4>
 				
-				<table class="table table-bordered table-striped table-condensed">
+				<table id="table_edit" class="table table-bordered table-striped table-condensed">
 					<thead>
 						<tr>
 							
@@ -93,19 +108,22 @@
 								<td><img src="{{asset($order_detail->anh)}}" width="50px" height="50px" /></td>
 								<td>{{ $order_detail->tensp}}</td>
 								<td class="giasp">{{number_format($order_detail->giasp,0,",",".")}}</td>
-								<td><input type='number' class="qty_order_detail" value='{{$order_detail->soluong}}' style="width: 50px;"></input></td>
+								<td><input type='number' min="1" class="qty_order_detail" value='{{$order_detail->soluong}}' style="width: 50px;"></input></td>
 								<td class="tongtiensp">{{number_format($order_detail->tongtien,0,",",".")}}</td>
 								<td> <i style="width: 50px;height: 50px;display: block;text-align: center;font-size: 20px;"class='icon-retweet capnhat_button'></i></td>
 								<td> <i style="width: 50px;height: 50px;display: block;text-align: center;font-size: 20px;"class='icon-remove remove_button'></i></td>
 							</tr> 
 						@endforeach
-						<tr>
-							<td colspan="7"><em>*</em>Ấn cập nhật để sửa số lượng <br>
+
+					</tbody>
+
+					<tfoot>
+						<tr class="footer_table">
+							<td colspan="7" style="color:red"><em>*</em> Ấn cập nhật để sửa số lượng <br>
 
 							</td>
 						</tr>
-					</tbody>
-					
+					</tfoot>
 				</table>
 			</div> <!-- end col md 4 -->
 	</section>
@@ -120,53 +138,52 @@
             var id = tr.attr('value');
          	var qty = $(this).parent().parent().find('.qty_order_detail').val();
          	var tongtien = $(this).parent().parent().find('.tongtiensp');
-         	
-            $.ajax({
-                url: '/admin/order/capnhat_order_detail',
-                type:'get',
-                data:{"qty":qty,"id":id},
-                dataType:'text',
-                success:function(data){
+        	if(qty!=0){ 	
+	            $.ajax({
+	                url: '/admin/order/capnhat_order_detail',
+	                type:'get',
+	                data:{"qty":qty,"id":id},
+	                dataType:'text',
+	                success:function(data){
 
-                    if(data!='loi'){
-                     tongtien.html(data);
-                     alert('Cập nhật thành công');
-                    }
-              }
-          });
+	                    if(data!='loi'){
+	                     tongtien.html(data);
+	                     alert('Cập nhật thành công');
+	                    }
+	              }
+	          }); 
+       	 	}else{
+       	 		alert('Số lượng bằng không!! Vui lòng xóa sản phẩm');
+       	 	}
+        }); //end capnhat_button
 
-        });
 
+        $(".remove_button").click(function(){
+        		
+            	var tr = $(this).parent().parent();
+           		 var id = tr.attr('value');
+            	if(confirm("Bạn có chắc chắn xóa")){
 
-        $(".updatecart").click(function(){
-            
-            var rowid = $(this).attr('value');
+            		 $.ajax({
+		                url: '/admin/order/xoa_order_detail',
+		                type:'get',
+		                data:{"id":id},
+		                dataType:'text',
+		                success:function(data){
 
-            var qty = $(this).parent().parent().find(".qty").val();
+		                    if(data!='loi'){
+		                    	tr.remove();
+		                    	var count = $('#table_edit tr').length; // check tr neu del het sp :))
+				        		if(count==2){
+				        			var tbody = $('#table_edit tbody').html('<tr><td colspan="7">Hiện tại không có sản phẩm nào!!!</td></tr>');
+				        		}
+		                     alert('Xóa thành công');
+		                    }
+				        }
+		          	}); 
 
-            var token = $("input[name='_token']").val();
-            var str_price = 'price_'+rowid;
-
-            var price = parseInt($('.'+str_price).text());
-          
-            $.ajax({
-              url:'capnhatcart',
-              type:'POST',
-              data:{"_token":token,"rowid":rowid,"qty":qty},
-            dataType:'text',
-              success:function (data) {
-              
-
-                total_price= price*parseInt(qty);
-                $('.price_total'+rowid).text(total_price); //cap nhat lai gia cho 1 sản phẩm
-                $('.qty_header'+rowid).text(qty);
-                $('.price_tongtien').text(data);
-                  alert('Cập nhật giỏ hàng thành công');
-            
-          }
-
-      });
-        });
+            	 } //end if confirm          
+        }); //end remove button
     });
 </script>
 @endsection
