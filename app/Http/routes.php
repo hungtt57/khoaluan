@@ -82,5 +82,6 @@ Route::group(['prefix' => 'admin'], function () {
           Route::post('/{id}/edit','OrderController@update');
           Route::get('/capnhat_order_detail','OrderController@capnhat_order_detail');
            Route::get('/xoa_order_detail','OrderController@xoa_order_detail');
+          Route::get('/{id}/show','OrderController@show');
       });
 });

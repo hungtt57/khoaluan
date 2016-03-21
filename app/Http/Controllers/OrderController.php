@@ -35,7 +35,9 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order=Order::find($id);
+        $orderdetail=Order::find($id)->order_detail;
+        return view('admin.pages.order.show')->with('order',$order)->with('order_details',$orderdetail);
     }
 
     /**
