@@ -35,11 +35,10 @@
                                                 <div class="em-owlcarousel-slideshow">
                                                     <div id="em_owlcarousel_2_2484_sync1" class="owl-carousel">
                                                         <div class="item">
-                                                            <a href="#"> <img alt="1435569308_0_1.jpg" class="lazyOwl img-responsive" src="{{asset('public/frontend/images/loading.gif')}}" data-src="{{asset('public/frontend/images/em_minislideshow/1435569308_0_1.jpg')}}" /> </a>
+                                                            <a href="#"> <img alt="1435569308_0_1.jpg" class="lazyOwl img-responsive" src="{{asset('public/frontend/images/loading.gif')}}" data-src="{{asset('public/image/slide/thanthien.jpg')}}" /> </a>
                                                             <div class="em-owlcarousel-description">
                                                                 <div class="fadeInLeft em-owlcarousel-des em-owlcarousel-des-0">
-                                                                    <h3 style="font:italic 2rem/1 Lora,Helvetica Neue, Helvetica, Arial, sans-serif;margin-bottom:1.7rem;">High Fashion Collection 2015</h3>
-                                                                    <h1 style="font:700 6rem/1 Raleway,Helvetica Neue, Helvetica, Arial, sans-serif;  margin-bottom: 3rem;" class="em-text-upercase">em stores</h1> <a href="#" class="button-link first"><span>purchase now</span></a> <a href="#" class="button-link"><span>shop now</span></a>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div><!-- /.item -->
@@ -69,7 +68,7 @@
                                         <div class="std"></div>
                                         <div class="row hidden-xs">
                                             <div class="em-wrapper-banners">
-                                                <div class="col-sm-8  text-center">
+                                                <!-- <div class="col-sm-8  text-center">
                                                     <div class="img-banner">
                                                         <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_06.jpg')}}" /> </a>
                                                         <a class="banner-text effect-line" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_01.png')}}" /> </a>
@@ -86,7 +85,7 @@
                                                         <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_08.jpg')}}" /> </a>
                                                         <a class="banner-text effect-line" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_03.png')}}" /> </a>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div><!-- /.em-wrapper-banners -->
                                         </div>
 
@@ -127,20 +126,9 @@
                                                                                                                 <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
                                                                                                             </a>
                                                                                                             <div class="em-element-display-hover bottom">
-                                                                                                                <div class="em-btn-addto">
-                                                                                                                    <!--product add to cart-->
-                                                                                                                    <button type="button" title="Add to Cart" class="button btn-cart" ><span><span>Add to Cart</span></span>
-                                                                                                                    </button>
-                                                                                                                    <!--product add to compare-wishlist-->
-                                                                                                                    <ul class="add-to-links">
-                                                                                                                        <li><a onclick="" href="#177" class="link-wishlist" title="Add to Wishlist">Add to Wishlist</a>
-                                                                                                                        </li>
-                                                                                                                        <li><span class="separator">|</span> <a href="#177" class="link-compare" title="Add to Compare">Add to Compare</a>
-                                                                                                                        </li>
-                                                                                                                    </ul>
-                                                                                                                </div>
+                                                                                                               
                                                                                                                 <div class="quickshop-link-container">
-                                                                                                                    <a href="#" class="quickshop-link" title="Quickshop">Quickshop</a>
+                                                                                                                    <a href="#" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div><!-- /.product-shop-top -->
@@ -535,10 +523,10 @@
                                             </div>
                                         </div><!-- /.row -->
                                         <div class="img-banner hidden-xs">
-                                            <div class="effect-hover-text2">
+                                           <!--  <div class="effect-hover-text2">
                                                 <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_05.jpg')}}" /> </a>
                                                 <a class="banner-text" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_05.png')}}" /> </a>
-                                            </div>
+                                            </div> -->
                                         </div><!-- /.img-banner -->
                                     </div><!-- /.em-sidebar -->
                                 </div>
@@ -548,73 +536,27 @@
                                 <div class="row hidden-xs">
                                     <div class="em-wrapper-banners">
                                         <div class="col-sm-6 first img-banner text-center">
-                                            <div class="effect-hover-text">
+                                            <!-- <div class="effect-hover-text">
                                                 <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_11.jpg')}}" /> </a>
                                                 <a class="banner-text" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_07.png')}}" /> </a>
-                                            </div>
+                                            </div> -->
                                         </div><!-- /.img-banner -->
                                         <div class="col-sm-12  img-banner text-center">
-                                            <div class="effect-hover-text4">
+                                            <!-- <div class="effect-hover-text4">
                                                 <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_12.jpg')}}" /> </a>
                                                 <a class="banner-text" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_08.png')}}" /> </a>
-                                            </div>
+                                            </div> -->
                                         </div><!-- /.img-banner -->
                                         <div class="col-sm-6 last img-banner text-center">
-                                            <div class="effect-hover-text3">
+                                            <!-- <div class="effect-hover-text3">
                                                 <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_13.jpg')}}" /> </a>
                                                 <a class="banner-text" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_09.png')}}" /> </a>
-                                            </div>
+                                            </div> -->
                                         </div><!-- /.img-banner -->
                                     </div>
                                 </div>
                             </div><!-- /.em-wrapper-area04 -->
 
-                            <div class="em-wrapper-area05">
-                                <div class="em-wrapper-ads-09">
-                                    <div class="row">
-                                        <div class="col-sm-6 text-center em-wrapper-ads-item">
-                                            <div class="em-ads-item">
-                                                <p><em class="fa fa-fw"></em>
-                                                </p>
-                                                <div class="em-ads-content">
-                                                    <h4 class="primary em-text-upercase">SUPER ONLINE STORES</h4>
-                                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.em-wrapper-ads-item -->
-                                        <div class="col-sm-6 text-center em-wrapper-ads-item  line-left line-right">
-                                            <div class="em-ads-item">
-                                                <p><em class="fa fa-fw"></em>
-                                                </p>
-                                                <div class="em-ads-content">
-                                                    <h4 class="primary em-text-upercase">RESPONSIVaE DESIGN</h4>
-                                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.em-wrapper-ads-item -->
-                                        <div class="col-sm-6 text-center  em-wrapper-ads-item  line-left line-right">
-                                            <div class="em-ads-item">
-                                                <p><em class="fa fa-fw"></em>
-                                                </p>
-                                                <div class="em-ads-content">
-                                                    <h4 class="primary em-text-upercase">FREE UPDATES</h4>
-                                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.em-wrapper-ads-item -->
-                                        <div class="col-sm-6 text-center  em-wrapper-ads-item">
-                                            <div class="em-ads-item">
-                                                <p><em class="fa fa-fw"></em>
-                                                </p>
-                                                <div class="em-ads-content">
-                                                    <h4 class="primary em-text-upercase">24/7 SUPPORT ONLINE</h4>
-                                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
-                                                </div>
-                                            </div>
-                                        </div><!-- /.em-wrapper-ads-item -->
-                                    </div>
-                                </div>
-                            </div><!-- /.em-wrapper-area05 -->
 
                             <div class="em-wrapper-area06">
                                 <div class="em-wrapper-brands">

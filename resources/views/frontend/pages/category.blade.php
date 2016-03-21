@@ -36,52 +36,11 @@
                                             <h1>{{$name_cate->ten}}</h1>
                                         </div>
                                         <div class="category-products">
-                                            <div class="toolbar-top">
-                                                <div class="toolbar">
-                                                    <div class="pager">
-                                                        <p class="amount"> Items 1 to 12 of 20 total</p>
-                                                        <div class="pages">
-                                                            <ol>
-                                                                <li class="current">1</li>
-                                                                <li><a href="#">2</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="next i-next" href="#" title="Next"> <img src="{{asset('public/frontend/images/pager_arrow_right.gif')}}" alt="Next" class="v-middle" /> </a>
-                                                                </li>
-                                                            </ol>
-                                                        </div>
-                                                    </div><!-- /.pager -->
-                                                    <div class="sorter">
-                                                     
-                                                        <div class="sort-by toolbar-switch">
-                                                            <div class="toolbar-title">
-                                                                <label>Sort By</label>
-                                                                <select class="sortby" name="sortby">
-                                                                    <option value="position" selected="selected"> Position</option>
-                                                                    <option value="name"> Name</option>
-                                                                    <option value="price"> Price</option>
-                                                                </select>
-                                                            </div>
-                                                            <a href="#" title="Set Descending Direction"><img src="{{asset('public/frontend/images/i_asc_arrow.png')}}" alt="Set Descending Direction" class="v-middle" />
-                                                            </a>
-                                                        </div>
-                                                        <div class="limiter toolbar-switch">
-                                                            <div class="toolbar-title">
-                                                                <label>Show</label>
-                                                                <select class="toolbar-show">
-                                                                    <option value="12" selected="selected"> 12</option>
-                                                                    <option value="24"> 24</option>
-                                                                    <option value="36"> 36</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.sorter -->
-                                                </div>
-                                            </div><!-- /.toolbar-top -->
+                                            
                                             <div id="em-grid-mode">
                                                 <ul class="emcatalog-grid-mode products-grid emcatalog-disable-hover-below-mobile">
                                           
-                                                    @foreach($product_cate as $key => $product_cate)
+                                                    @foreach($product_cates as $key => $product_cate)
                                                     <li class="item">
                                                         <div class="product-item">
                                                             <div class="product-shop-top">
@@ -129,45 +88,15 @@
                                             <div class="toolbar-bottom em-box-03">
                                                 <div class="toolbar">
                                                     <div class="pager">
-                                                        <p class="amount"> Items 1 to 12 of 20 total</p>
-                                                        <div class="pages">
-                                                            <ol>
-                                                                <li class="current">1</li>
-                                                                <li><a href="#">2</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="next i-next" href="#" title="Next"> <img src="{{asset('public/frontend/images/pager_arrow_right.gif')}}" alt="Next" class="v-middle" /> </a>
-                                                                </li>
-                                                            </ol>
-                                                        </div>
+                                                        
+                                                        <div style="float:right;">
+                                                    
+                                                        {!!$product_cates->setPath('')->appends(Input::query())->render() !!}
+                                                        
+                                                    
+                                                </div>
                                                     </div><!-- /.pager -->
-                                                    <div class="sorter">
-                                                        <p class="view-mode">
-                                                            <label>View as:</label> <strong title="Grid" class="grid">Grid</strong> <a href="category-one-column-list.html" title="List" class="list">List</a>
-                                                        </p>
-                                                        <div class="sort-by toolbar-switch">
-                                                            <div class="toolbar-title">
-                                                                <label>Sort By</label>
-                                                                <select class="sortby" name="sortby">
-                                                                    <option value="position" selected="selected"> Position</option>
-                                                                    <option value="name"> Name</option>
-                                                                    <option value="price"> Price</option>
-                                                                </select>
-                                                            </div>
-                                                            <a href="#" title="Set Descending Direction"><img src="{{asset('public/frontend/images/i_asc_arrow.png')}}" alt="Set Descending Direction" class="v-middle" />
-                                                            </a>
-                                                        </div>
-                                                        <div class="limiter toolbar-switch">
-                                                            <div class="toolbar-title">
-                                                                <label>Show</label>
-                                                                <select class="toolbar-show">
-                                                                    <option value="12" selected="selected"> 12</option>
-                                                                    <option value="24"> 24</option>
-                                                                    <option value="36"> 36</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.sorter -->
+                                                    
                                                 </div>
                                             </div><!-- /.toolbar-bottom -->
                                         </div><!-- /.category-products -->

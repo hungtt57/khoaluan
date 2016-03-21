@@ -25,9 +25,9 @@ class HomeController extends Controller
     }
     public function loaisanpham($id)
     {
-        $product_cate = DB::table('products')->select('id','ten','alias','gia','anhdaidien','category_id')->where('category_id',$id)->get();
+        $product_cates = DB::table('products')->select('id','ten','alias','gia','anhdaidien','category_id')->where('category_id',$id)->paginate(10);
         $name_cate = DB::table('categories')->select('ten')->where('id',$id)->first();
-        return view('frontend.pages.category',compact('product_cate','name_cate'));
+        return view('frontend.pages.category',compact('product_cates','name_cate'));
     }
     public function chitietsanpham($id){
         $product_detail  = DB::table('products')->where('id',$id)->first();
