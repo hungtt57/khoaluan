@@ -20,6 +20,7 @@ Route::post('capnhatcart','HomeController@capnhatcart');
 
 
 Route::get('/','HomeController@index');
+Route::get('/home','HomeController@index');
 Route::get('/loaisanpham/{id}/{tenloai}','HomeController@loaisanpham');
 Route::get('/chitietsanpham/{id}/{tenloai}','HomeController@chitietsanpham');
 Route::post('/muahang/{id}/{tenhang}','HomeController@muahang');

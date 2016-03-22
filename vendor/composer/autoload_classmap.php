@@ -8,8 +8,10 @@ $baseDir = dirname($vendorDir);
 return array(
     'CreateBlogTable' => $baseDir . '/database/migrations/2016_03_08_143142_create_blog_table.php',
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2016_01_28_161939_create_categories_table.php',
-    'CreateOrderDetailTable' => $baseDir . '/database/migrations/2016_03_16_144235_create_order_detail_table.php',
-    'CreateOrderTable' => $baseDir . '/database/migrations/2016_03_16_144207_create_order_table.php',
+    'CreateFailedJobsTable' => $baseDir . '/database/migrations/2016_03_22_160150_create_failed_jobs_table.php',
+    'CreateJobsTable' => $baseDir . '/database/migrations/2016_03_22_155816_create_jobs_table.php',
+    'CreateOrderDetailTable' => $baseDir . '/database/migrations/2016_03_16_144280_create_order_detail_table.php',
+    'CreateOrderTable' => $baseDir . '/database/migrations/2016_03_16_144277_create_order_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateProductsTable' => $baseDir . '/database/migrations/2016_01_28_174223_create_products_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
