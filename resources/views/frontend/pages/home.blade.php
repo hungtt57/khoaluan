@@ -562,40 +562,49 @@
                                 <div class="em-wrapper-brands">
                                     <div class=" slider-style02">
                                         <div class="em-slider em-slider-banners em-slider-navigation-icon" data-emslider-navigation="true" data-emslider-items="6" data-emslider-desktop="5" data-emslider-desktop-small="4" data-emslider-tablet="3" data-emslider-mobile="2">
+            
                                             <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_01.jpg" src="{{asset('public/frontend/images/brand/em_brand_01.png')}}" />
+                                                <a href="#"><img class="img-responsive" alt="em_brand_03.jpg" src="{{asset('public/image/slide_bottom/1.png')}}" />
                                                 </a>
                                             </div>
                                             <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_02.jpg" src="{{asset('public/frontend/images/brand/em_brand_02.png')}}" />
+                                                <a href="#"><img class="img-responsive" alt="em_brand_04.jpg" src="{{asset('public/image/slide_bottom/2.png')}}" />
                                                 </a>
                                             </div>
                                             <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_03.jpg" src="{{asset('public/frontend/images/brand/em_brand_03.png')}}" />
+                                                <a href="#"><img class="img-responsive" alt="em_brand_05.jpg" src="{{asset('public/image/slide_bottom/3.png')}}" />
                                                 </a>
                                             </div>
                                             <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_04.jpg" src="{{asset('public/frontend/images/brand/em_brand_04.png')}}" />
+                                                <a href="#"><img class="img-responsive" alt="em_brand_06.jpg" src="{{asset('public/image/slide_bottom/4.png')}}" />
                                                 </a>
                                             </div>
                                             <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_05.jpg" src="{{asset('public/frontend/images/brand/em_brand_05.png')}}" />
+                                                <a href="#"><img class="img-responsive" alt="em_brand_07.jpg" src="{{asset('public/image/slide_bottom/5.png')}}" />
                                                 </a>
                                             </div>
                                             <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_06.jpg" src="{{asset('public/frontend/images/brand/em_brand_06.png')}}" />
+                                                <a href="#"><img class="img-responsive" alt="em_brand_01.jpg" src="{{asset('public/image/slide_bottom/6.png')}}" />
                                                 </a>
                                             </div>
                                             <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_07.jpg" src="{{asset('public/frontend/images/brand/em_brand_01.png')}}" />
+                                                <a href="#"><img class="img-responsive" alt="em_brand_02.jpg" src="{{asset('public/image/slide_bottom/7.png')}}" />
                                                 </a>
                                             </div>
-                                            <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_01.jpg" src="{{asset('public/frontend/images/brand/em_brand_02.png')}}" />
+                                             <div class="em-banners-item">
+                                                <a href="#"><img class="img-responsive" alt="em_brand_02.jpg" src="{{asset('public/image/slide_bottom/8.png')}}" />
                                                 </a>
                                             </div>
-                                            <div class="em-banners-item">
-                                                <a href="#"><img class="img-responsive" alt="em_brand_02.jpg" src="{{asset('public/frontend/images/brand/em_brand_03.png')}}" />
+                                             <div class="em-banners-item">
+                                                <a href="#"><img class="img-responsive" alt="em_brand_02.jpg" src="{{asset('public/image/slide_bottom/9.png')}}" />
+                                                </a>
+                                            </div>
+                                             <div class="em-banners-item">
+                                                <a href="#"><img class="img-responsive" alt="em_brand_02.jpg" src="{{asset('public/image/slide_bottom/10.png')}}" />
+                                                </a>
+                                            </div>
+                                             <div class="em-banners-item">
+                                                <a href="#"><img class="img-responsive" alt="em_brand_02.jpg" src="{{asset('public/image/slide_bottom/11.png')}}" />
                                                 </a>
                                             </div>
                                         </div>

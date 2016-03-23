@@ -72,7 +72,8 @@ class HomeController extends Controller
     }
     public function blog_detail($id){
         $blog_detail = DB::table('blog')->where('id',$id)->first();
-        return view('frontend.pages.blog_detail',compact('blog_detail'));
+        $recent_blogs = DB::table('blog')->orderBy('id','DESC')->paginate(2); 
+        return view('frontend.pages.blog_detail',compact('blog_detail','recent_blogs'));
     }
 
     public function xoaspcart(){

@@ -48,16 +48,9 @@
                                                                 <img id="product-collection-image-217" class="em-img-lazy img-responsive em-alt-org" src="{{asset($product_cate->anhdaidien)}}" width="220" height="220" alt="WIASSI Version 12" /><span class="bkg-hover"></span> </a>
                                                                 <div class="bottom">
                                                                     <div class="em-btn-addto text-center ">
-                                                                        <button type="button" title="Add to Cart" class="button btn-cart" onclick="217"><span><span>Add to Cart</span></span>
-                                                                        </button>
-                                                                        <ul class="add-to-links">
-                                                                            <li><a href="#217" class="link-wishlist" title="Add to Wishlist">Add to Wishlist</a>
-                                                                            </li>
-                                                                            <li><a href="#217" class="link-compare" title="Add to Compare">Add to Compare</a>
-                                                                            </li>
-                                                                        </ul>
+                                                                       
                                                                     </div>
-                                                                    <div class="quickshop-link-container"> <a href="#" class="quickshop-link" title="Quickshop">Quickshop</a>
+                                                                    <div class="quickshop-link-container"> <a href="#" class="quickshop-link" title="Chi tiết sản phẩm">Chi tiết sản phẩm</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
