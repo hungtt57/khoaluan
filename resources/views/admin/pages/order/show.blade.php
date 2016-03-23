@@ -18,7 +18,7 @@
 				</div>	
 				@endif
 
-					<table id="" class="table table-bordered table-striped table-condensed">
+					<table  class="table table-bordered table-striped table-condensed">
 					<tr>
 						<td>Tên khách hàng</td>
 						<td>{{$order->tenkh}}</td>

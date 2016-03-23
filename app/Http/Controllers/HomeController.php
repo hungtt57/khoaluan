@@ -9,6 +9,7 @@ use App\Blog;
 use App\Http\Requests\CheckThanhtoanRequest;
 use App\Order;
 use App\Order_detail;
+use Mail;
 class HomeController extends Controller
 {
     /**
@@ -40,7 +41,7 @@ class HomeController extends Controller
         $product_buy = DB::table('products')->where('id',$id)->first();
         Cart::add(array('id'=> $id,'name'=> $product_buy->ten,'qty'=>$qty,'price'=> format_gia($product_buy->gia), 'options' => array('image' => $product_buy->anhdaidien)));
         $content=Cart::content();
-        return redirect()->back();
+        return redirect()->back()->with('flash_message','1');
     }
      public function giohang(){
         $content = Cart::content();
@@ -137,22 +138,24 @@ class HomeController extends Controller
         }
     
         
-        // $info=DB::table('orderdetails')->where('order_id',$order->id)->get();
+        $info=Order::find($order->id)->order_detail->toArray();
+        $order=$order->toArray();
+       
+          $data = array(
+                  'order' => $order,
+                  'orderdetail'=>$info
+                  );
         
-        //   $data = array(
-        //           'order' => $order,
-        //           'orderdetail'=>$info
-        //           );
-        
-        //   Mail::send('emails.order', $data, function ($message) use ($order){
+          Mail::queue('admin.email.order', $data, function ($message) use ($data){
 
-        //   $message->from('hin1471994@gmail.com', 'Mail Confirm Your Order');
+          $message->from('hin1471994@gmail.com', 'Thông tin đơn hàng');
 
-        //    $message->to($order->customer_email)->subject('Confirm Your Information Order');
+           $message->to($data['order']['emailkh'])->subject('Xác nhận đặt hàng!!');
 
-        //    });
-        //  Cart::destroy();
-        // return redirect('home')->with('message','Checkout successed!!Please check mail to know more info order!!');
+           });
+
+          Cart::destroy();
+         return redirect('/')->with('message','Checkout successed!!Please check mail to know more info order!!');
     }
 
 
