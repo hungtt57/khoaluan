@@ -92,7 +92,7 @@
                                         </li>
                                         @endforeach
 
-                                              {!! $products->setPath('')->appends(Input::query())->render() !!}
+                                             {!!  $products->setPath('')->appends(Input::query())->render() !!}
                                              
                                         @if(count($blogs))
                                         <h2> Tin tức</h2>
@@ -122,7 +122,7 @@
                                         height: 300px">
                                         <div class="product-item">
                                             <div class="product-shop-top">
-                                                <a href="{{asset('/chitietsanpham/'.$product->id.'/'.$product->alias)}}" title="{{$product->alias}} " class="product-image"> 
+                                                <a href="{{asset('/blog_detail/'.$blog->id.'/'.$blog->alias)}}" title="{{$blog->title}} " class="product-image"> 
 
                                                     <img class="em-img-lazy img-responsive em-alt-hover" src="{{asset($blog->image)}}" width="220" height="220"/> 
                                                     <img id="product-collection-image-217" class="em-img-lazy img-responsive em-alt-org" src="{{asset($blog->image)}}" width="220" height="220" alt="WIASSI Version 12" /><span class="bkg-hover"></span> </a>
@@ -130,7 +130,7 @@
                                                 </div>
                                                 <div class="product-shop">
                                                     <div class="f-fix">
-                                                        <h2 class="product-name text-center  "><a href="product-detail.html" title="{{$product->ten}}"> {{$blog->title}} </a></h2>
+                                                        <h2 class="product-name text-center  "><a href="{{asset('/blog_detail/'.$blog->id.'/'.$blog->alias)}}" title="{{$blog->title}}"> {{$blog->title}} </a></h2>
 
 
                                                         <div class="desc std text-center em-element-display-hover"></div>
@@ -139,9 +139,9 @@
                                             </div><!-- /.product-item -->
                                         </li>
                                         @endforeach
-
+                                        <div>
                                          {!! $blogs->setPath('')->appends(Input::query())->render() !!}
-
+                                        </div>
 
 
 
