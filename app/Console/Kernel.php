@@ -26,11 +26,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('inspire')
-                 ->hourly();
-        $schedule->command('crawlermuathuoc')
-                 ->everyTenMinutes();
-                 $schedule->command('crawlertintuc')
-                 ->everyTenMinutes();
+        $schedule->command('inspire')->everyMinute();
+        $schedule->command('crawlermuathuoc')->weekly();
+        $schedule->command('crawlertintuc')->weekly();
+         $schedule->command('queue:work')->everyMinute();
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use File;
-
+use Log;
 use Sunra\PhpSimple\HtmlDomParser;
 
 use App\Category;
@@ -90,6 +90,7 @@ class CrawlerMuathuoc extends Command
         }
         $this->line('>>>End crawler--- :');
          sleep(0);
+          Log::warning('crawler mua thuoc');
 
     } //end handle
 

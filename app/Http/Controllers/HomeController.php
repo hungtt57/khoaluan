@@ -10,6 +10,7 @@ use App\Http\Requests\CheckThanhtoanRequest;
 use App\Order;
 use App\Order_detail;
 use Mail;
+use Illuminate\Pagination\Paginator;
 class HomeController extends Controller
 {
     /**
@@ -53,11 +54,14 @@ class HomeController extends Controller
          if($key=="" || $key==" "){
             return redirect()->back();
          }
-       
-        $products=Product::where('ten','like','%'.$key.'%')->paginate(5);
-     
-        $blogs = Blog::where('title','like','%'.$key.'%')->paginate(5);
-        
+      
+        $products=Product::where('ten','like','%'.$key.'%')->paginate(5,['*'],'product');
+
+        $products->setPageName('product');
+    
+        $blogs = Blog::where('title','like','%'.$key.'%')->paginate(5,['*'],'blog');
+         $blogs->setPageName('blog');
+
        return view('frontend.pages.search',compact('products','blogs','key'));
     }
     
