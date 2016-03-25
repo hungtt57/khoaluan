@@ -12,7 +12,7 @@
                             <div class="form-search no_cate_search">
                                 <div class="text-search">
                                     <input id="search-mobile" type="text" name="q" value="" class="input-text" maxlength="128" />
-                                    <button type="submit" title="Search" class="button"><span><span>Search</span></span>
+                                    <button type="submit" title="Search" class="button"><span><span>Tìm Kiếm</span></span>
                                     </button>
                                     <div id="search_autocomplete_mobile" class="search-autocomplete"></div>
                                 </div>
@@ -329,7 +329,7 @@
                                                 <form id="search_mini_form" method="get" action="{{asset('timkiem')}}">
                                                     <div class="form-search no_cate_search">
                                                         <div class="text-search">
-                                                            <label for="search">Search:</label>
+                                                            <label for="search">Tìm Kiếm:</label>
                                                             <input id="search" type="text" name="search"  class="input-text" maxlength="128" placeholder="Nhập từ khóa" />
                                                             <button type="submit" title="Search" class="button"><span><span>Tìm kiếm</span></span>
                                                             </button>
@@ -361,16 +361,18 @@
                         <div class="em-search em-search-sticky f-right">
                             <div class="em-top-search">
                                 <div class="em-wrapper-js-search em-search-style01">
-                                    <div class="em-wrapper-search"> <a class="em-search-icon" title="Search" href="javascript:void(0);"><span>Search</span></a>
+                                    <div class="em-wrapper-search"> <a class="em-search-icon" title="Search" href="javascript:void(0);"><span>Tìm Kiếm</span></a>
                                         <div class="em-container-js-search" style="display: none;">
-                                            <form id="search_mini_form_fixed_top" method="get">
-                                                <div class="form-search">
-                                                    <label for="search">Search:</label>
-                                                    <input id="search-fixed-top" type="text" name="q" value="" class="input-text" maxlength="128" placeholder="Search entire store here..." />
-                                                    <button type="submit" title="Search" class="button"><span><span>Search</span></span>
-                                                    </button>
-                                                </div>
-                                            </form>
+                                            <form id="search_mini_form" method="get" action="{{asset('timkiem')}}">
+                                                    <div class="form-search no_cate_search">
+                                                        <div class="text-search">
+                                                            <label for="search">Tìm Kiếm:</label>
+                                                            <input id="search" type="text" name="search"  class="input-text" maxlength="128" placeholder="Nhập từ khóa" />
+                                                            <button type="submit" title="Search" class="button"><span><span>Tìm kiếm</span></span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form><!-- /#search_mini_form -->
                                         </div>
                                     </div>
                                 </div><!-- /.em-wrapper-js-search -->
@@ -445,10 +447,10 @@
                                                     <a class="em-menu-link" href="#"> <span> Danh mục </span> </a>
                                                     <ul class="menu-container">
                                                         <li class="menu-item-hbox menu-item-depth-1 col-menu menu_col24 grid_24 menu-item-parent" style="">
-                                                            <ul class="menu-container">
+                                                            <ul class="menu-container list-group">
                                                                <?php $categories = category_menu();?>
                                                                @foreach($categories as $key => $value)
-                                                               <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent" style="">
+                                                               <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent list-group-item" style="border:none !important;">
                                                                 <a href="{{asset('/loaisanpham/'.$value->id.'/'.$value->alias)}}}">{{$value->ten}}</a>
                                                             </li><!-- /.menu-item-vbox -->
                                                             @endforeach
@@ -456,12 +458,17 @@
                                                     </li>
                                                 </ul><!-- /.menu-container -->
                                             </li><!-- /.menu-item-link -->
+
                                             <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                <a class="em-menu-link" href="#"> <span> About </span> </a>
+                                                <a class="em-menu-link" href="{{asset('/tintuc')}}"> <span> Tin Tức </span> </a>
 
                                             </li><!-- /.menu-item-link -->
                                             <li class="menu-item-link menu-item-depth-0  menu-item-parent">
-                                                <a class="em-menu-link" href="blog.html"> <span> Liên hệ </span> </a>
+                                                <a class="em-menu-link" href="{{asset('/about')}}"> <span> Giới Thiệu </span> </a>
+
+                                            </li><!-- /.menu-item-link -->
+                                            <li class="menu-item-link menu-item-depth-0  menu-item-parent">
+                                                <a class="em-menu-link" href="{{asset('/contact')}}"> <span> Liên Hệ </span> </a>
 
                                             </li><!-- /.menu-item-link -->
                                         </ul><!-- /.hnav em_hoz_menu -->

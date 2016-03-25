@@ -99,7 +99,7 @@
     <script type="text/javascript" src="{{asset('public/frontend/js/jquery.fancybox.js')}}"></script>
     <!-- Custom Js -->
     <script type="text/javascript" src="{{asset('public/frontend/js/custom.js')}}"></script>
-    
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.20.1/mediaelement-and-player.min.js"></script>
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')}}"></script>

@@ -28,13 +28,13 @@
                                         @foreach($allBlogs as $key => $val)
                                             <div class="em_post-item">
                                                 <div class="post-title">
-                                                    <h2><a href="{{asset('/blog_detail/'.$val->id.'/'.$val->alias)}}">{{$val->title}}</a></h2>
+                                                    <h2><a href="{{asset('/baiviet/'.$val->id.'/'.$val->alias)}}">{{$val->title}}</a></h2>
                                                 </div>
                                                 <div class="post-header">
                                                      <span class="post-time"><small class="time-stamp">{{$val->created_at}}</small></span> <!-- <span class="comment-count"> 3 </span> <a class="comment-post-link" href="blog-detail.html">Comments</a> -->
                                                 </div>
                                                 <div class="post-image">
-                                                    <a href="{{asset('/blog_detail/'.$val->id.'/'.$val->alias)}}"> <img class="img-responsive" alt="" src="{{asset($val->image)}}" style="width:380px; height:209px;"/> </a>
+                                                    <a href="{{asset('/baiviet/'.$val->id.'/'.$val->alias)}}"> <img class="img-responsive" alt="" src="{{asset($val->image)}}" style="width:380px; height:209px;"/> </a>
                                                 </div>
                                                 <div class="post-content">
                                                     <div class="std">
@@ -68,7 +68,7 @@
                                                 <ul class="em-recent-post">
                                                 @foreach($recent_blogs as $key => $recent_blog)
                                                     <li class="item">
-                                                        <a href="{{asset('/blog_detail/'.$recent_blog->id.'/'.$recent_blog->alias)}}"> <img alt="" src="{{asset($recent_blog->image)}}" /> </a> <a class="post-title em-blog-title" href="blog-detail.html">{{$recent_blog->title}}</a>
+                                                        <a href="{{asset('/baiviet/'.$recent_blog->id.'/'.$recent_blog->alias)}}"> <img alt="" src="{{asset($recent_blog->image)}}" /> </a> <a class="post-title em-blog-title" href="blog-detail.html">{{$recent_blog->title}}</a>
                                                         <p class="intro">
                                                             <p><span>{{$recent_blog->description}}</span>
                                                             </p>

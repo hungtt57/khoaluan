@@ -8,7 +8,7 @@
                                     <ul>
                                         <li class="home"> <a href="{{asset('/')}}" title="Go to Home Page"><span >Trang chủ</span></a> <span class="separator">/ </span>
                                         </li>
-                                        <li class="blog"> <a href="{{asset('/blog')}}" title="Go to Blog"><span >Tin tức</span></a> <span class="separator">/ </span>
+                                        <li class="blog"> <a href="{{asset('/tintuc')}}" title="Go to Blog"><span >Tin tức</span></a> <span class="separator">/ </span>
                                         </li>
                                         <li class="post"><strong>{{$blog_detail->title}}</strong>
                                         </li>

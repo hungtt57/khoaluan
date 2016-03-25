@@ -12,13 +12,12 @@
                                                         </p>
                                                     </div>
                                                     <ul id="collapse01" class="em-links em-block-content block-info">
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Discount Voucher</span></a>
+                                                        <li class="em-links-item"><span>Chủ Cửa Hàng: Nguyễn Xuân Nam</span>
                                                         </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Spring Collection</span></a>
+                                                        
+                                                        <li class="em-links-item"><span>Địa Chỉ: 144 Xuân Thủy, Cầu Giấy,Hà Nội</span>
                                                         </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Trending</span></a>
-                                                        </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Best Sellers</span></a>
+                                                        <li class="em-links-item"><span>Số Điện Thoại: 0984 203 569</span>
                                                         </li>
                                                     </ul>
                                                 </div><!-- /.col-sm-4 -->
@@ -28,29 +27,24 @@
                                                         </p>
                                                     </div>
                                                     <ul id="collapse02" class="em-links em-block-content block-info">
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Jack &amp; Jones</span></a>
-                                                        </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Calvin Klein</span></a>
-                                                        </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Ray Ban</span></a>
-                                                        </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>River Island</span></a>
-                                                        </li>
+                                                    <li class="em-links-item"><p class="em-social"><a class="em-social-icon em-facebook f-center" title="em-sample-title" href="#"><span class="fa fa-fw"></span></a> 
+                                                                </p>
+                                                    </li>
+                                                        
                                                     </ul>
                                                 </div><!-- /.col-sm-4 -->
                                                 <div class="col-sm-8 text-center">
                                                     <div class="em-block-title" data-collapse-target="#collapse03">
-                                                        <p class="h4 em-text-upercase"><span>Men shop</span>
+                                                        <p class="h4 em-text-upercase"><span>Cửa Hàng Có:</span>
                                                         </p>
                                                     </div>
                                                     <ul id="collapse03" class="em-links em-block-content block-info">
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Top</span></a>
+            
+                                                        <li class="em-links-item"><a title="em-sample-title" href="{{asset('/blog')}}"><span>Các Bài Viết Về Thuốc</span></a>
                                                         </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Bottoms</span></a>
+                                                        <li class="em-links-item"><span>Thông Tin Về Các Loại Thuốc</span>
                                                         </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Accessories</span></a>
-                                                        </li>
-                                                        <li class="em-links-item"><a title="em-sample-title" href="#"><span>Shoes</span></a>
+                                                        <li class="em-links-item"><span>Dịch Vụ Chuyển Hàng Nhanh </span>
                                                         </li>
                                                     </ul>
                                                 </div><!-- /.col-sm-4 -->
@@ -71,7 +65,7 @@
                                                                             <div class="block-content">
                                                                                 <div class="form-subscribe-content">
                                                                                     <div class="input-box">
-                                                                                        <input type="text" name="email" id="em-newsletter-style03" title="Sign up for our newsletter" class="input-text required-entry validate-email" placeholder="Sign up for your email ..." />
+                                                                                        <input type="text" name="email" id="em-newsletter-style03" title="Sign up for our newsletter" class="input-text required-entry validate-email" placeholder="Nhập địa chỉ Email của bạn ..." />
                                                                                     </div>
                                                                                     <div class="actions">
                                                                                         <button type="submit" title="Subscribe" class="button"><span><span>Đăng ký</span></span>
@@ -88,7 +82,7 @@
                                                     <div class="col-sm-9 last">
                                                         <div class="em-wrapper-social f-right">
                                                             <div class="em-block-title" data-collapse-target="#collapse08">
-                                                                <p class="h4 em-text-upercase"><span>Follow Us</span>
+                                                                <p class="h4 em-text-upercase"><span>Facebook Cửa Hàng</span>
                                                                 </p>
                                                             </div>
                                                             <div id="collapse08" class="em-block-content">
