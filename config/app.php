@@ -146,7 +146,9 @@ return [
          // add these two at the bottom  
        
         Intervention\Image\ImageServiceProvider::class,
+        //'RobBrazier\Piwik\PiwikServiceProvider',
         'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
+
     ],
 
     /*
@@ -197,6 +199,7 @@ return [
          'Form'      => Illuminate\Html\FormFacade::class, 
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Image'     => Intervention\Image\Facades\Image::class,
+        //'Piwik' => 'RobBrazier\Piwik\Facades\Piwik',
         'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
     ],
 

@@ -81,34 +81,25 @@
                                                                             <!-- </div> --><!-- /.ratings -->
                                                                             
                                                                         </div>
-                                                                        <div class="em-sku-availability">
-                                                                          <!--   <p class="sku">SKU: Sho_1</p> -->
+                                                                        <!-- <div class="em-sku-availability">
+                                                                             <p class="sku">SKU: Sho_1</p>
                                                                             <p class="availability in-stock"> Availability: <span class="value">In stock</span>
                                                                             </p>
-                                                                        </div>
+                                                                        </div>  -->
                                                                         <div class="short-description">
-                                                                            <h2>Quick Overview</h2>
+                                                                            <h2>Đóng Gói</h2>
                                                                             <div class="std">{{$product_detail->donggoi}}</div>
                                                                         </div>
-                                                                        <div class="em-addthis-plug"> <span>Share</span>
+                                                                        <div class="em-addthis-plug"> <span>Chia Sẻ</span>
                                                                             <a href="#" target="_blank"><img alt="Facebook" src="{{asset('public/frontend/images/social/facebook.png')}}" />
                                                                             </a>
-                                                                            <a href="#" target="_blank"><img alt="Twitter" src="{{asset('public/frontend/images/social/twitter.png')}}" />
-                                                                            </a>
-                                                                            <a href="#" target="_blank"><img alt="Google+" src="{{asset('public/frontend/images/social/google_plusone_share.png')}}" />
-                                                                            </a>
-                                                                            <a href="#" target="_blank"><img alt="Pinterest" src="{{asset('public/frontend/images/social/pinterest.png')}}" />
-                                                                            </a>
-                                                                            <a href="#" target="_blank"><img alt="LinkedIn" src="{{asset('public/frontend/images/social/linkedin.png')}}" />
-                                                                            </a>
-                                                                            <a href="#" target="_blank"><img alt="Email" src="{{asset('public/frontend/images/social/email.png')}}" />
-                                                                            </a>
+                                                        
                                                                         </div><!-- /.em-addthis-plug -->
                                                                         <div>
                                                                             
-                                                                            <p class="availability in-stock">Availability: <span>In stock</span>
+                                                                           <!--  <p class="availability in-stock">Availability: <span>In stock</span>
                                                                             </p>
-                                                                            
+                                                                             -->
                                                                             <div class="price-box"> <span class="regular-price" id="product-price-206"> <span class="price"  content="750">{{$product_detail->gia}}</span> </span>
                                                                             </div>
                                                                         </div>
@@ -131,7 +122,7 @@
                                                                                     </li> -->
                                                                                 </ul>
                                                                                 <div class="button_addto">
-                                                                                    <button  title="Add to Cart" type ="Submit" id="em-buy-now" class="button btn-em-buy-now"><span><span>Add to Cart</span></span>
+                                                                                    <button  title="Add to Cart" type ="Submit" id="em-buy-now" class="button btn-em-buy-now"><span><span style="font-size: 15px;">Thêm vào giỏ hàng</span></span>
                                                                                     </button>
                                                                                     
                                                                                 </div>
@@ -174,7 +165,7 @@
                                                             <div class="box-collateral box-reviews em-line-01" id="customer-reviews">
                                                                 <div id="customer_review_list" class="reviews">
                                                                     <div class="em-block-title">
-                                                                        <h2>Customer Reviews</h2>
+                                                                        <h2>Phản Hồi Khách Hàng</h2>
                                                                     </div>
                                                                     <div class="em-box-review">
                                                                         <table>

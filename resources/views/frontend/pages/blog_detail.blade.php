@@ -42,62 +42,12 @@
                                             </div>
                                             
                                             <div class="comments">
-                                                <div class="post-footer"> <span class="comment-count"> 3 Comments </span> <span class="separator">|</span> <span class="post-by">Posted by <span>admin</span></span>
-                                                </div>
+                                                
                                                 <div class="article-comments">
-                                                    <div id="comments-header">
-                                                        <h3 class="form-title">Comments (3)</h3>
-                                                    </div>
-                                                    <div id="allcomments">
-                                                        <div class="level1 comment-item">
-                                                            <div class="wrapper-reply-comment">
-                                                                <div class="comment-item-header"> <span class="comment-by"> Comment by <span>Ben Sherman</span> </span>
-                                                                </div>
-                                                                <div class="comment-body"> We are particularly excited about this transaction as Ben Sherman is consistent with our mission to acquire high quality brands with substantial global growth potential. The current management team under Oxford’s leadership has done a great job building on the core essence of the brand. We’ve received supportive messages from retailers across the globe that share our view of the growth opportunity ahead.</div> <small class="time-stamp"> Wednesday, Jul 22 2015, 02:59AM </small>
-                                                                <div class="comment-button">
-                                                                    <button class="button" name="reply" value="Post Reply"><span><span>Post reply</span></span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                            <div id="3_comment_box"></div>
-                                                        </div><!-- /.level1 -->
-                                                        <div class="level1 comment-item">
-                                                            <div class="wrapper-reply-comment">
-                                                                <div class="comment-item-header"> <span class="comment-by"> Comment by <span>Musgrave</span> </span>
-                                                                </div>
-                                                                <div class="comment-body"> s the fashion business as guilty as any other offender? Or is it actually better than most? We would love to hear your views, experiences and observations.</div> <small class="time-stamp"> Wednesday, Jul 22 2015, 02:57AM </small>
-                                                                <div class="comment-button">
-                                                                    <button class="button" name="reply" value="Post Reply"><span><span>Post reply</span></span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                            <div id="1_comment_box"></div>
-                                                            <div class='level2 reply comment-item '>
-                                                                <div class='comment-item-header'><span>Drappers</span>
-                                                                    <div class='comment-status'> <small class='date'>Wednesday, Jul 22 2015, 02:58AM</small>
-                                                                        <div class='comment-button'>
-                                                                            <button name='reply' class='button' value='Reply'><span><span>Reply</span></span>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class='comment-body'>It will be interesting to see which firms seize the opportunity to lead by example and how many continue to duck and dive with deflections about staff discounts and other benefits or just ignore the debate. As ever, your views on the topic would be most welcome.</div>
-                                                                <div id='2_comment_box'></div>
-                                                            </div>
-                                                        </div><!-- /.level1 -->
-                                                    </div>
-                                                    <div class="toolbar">
-                                                        <div class="pager">
-                                                            <p class="amount"> <strong>2 Item(s)</strong>
-                                                            </p>
-                                                        </div>
-                                                    </div><!-- /.toolbar -->
+                                                    
+                                                    
                                                 </div>
-                                                <div class="form-comment-container"> <span id="new"><h3>Leave Your Comment</h3> </span>
-                                                    <div id="0_comment_box" class="form-comment">
-                                                        
-                                                    </div><!-- /#0_comment_box -->
-                                                </div><!-- /.form-comment-container -->
+                                               
                                             </div><!-- /.comments -->
                                         </div>
                                     </div><!-- /.em-col-main -->
