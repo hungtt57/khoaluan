@@ -4,8 +4,13 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+
     "hash": "63c9ebb42a3636e1e5ed60d7f3c510b3",
     "content-hash": "3197b487b945abcb0cc91e1d97f0948a",
+
+    "hash": "5da8fdb5ab0ce02a3770eca1ecbc5f2b",
+    "content-hash": "fd2745c482b1c968ca87c2b6ed25e5ca",
+
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1679,6 +1684,7 @@
                 "shell"
             ],
             "time": "2016-03-09 05:03:14"
+<<<<<<< HEAD
         },
         {
             "name": "robbrazier/piwik",
@@ -1723,6 +1729,8 @@
                 "piwik"
             ],
             "time": "2015-12-09 20:08:19"
+=======
+>>>>>>> 41b0a7745ac76d30058eaad9f258f47089689b44
         },
         {
             "name": "sunra/php-simple-html-dom-parser",

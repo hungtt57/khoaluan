@@ -12,19 +12,19 @@
                     <div class="text-box col-sm-8"><a class="icon-banner-left pull-left" title="Tech Support 247" href="#"><em class="fa fa-fw"></em></a>
                         <div class="em-banner-right">
                             <h5><a title="Tech Support 247" href="#">Thân Thiện</a></h5>
-                            <p>Vintage pastel tucked t-shirt leather cami</p>
+                            <p>Luôn là tiêu trí hàng đầu của chúng tôi</p>
                         </div>
                     </div>
                     <div class="text-box col-sm-8"><a class="icon-banner-left pull-left" title="Free shipping all order" href="#"><em class="fa fa-fw"></em></a>
                         <div class="em-banner-right">
                             <h5><a title="Free shipping all order" href="#">An Toàn</a></h5>
-                            <p>Get Free Shipping on all orders</p>
+                            <p>Giao hàng nhanh chóng,an toàn</p>
                         </div>
                     </div>
                     <div class="text-box col-sm-8"><a class="icon-banner-left pull-left" title="30 days return" href="#"><em class="fa fa-fw"></em></a>
                         <div class="em-banner-right">
                             <h5><a title="30 days return" href="#">Đáng Tin Cậy</a></h5>
-                            <p>The total billed is discount for member</p>
+                            <p>Luôn tạo niềm tin cho khách hàng</p>
                         </div>
                     </div>
                 </div><!-- /.em-wrapper-ads-13-->
@@ -46,21 +46,18 @@
                                             </div>
                                         </div><!-- /.item -->
                                         <div class="item">
-                                            <a href="#"> <img alt="1435569308_1_2.jpg" class="lazyOwl img-responsive" src="{{asset('public/frontend/images/loading.gif')}}" data-src="{{asset('public/frontend/images/em_minislideshow/1435569308_1_2.jpg')}}" /> </a>
+                                            <a href="#"> <img alt="1435569308_0_1.jpg" class="lazyOwl img-responsive" src="{{asset('public/frontend/images/loading.gif')}}" data-src="{{asset('public/image/slide/giao_hang_mien_phi.jpg')}}" /> </a>
                                             <div class="em-owlcarousel-description">
-                                                <div class="fadeInDown em-owlcarousel-des em-owlcarousel-des-1">
-                                                    <h4 style="font:italic 3rem/1 Lora,Helvetica Neue, Helvetica, Arial, sans-serif;  margin-bottom: 3.5rem;">Hot discounts of the week</h4>
-                                                    <h2 style="font:700 6rem/1 Raleway,Helvetica Neue, Helvetica, Arial, sans-serif;  margin-bottom: 3rem;" class="em-text-upercase">sale up 70% off</h2>
-                                                    <h4 class="em-text-upercase" style="font:500 2rem/1 Lato,Helvetica Neue, Helvetica, Arial, sans-serif;">only over oders on $99.99</h4>
+                                                <div class="fadeInLeft em-owlcarousel-des em-owlcarousel-des-0">
+
                                                 </div>
                                             </div>
                                         </div><!-- /.item -->
                                         <div class="item">
-                                            <a href="#"> <img alt="1436500083_0_slideshow3.jpg" class="lazyOwl img-responsive" src="{{asset('public/frontend/images/loading.gif')}}" data-src="{{asset('public/frontend/images/em_minislideshow/1436500083_0_slideshow3.jpg')}}" /> </a>
+                                            <a href="#"> <img alt="1435569308_0_1.jpg" class="lazyOwl img-responsive" src="{{asset('public/frontend/images/loading.gif')}}" data-src="{{asset('public/image/slide/doi-ngu-chuyen-nghiep.jpg')}}" /> </a>
                                             <div class="em-owlcarousel-description">
-                                                <div class="fadeInRight em-owlcarousel-des em-owlcarousel-des-2">
-                                                    <h3 style="font:italic 2rem/1 Lora,Helvetica Neue, Helvetica, Arial, sans-serif;margin-bottom:1.7rem;">Long Weekend Sale Off</h3>
-                                                    <h1 style="font:700 6rem/1 Raleway,Helvetica Neue, Helvetica, Arial, sans-serif; margin-bottom: 3rem;" class="em-text-upercase">couple shop</h1> <a href="#" class="button-link first"><span>purchase now</span></a> <a href="#" class="button-link"><span>shop now</span></a>
+                                                <div class="fadeInLeft em-owlcarousel-des em-owlcarousel-des-0">
+
                                                 </div>
                                             </div>
                                         </div><!-- /.item -->
@@ -196,173 +193,25 @@
                                                 <div class="emfilter-ajaxblock-loaded">
                                                     <div class="em-grid-15 custom-product-list">
                                                         <div class="widget-title em-widget-title">
-                                                            <h3><span>Bài viết mới nhất</span></h3>
+                                                            <h3><span>Sản phẩm được mua nhiều nhất</span></h3>
                                                         </div>
 
                                                         <div class="widget em-filterproducts-list">
                                                             <div class="widget-products em-widget-products">
-                                                                <div class="products-list ">
-                                                                    <div class="item first" style="  ">
-                                                                        <a href="#" title=" Pretty Playsuit" class="product-image">
-
-                                                                            <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp19_2.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp19_2.jpg')}}" alt=" Pretty Playsuit" height="110" width="110">
-                                                                            <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp19_1.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp19_1.jpg')}}" alt=" Pretty Playsuit" height="110" width="110">
-                                                                        </a>
-                                                                        <div class="product-shop">
-                                                                            <div class="f-fix">
-                                                                                <!--product name-->
-                                                                                <h3 class="product-name"><a href="#" title=" Pretty Playsuit"> Pretty Playsuit</a></h3>
-                                                                                <!--product description-->
-                                                                                <!--product reviews-->
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:0%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#" onclick="184">(0)</a></span>
-                                                                                </div>
-                                                                                <!--product price-->
-                                                                                <div class="price-box">
-
-                                                                                    <p class="old-price">
-                                                                                        <span class="price-label">Regular Price:</span>
-                                                                                        <span class="price" id="old-price-184-emprice-9c7acb644d253ae8c0c656d97ce7a00f">$130.00</span>
-                                                                                    </p>
-
-                                                                                    <p class="special-price">
-                                                                                        <span class="price-label">Special Price</span>
-                                                                                        <span class="price" content="90" id="product-price-184-emprice-9c7acb644d253ae8c0c656d97ce7a00f"> $90.00</span>
-                                                                                    </p>
-
-
-                                                                                </div>
-
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><!-- /.item -->
-                                                                    <div class="item" style="  ">
-                                                                        <a href="#" title="Cross Back Dress" class="product-image">
-
-
-                                                                            <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp1_2.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp1_2.jpg')}}" alt="Cross Back Dress" height="110" width="110">
-                                                                            <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp1_1.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp1_1.jpg')}}" alt="Cross Back Dress" height="110" width="110">
-                                                                        </a>
-                                                                        <div class="product-shop">
-                                                                            <div class="f-fix">
-                                                                                <!--product name-->
-                                                                                <h3 class="product-name"><a href="#" title="Cross Back Dress">Cross Back Dress</a></h3>
-                                                                                <!--product description-->
-                                                                                <!--product reviews-->
-                                                                                <div class="ratings">
-                                                                                    <div class="rating-box">
-                                                                                        <div class="rating" style="width:%"></div>
-                                                                                    </div>
-                                                                                    <span class="amount"><a href="#" onclick="166">(0)</a></span>
-                                                                                </div>
-                                                                                <!--product price-->
-
-
-
-                                                                                <div class="price-box">
-                                                                                    <span class="regular-price" id="product-price-166-emprice-420d7edd38e60d3ae400966629e226d2">
-                                                                                        <span class="price">$750.00</span> </span>
-
-                                                                                    </div>
-
-
-                                                                                </div>
-                                                                            </div>
-                                                                        </div><!-- /.item -->
-                                                                        <div class="item last" style="  ">
-                                                                            <a href="#" title="Drape Back Playsuit " class="product-image">
-
-
-                                                                                <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp17_2.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp17_2.jpg')}}" alt="Drape Back Playsuit " height="110" width="110">
-                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp17_1.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp17_1.jpg')}}" alt="Drape Back Playsuit " height="110" width="110">
-                                                                            </a>
-                                                                            <div class="product-shop">
-                                                                                <div class="f-fix">
-                                                                                    <!--product name-->
-                                                                                    <h3 class="product-name"><a href="#" title="Drape Back Playsuit ">Drape Back Playsuit </a></h3>
-                                                                                    <!--product description-->
-                                                                                    <!--product reviews-->
-                                                                                    <div class="ratings">
-                                                                                        <div class="rating-box">
-                                                                                            <div class="rating" style="width:100%"></div>
-                                                                                        </div>
-                                                                                        <span class="amount"><a href="#" onclick="182">(1)</a></span>
-                                                                                    </div>
-                                                                                    <!--product price-->
-
-
-
-                                                                                    <div class="price-box">
-
-                                                                                        <p class="old-price">
-                                                                                            <span class="price-label">Regular Price:</span>
-                                                                                            <span class="price" id="old-price-182-emprice-b0a1e32195ca82a58e889da04d6711df">$70.00</span>
-                                                                                        </p>
-
-                                                                                        <p class="special-price">
-                                                                                            <span class="price-label">Special Price</span>
-                                                                                            <span class="price" content="60" id="product-price-182-emprice-b0a1e32195ca82a58e889da04d6711df">$60.00</span>
-                                                                                        </p>
-
-
-                                                                                    </div>
-
-
-                                                                                </div>
-                                                                            </div>
-                                                                        </div><!-- /.item -->
-                                                                    </div><!-- /.products-list -->
+                                                                @for ($i = 0; $i < count($products_popular); $i++)
+                                                                    @if($i%3==0)
                                                                     <div class="products-list ">
-                                                                        <div class="item first" style="  ">
-                                                                            <a href="#" title="Embellished Playsuit" class="product-image">
-                                                                                <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp18_2.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp18_2.jpg')}}" alt="Embellished Playsuit" height="110" width="110">
-                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp18_1.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp18_1.jpg')}}" alt="Embellished Playsuit" height="110" width="110">
-                                                                            </a>
-                                                                            <div class="product-shop">
-                                                                                <div class="f-fix">
-                                                                                    <!--product name-->
-                                                                                    <h3 class="product-name"><a href="#" title="Embellished Playsuit">Embellished Playsuit</a></h3>
-                                                                                    <!--product description-->
-                                                                                    <!--product reviews-->
-                                                                                    <div class="ratings">
-                                                                                        <div class="rating-box">
-                                                                                            <div class="rating" style="width:%"></div>
-                                                                                        </div>
-                                                                                        <span class="amount"><a href="#" onclick="183">(0)</a></span>
-                                                                                    </div>
-                                                                                    <!--product price-->
-                                                                                    <div class="price-box">
-
-                                                                                        <p class="old-price">
-                                                                                            <span class="price-label">Regular Price:</span>
-                                                                                            <span class="price" id="old-price-183-emprice-447f1b9a2238137e1de786f67b42bb85">$150.00</span>
-                                                                                        </p>
-
-                                                                                        <p class="special-price">
-                                                                                            <span class="price-label">Special Price</span>
-                                                                                            <span class="price" content="80" id="product-price-183-emprice-447f1b9a2238137e1de786f67b42bb85">$80.00</span>
-                                                                                        </p>
-
-
-                                                                                    </div>
-
-
-                                                                                </div>
-                                                                            </div>
-                                                                        </div><!-- /.item -->
+                                                                        @for ($j = $i; $j < $i+3; $j++)
+                                                                        @if($j<count($products_popular))
                                                                         <div class="item" style="  ">
-                                                                            <a href="#" title="Geometric Dress" class="product-image">
-                                                                                <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp20_2.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp20_2.jpg')}}" alt="Geometric Dress" height="110" width="110">
-                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp20_1.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp20_1.jpg')}}" alt="Geometric Dress" height="110" width="110">
+                                                                            <a href="{{asset('/chitietsanpham/'.$products_popular[$j]->id.'/'.$products_popular[$j]->alias)}}" title="Geometric Dress" class="product-image">
+                                                                                <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($products_popular[$j]->anhdaidien)}}" data-original="{{asset($products_popular[$j]->anhdaidien)}}" alt="Geometric Dress" height="110" width="110">
+                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($products_popular[$j]->anhdaidien)}}" data-original="{{asset($products_popular[$j]->anhdaidien)}}" alt="Geometric Dress" height="110" width="110">
                                                                             </a>
                                                                             <div class="product-shop">
                                                                                 <div class="f-fix">
                                                                                     <!--product name-->
-                                                                                    <h3 class="product-name"><a href="#" title="Geometric Dress">Geometric Dress</a></h3>
+                                                                                    <h3 class="product-name"><a href="{{asset('/chitietsanpham/'.$products_popular[$j]->id.'/'.$products_popular[$j]->alias)}}" title="Geometric Dress">{{$products_popular[$j]->tensp}}</a></h3>
                                                                                     <!--product description-->
                                                                                     <!--product reviews-->
                                                                                     <div class="ratings">
@@ -374,54 +223,21 @@
                                                                                     <!--product price-->
                                                                                     <div class="price-box">
 
-                                                                                        <p class="old-price">
-                                                                                            <span class="price-label">Regular Price:</span>
-                                                                                            <span class="price" id="old-price-185-emprice-b9cbb909aac3b0c33ee82836547d5755">$120.00</span>
-                                                                                        </p>
-
                                                                                         <p class="special-price">
                                                                                             <span class="price-label">Special Price</span>
-                                                                                            <span class="price" content="100" id="product-price-185-emprice-b9cbb909aac3b0c33ee82836547d5755">$100.00</span>
+                                                                                            <span class="price" content="100" id="product-price-185-emprice-b9cbb909aac3b0c33ee82836547d5755">{{$products_popular[$j]->giasp}}</span>
                                                                                         </p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div><!-- /.item -->
-                                                                        <div class="item last" style="  ">
-                                                                            <a href="#" title="Mono Scallop" class="product-image">
-                                                                                <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp16_2.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp16_2.jpg')}}" alt="Mono Scallop" height="110" width="110">
-                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset('public/frontend/images/product/110x110/clothing_sp16_1.jpg')}}" data-original="{{asset('public/frontend/images/product/110x110/clothing_sp16_1.jpg')}}" alt="Mono Scallop" height="110" width="110">
-                                                                            </a>
-                                                                            <div class="product-shop">
-                                                                                <div class="f-fix">
-                                                                                    <!--product name-->
-                                                                                    <h3 class="product-name"><a href="#" title="Mono Scallop">Mono Scallop</a></h3>
-                                                                                    <!--product description-->
-                                                                                    <!--product reviews-->
-                                                                                    <div class="ratings">
-                                                                                        <div class="rating-box">
-                                                                                            <div class="rating" style="width:%"></div>
-                                                                                        </div>
-                                                                                        <span class="amount"><a href="#" onclick="181">(0)</a></span>
-                                                                                    </div>
-                                                                                    <!--product price-->
-                                                                                    <div class="price-box">
+                                                                        @endif
 
-                                                                                        <p class="old-price">
-                                                                                            <span class="price-label">Regular Price:</span>
-                                                                                            <span class="price" id="old-price-181-emprice-f425d011393677da16e76f16bed41113">$175.00</span>
-                                                                                        </p>
-
-                                                                                        <p class="special-price">
-                                                                                            <span class="price-label">Special Price</span>
-                                                                                            <span class="price" content="75" id="product-price-181-emprice-f425d011393677da16e76f16bed41113">$75.00</span>
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div><!-- /.item -->
+                                                                        @endfor   
                                                                     </div><!-- /.products-list -->
-                                                                </div>
+                                                                    @endif
+                                                                @endfor
+                                                            </div>
                                                             </div><!-- /.widget -->
 
                                                         </div><!-- /.em-grid-15 -->
