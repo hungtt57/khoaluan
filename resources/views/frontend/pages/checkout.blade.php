@@ -29,26 +29,26 @@
                         <div class="page-title">
                             <h1>Thanh Toán</h1>
                         </div>
-                            <form id="co-billing-form" action="{{asset('/thanhtoan')}}" method="POST">
+                        <form id="co-billing-form" action="{{asset('/thanhtoan')}}" method="POST">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                        <ol class="opc" id="checkoutSteps">
-                            <li id="opc-billing" class="section allow">
-                                <div class="em-box-02 step-title" >
-                                    <div class="title-box"> <span class="number">1</span>
-                                        <h2>Thông tin người nhận</h2> 
+                            <ol class="opc" id="checkoutSteps">
+                                <li id="opc-billing" class="section allow">
+                                    <div class="em-box-02 step-title" >
+                                        <div class="title-box"> <span class="number">1</span>
+                                            <h2>Thông tin người nhận</h2> 
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="checkout-step-billing" class="step a-item collapse in">
-                                @if ($errors->any())
-                                <div class="alert alert-danger"> 
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>  
-                                @endif
+                                    <div id="checkout-step-billing" class="step a-item collapse in">
+                                        @if ($errors->any())
+                                        <div class="alert alert-danger"> 
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>  
+                                        @endif
                                         <fieldset>
                                             <ul class="form-list">
                                                 <li id="billing-new-address-form">
@@ -92,7 +92,7 @@
                                                                     <textarea type="text" title="Địa chỉ khách hàng" name="diachikh" id="billing:street1" value="{{Input::old('diachikh')}}" class="input-text  required-entry" /></textarea>
                                                                 </div>
                                                             </li>
-                                                             <li class="wide">
+                                                            <li class="wide">
                                                                 <label for="billing:street1" class="required">Ghi chú</label>
                                                                 <div class="input-box">
                                                                     <textarea  type="text" title="Ghi chú" name="ghichukh" id="billing:street1" value="Input::old('ghichukh');" class="input-text  required-entry" /></textarea>
@@ -121,49 +121,114 @@
                                                 <span class="please-wait" id="billing-please-wait" style="display:none;"> <img src="images/opc-ajax-loader.html" alt="Loading next step..." title="Loading next step..." class="v-middle" /> Loading next step... </span>
                                             </div>
                                         </fieldset>
-                                   
-                                </div><!-- /#checkout-step-billing -->
-                            </li><!-- /#opc-billing -->
-                            <li id="opc-shipping" class="section">
-                                <div class="em-box-02 step-title " >
-                                    <div class="title-box"> <span class="number">2</span>
-                                        <h2>Thông tin đơn hàng</h2>
+                                        
+                                    </div><!-- /#checkout-step-billing -->
+                                </li><!-- /#opc-billing -->
+                                <li id="opc-shipping" class="section">
+                                    <div class="em-box-02 step-title " >
+                                        <div class="title-box"> <span class="number">2</span>
+                                            <h2>Thông tin đơn hàng</h2>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="checkout-step-shipping" class="step a-item">
+                                    <div id="checkout-step-shipping" class="step a-item">
+                                     <table id="shopping-cart-table" class="data-table cart-table">
+                                        <thead>
+                                            <tr class="em-block-title">
+                                                <th><span class="nobr">Ảnh</span>
+                                                </th>
+                                                <th>Teen thuốc</th>
 
-                                               <button type="submit" title="Continue" ><span>Thanh toán</span></span>
-                                              
-                                                </button>
-                                </div><!-- /#checkout-step-shipping -->
-                            </li><!-- /#opc-shipping -->
+                                                <th class="a-center" colspan="1"><span class="nobr">Đơn giá</span>
+                                                </th>
+                                                <th class="a-center">Số lượng</th>
+                                                <th class="a-center last" colspan="1">Tổng tiền</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
-                        </ol>
+                                            {!! csrf_field() !!}
+                                            <?php $count = 0;?>
+                                            @foreach(Cart::content() as $item)
+                                            
+                                            <tr class="last even {{$item['rowid']}}">
+                                                <td>
+                                                    <div class="cart-product">
 
-                         </form>
+                                                        <a href="#" title="{{$item['name']}}" class="product-image"><img src="{{asset($item['options']['image'])}}" style="height:80px;" width="100"/>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <h2 class="product-name"> <a > {{$item['name']}} </a></h2>
+                                                    
+                                                </td>
+
+
+                                                <td class="a-center"> <span class="cart-price"> <span class="price price_{{$item['rowid']}} ">{{$item['price']}}</span> </span>
+                                                </td>
+                                                <td class="a-center">
+                                                    <div class="qty_cart">
+                                                        
+                                                     {{$item['qty']}}
+                                                     
+                                                 </div>
+                                             </td>
+                                             <td class="a-center last"> <span class="cart-price"> <span class="price  price_total{{$item['rowid']}}">{{$item["price"]*$item["qty"]}}</span> </span>
+                                             </td>
+                                         </tr>
+
+
+                                         <?php $count++;?>
+                                         @endforeach
+                                     </tbody>
+                                     
+
+                                     
+                                 </table>
+
+
+
+
+                                 <button type="submit" style="
+                                 margin-top: 10px;
+                                 border-color: #ec6a54;
+                                 background-color: #ec6a54;
+                                 color: #fff;
+                                 padding: 10px;
+                                 box-shadow: none;
+                                 border: none;
+                                 " title="Continue" ><span>Thanh toán</span></span>
+                                 
+                             </button>
+                         </div><!-- /#checkout-step-shipping -->
+                     </li><!-- /#opc-shipping -->
+
+                 </ol>
+
+             </form>
+         </div>
+         <div class="col-sm-6 col-sm-pull-18 em-col-left em-sidebar">
+            <div class="em-wrapper-area02"></div>
+            <div id="checkout-progress-wrapper">
+                <div class="block block-progress opc-block-progress em-line-01">
+                    <div class="em-block-title block-title"> <strong><span>Các Bước Thanh Toán</span></strong>
                     </div>
-                    <div class="col-sm-6 col-sm-pull-18 em-col-left em-sidebar">
-                        <div class="em-wrapper-area02"></div>
-                        <div id="checkout-progress-wrapper">
-                            <div class="block block-progress opc-block-progress em-line-01">
-                                <div class="em-block-title block-title"> <strong><span>Các Bước Thanh Toán</span></strong>
-                                </div>
-                                <div class="block-content">
-                                    <dl>
-                                    <div id="billing-progress-opcheckout"><dt> Thông tin người nhận</dt>
-                                        </div>
-                                        <div id="shipping-progress-opcheckout"><dt> Thông tin đơn hàng</dt>
-                                        </div>
-                                       
-                                    </dl>
-                                </div>
+                    <div class="block-content">
+                        <dl>
+                            <div id="billing-progress-opcheckout"><dt> Thông tin người nhận</dt>
                             </div>
-                        </div>
-                    </div><!-- /.em-sidebar -->
+                            <div id="shipping-progress-opcheckout"><dt> Thông tin đơn hàng</dt>
+                            </div>
+                            
+                        </dl>
+                    </div>
                 </div>
-            </div><!-- /.em-main-container -->
-        </div>
+            </div>
+        </div><!-- /.em-sidebar -->
     </div>
+</div><!-- /.em-main-container -->
+</div>
+</div>
 </div><!-- /.em-wrapper-main -->
 
 @endsection

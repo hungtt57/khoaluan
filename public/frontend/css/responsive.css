@@ -4,7 +4,7 @@
 /*Header*/
 @media (min-width: 768px) and (max-width: 991px) {
   .em-header-style08 .em-header-bottom .em_nav {
-    padding-top: 0;
+    padding-top: 20px;
   }
 
   .em-header-style03 .em-menu-hoz {

@@ -41,9 +41,9 @@
                                     <table id="shopping-cart-table" class="data-table cart-table">
                                         <thead>
                                             <tr class="em-block-title">
-                                                <th><span class="nobr">Tên thuốc</span>
+                                                <th><span class="nobr">Ảnh</span>
                                                 </th>
-                                                <th>&nbsp;</th>
+                                                <th>Tên thuốc</th>
 
                                                 <th class="a-center" colspan="1"><span class="nobr">Đơn giá</span>
                                                 </th>
@@ -66,7 +66,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <h2 class="product-name"> <a href="product-detail.html"> {{$item['name']}} </a></h2>
+                                                    <h2 class="product-name"> <a > {{$item['name']}} </a></h2>
                                                     
                                                 </td>
 
@@ -113,8 +113,7 @@
 
 
 
-                                    </form>
-
+                                   
                                 </table>
                             </fieldset>
                         </form><!-- /form -->
