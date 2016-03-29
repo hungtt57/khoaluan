@@ -91,8 +91,7 @@
                                                                             <div class="std">{{$product_detail->donggoi}}</div>
                                                                         </div>
                                                                         <div class="em-addthis-plug"> <span>Chia Sẻ</span>
-                                                                            <a href="#" target="_blank"><img alt="Facebook" src="{{asset('public/frontend/images/social/facebook.png')}}" />
-                                                                            </a>
+                                                                            <div class="fb-like" data-href=""  data-action="like" data-show-faces="true" data-share="true"></div>
                                                         
                                                                         </div><!-- /.em-addthis-plug -->
                                                                         <div>
@@ -163,61 +162,15 @@
                                                                 </div><!-- /.em-details-tabs-content -->
                                                             </div><!-- /.em-details-tabs -->
                                                             <div class="box-collateral box-reviews em-line-01" id="customer-reviews">
-                                                                <div id="customer_review_list" class="reviews">
-                                                                    <div class="em-block-title">
-                                                                        <h2>Phản Hồi Khách Hàng</h2>
-                                                                    </div>
-                                                                    <div class="em-box-review">
-                                                                        <table>
-                                                                            <colgroup>
-                                                                                <col style="width:1%;" />
-                                                                                <col style="width:1%;" />
-                                                                                <col />
-                                                                            </colgroup>
-                                                                            <tr>
-                                                                                <td class="em-review-nickname"> sdfd</td>
-                                                                                <td>
-                                                                                    <table class="ratings-table">
-                                                                                        <col style="width:1%;" />
-                                                                                        <col />
-                                                                                        <tbody>
-                                                                                            <tr>
-                                                                                                <th>Quality</th>
-                                                                                                <td>
-                                                                                                    <div class="rating-box">
-                                                                                                        <div class="rating" style="width:60%;"></div>
-                                                                                                    </div>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <th>Price</th>
-                                                                                                <td>
-                                                                                                    <div class="rating-box">
-                                                                                                        <div class="rating" style="width:80%;"></div>
-                                                                                                    </div>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <th>Value</th>
-                                                                                                <td>
-                                                                                                    <div class="rating-box">
-                                                                                                        <div class="rating" style="width:60%;"></div>
-                                                                                                    </div>
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <p><a href="http://demo.emthemes.com/everything/index.php/review/product/view/id/110/">sdfds</a>
-                                                                                    </p>
-                                                                                    <p>test</p>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </div><!-- /.em-box-review -->
-                                                                </div><!-- /#ustomer_review_list -->
                                                                 
+                                                                <div class="comments">
+                                                
+                                                <div class="article-comments">
+                                                    <div class="fb-comments" data-href="khoaluan.com" data-colorscheme="light" data-numposts="10" data-width="750"></div>
+                                                    
+                                                </div>
+                                               
+                                            </div><!-- /.comments -->
                                                             </div><!-- /.box-collateral -->
                                                             
                                                         </div><!-- /.em-product-details -->

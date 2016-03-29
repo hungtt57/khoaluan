@@ -44,7 +44,7 @@
                                             <div class="comments">
                                                 
                                                 <div class="article-comments">
-                                                    
+                                                    <div class="fb-comments" data-href="khoaluan.com" data-colorscheme="light" data-numposts="10" data-width="850"></div>
                                                     
                                                 </div>
                                                
