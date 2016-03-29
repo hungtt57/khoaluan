@@ -61,7 +61,7 @@ class CrawlerTintuc extends Command
                
                     $this->get_link_bai_viet($array[$i]);
                                       }
-               exit();
+            
       
         }
         $this->line('>>>End crawler--- :');
