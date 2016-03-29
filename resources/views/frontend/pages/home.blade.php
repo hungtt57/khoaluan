@@ -128,7 +128,7 @@
                                                                                                             <div class="em-element-display-hover bottom">
 
                                                                                                                 <div class="quickshop-link-container">
-                                                                                                                    <a href="#" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
+                                                                                                                    <a href="{{asset('/chitietsanpham/'.$new_product->id.'/'.$new_product->alias)}}" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div><!-- /.product-shop-top -->
@@ -139,12 +139,7 @@
                                                                                                                 <h3 style="min-height: 19px;" class="product-name"><a href="#" title=" Metallic Midi Cut Out Midi Dress">{{$new_product->ten}}</a></h3>
                                                                                                                 <!--product description-->
                                                                                                                 <!--product reviews-->
-                                                                                                                <div class="ratings">
-                                                                                                                    <div class="rating-box">
-                                                                                                                        <div class="rating" style="width:67%"></div>
-                                                                                                                    </div>
-                                                                                                                    <span class="amount"><a href="#">(1)</a></span>
-                                                                                                                </div>
+                                                                                                                
                                                                                                                 <!--product price-->
 
 
@@ -214,12 +209,7 @@
                                                                                     <h3 class="product-name"><a href="{{asset('/chitietsanpham/'.$products_popular[$j]->id.'/'.$products_popular[$j]->alias)}}" title="Geometric Dress">{{$products_popular[$j]->tensp}}</a></h3>
                                                                                     <!--product description-->
                                                                                     <!--product reviews-->
-                                                                                    <div class="ratings">
-                                                                                        <div class="rating-box">
-                                                                                            <div class="rating" style="width:%"></div>
-                                                                                        </div>
-                                                                                        <span class="amount"><a href="#" onclick="185">(0)</a></span>
-                                                                                    </div>
+                                                                                    
                                                                                     <!--product price-->
                                                                                     <div class="price-box">
 
