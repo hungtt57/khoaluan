@@ -147,7 +147,6 @@
                                                                                                                 <div class="price-box">
                                                                                                                     <span class="regular-price" id="product-price-177-emprice-659da6b027ea5433ad0a985675d8fd89">
                                                                                                                         <span class="price">{{$new_product->gia}}</span> </span>
-
                                                                                                                     </div>
 
                                                                                                                 </div>
@@ -155,11 +154,6 @@
                                                                                                         </div>
                                                                                                     </div><!-- item -->
                                                                                                     @endforeach
-
-
-
-
-
                                                                                                 </div><!-- /.products-grid -->
                                                                                             </div><!-- /.emcatalog-desktop-4 -->
                                                                                         </div><!-- /.widget-products -->
@@ -169,8 +163,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div><!-- /#tab_emtabs_1_1 -->
-
-
                                                                 </div><!-- /.tab-content -->
                                                             </div><!-- /#emtabs_1 -->
                                                         </div>
@@ -178,61 +170,90 @@
                                                 </div><!-- /.em-new-arrivals-tabs -->
                                             </div><!-- /.em-wrapper-new-arrivals-tabs -->
 
-                                            <div class="em-wrapper-banners hidden-xs">
-                                                <div class="em-effect06">
-                                                    <a class="em-eff06-03" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_10.jpg')}}" /> </a>
-                                                </div>
-                                            </div><!-- /.em-wrapper-banners -->
-
-                                            <div class="em-best-sales em-wrapper-product-15">
-                                                <div class="emfilter-ajaxblock-loaded">
-                                                    <div class="em-grid-15 custom-product-list">
+                                            <div class="em-wrapper-new-arrivals-tabs">
+                                            <div class="em-new-arrivals-tabs em-line-01">
+                                                <div class="emtabs-ajaxblock-loaded">
+                                                    <div class="em-tabs-widget tabs-widget ">
                                                         <div class="widget-title em-widget-title">
-                                                            <h3><span>Sản phẩm được mua nhiều nhất</span></h3>
+                                                            <h3><span>Sản Phẩm Được Mua Nhiều Nhất</span></h3>
                                                         </div>
+                                                        <div id="emtabs_1" class="em-tabs emtabs r-tabs">
+                                                            <ul class="em-tabs-control tabs-control r-tabs-nav">
+                                                                <li class="r-tabs-tab r-tabs-state-active">
+                                                                    <a class="r-tabs-anchor active" href="#tab_emtabs_1_1" data-hover="Shirt"> <span class="icon"></span>Sản Phẩm Được Mua Nhiều Nhất</a>
+                                                                </li>
+                                                                
+                                                            </ul>
+                                                            <div class="em-tabs-content tab-content">
+                                                                <div class="r-tabs-accordion-title active">
+                                                                    <a class="r-tabs-anchor" href="#tab_emtabs_1_1"> <span class="icon tab_emtabs_1_1"></span>Sản Phẩm Được Mua Nhiều Nhất</a>
+                                                                </div>
+                                                                <div id="tab_emtabs_1_1" class="tab-pane tab-item content_tab_emtabs_1_1 r-tabs-panel r-tabs-state-active">
+                                                                    <div class="wrapper button-show01 button-hide-text em-wrapper-loaded">
+                                                                        <div class="emfilter-ajaxblock-loaded">
+                                                                            <div id="em_fashion_new_arrivals_tab01" class="em-grid-20 ">
 
-                                                        <div class="widget em-filterproducts-list">
-                                                            <div class="widget-products em-widget-products">
-                                                                @for ($i = 0; $i < count($products_popular); $i++)
-                                                                    @if($i%3==0)
-                                                                    <div class="products-list ">
-                                                                        @for ($j = $i; $j < $i+3; $j++)
-                                                                        @if($j<count($products_popular))
-                                                                        <div class="item" style="  ">
-                                                                            <a href="{{asset('/chitietsanpham/'.$products_popular[$j]->id.'/'.$products_popular[$j]->alias)}}" title="Geometric Dress" class="product-image">
-                                                                                <img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($products_popular[$j]->anhdaidien)}}" data-original="{{asset($products_popular[$j]->anhdaidien)}}" alt="Geometric Dress" height="110" width="110">
-                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($products_popular[$j]->anhdaidien)}}" data-original="{{asset($products_popular[$j]->anhdaidien)}}" alt="Geometric Dress" height="110" width="110">
-                                                                            </a>
-                                                                            <div class="product-shop">
-                                                                                <div class="f-fix">
-                                                                                    <!--product name-->
-                                                                                    <h3 class="product-name"><a href="{{asset('/chitietsanpham/'.$products_popular[$j]->id.'/'.$products_popular[$j]->alias)}}" title="Geometric Dress">{{$products_popular[$j]->tensp}}</a></h3>
-                                                                                    <!--product description-->
-                                                                                    <!--product reviews-->
-                                                                                    
-                                                                                    <!--product price-->
-                                                                                    <div class="price-box">
+                                                                                <div class="widget em-filterproducts-grid">
+                                                                                    <div class="widget-products em-widget-products">
+                                                                                        <div class="emcatalog-desktop-4" id="em-grid-mode-em_fashion_new_arrivals_tab01">
+                                                                                            <div class="products-grid ">
 
-                                                                                        <p class="special-price">
-                                                                                            <span class="price-label">Special Price</span>
-                                                                                            <span class="price" content="100" id="product-price-185-emprice-b9cbb909aac3b0c33ee82836547d5755">{{$products_popular[$j]->giasp}}</span>
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
+
+                                                                                                @foreach($products_popular as $key => $new_product)
+                                                                                                <div class="item" style="  ">
+                                                                                                    <div class="product-item">
+                                                                                                        <div class="product-shop-top">
+                                                                                                            <a href="{{asset('/chitietsanpham/'.$new_product->id.'/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress" class="product-image"><img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                                            </a>
+                                                                                                            <div class="em-element-display-hover bottom">
+
+                                                                                                                <div class="quickshop-link-container">
+                                                                                                                    <a href="{{asset('/chitietsanpham/'.$new_product->id.'/'.$new_product->alias)}}" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div><!-- /.product-shop-top -->
+
+                                                                                                        <div class="product-shop">
+                                                                                                            <div class="f-fix">
+                                                                                                                <!--product name-->
+                                                                                                                <h3 style="min-height: 19px;" class="product-name"><a href="#" title=" Metallic Midi Cut Out Midi Dress">{{$new_product->tensp}}</a></h3>
+                                                                                                                <!--product description-->
+                                                                                                                <!--product reviews-->
+                                                                                                                
+                                                                                                                <!--product price-->
+
+
+
+                                                                                                                <div class="price-box">
+                                                                                                                    <span class="regular-price" id="product-price-177-emprice-659da6b027ea5433ad0a985675d8fd89">
+                                                                                                                        <span class="price">{{$new_product->giasp}}</span> </span>
+                                                                                                                    </div>
+
+                                                                                                                </div>
+                                                                                                            </div><!-- /.product-shop -->
+                                                                                                        </div>
+                                                                                                    </div><!-- item -->
+                                                                                                    @endforeach
+                                                                                                </div><!-- /.products-grid -->
+                                                                                            </div><!-- /.emcatalog-desktop-4 -->
+                                                                                        </div><!-- /.widget-products -->
+                                                                                    </div><!-- /.widget -->
+
+                                                                                </div><!-- /#em_fashion_new_arrivals_tab01 -->
                                                                             </div>
-                                                                        </div><!-- /.item -->
-                                                                        @endif
-
-                                                                        @endfor   
-                                                                    </div><!-- /.products-list -->
-                                                                    @endif
-                                                                @endfor
-                                                            </div>
-                                                            </div><!-- /.widget -->
-
-                                                        </div><!-- /.em-grid-15 -->
+                                                                        </div>
+                                                                    </div><!-- /#tab_emtabs_1_1 -->
+                                                                </div><!-- /.tab-content -->
+                                                            </div><!-- /#emtabs_1 -->
+                                                        </div>
                                                     </div>
-                                                </div><!-- /.em-best-sales -->
+                                                </div><!-- /.em-new-arrivals-tabs -->
+                                            </div><!-- /.em-wrapper-new-arrivals-tabs -->
+
+
+
+
                                             </div><!-- /.em-col-main -->
 
                                             <div class="col-sm-6 col-sm-pull-18 em-col-left em-sidebar">

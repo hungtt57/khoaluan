@@ -40,7 +40,7 @@
                                                     </div>
                                                     <ul id="collapse03" class="em-links em-block-content block-info">
             
-                                                        <li class="em-links-item"><a title="em-sample-title" href="{{asset('/tintuc')}}"><span>Các Bài Viết Về Thuốc</span></a>
+                                                        <li class="em-links-item"><a title="em-sample-title" href="{{asset('/tin-tuc')}}"><span>Các Bài Viết Về Thuốc</span></a>
                                                         </li>
                                                         <li class="em-links-item"><span>Thông Tin Về Các Loại Thuốc</span>
                                                         </li>

@@ -22,7 +22,7 @@ class HomeController extends Controller
     {
         $allCategories= Category::all();
         $new_products = DB::table('products')->select('id','ten','anhdaidien','gia','alias')->orderBy('id','DESC')->paginate(8);
-        $products_popular = DB::select("select products.id,products.alias,anhdaidien,order_detail.giasp,tensp,sum(soluong) as soluong from order_detail join products on products.ten = order_detail.tensp group by tensp order by soluong DESC limit 6 ");
+        $products_popular = DB::select("select products.id,products.alias,anhdaidien,order_detail.giasp,tensp,sum(soluong) as soluong from order_detail join products on products.ten = order_detail.tensp group by tensp order by soluong DESC limit 8 ");
         $blogs = DB::table('blog')->select('id','title','description','image','alias')->orderBy('id','ASC')->limit(2)->get();
        return view('frontend.pages.home',compact('allCategories','new_products','blogs','products_popular'));
     }
