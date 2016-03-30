@@ -48,15 +48,14 @@ class CrawlerTintuc extends Command
              $urls = [
             1 => 'http://tapchiyduoc.com/thuoc-gia-dinh/nhung-dieu-nen-biet.html',
             2 => 'http://tapchiyduoc.com/thuoc-suc-khoe/tac-dung-phu-cua-thuoc.html',
-            3 => 'http://tapchiyduoc.com/thuoc-gia-dinh/nhung-dieu-nen-biet.html',
-            4 => 'http://tapchiyduoc.com/thuoc-gia-dinh/tu-thuoc-gia-dinh.html',
+            3 => 'http://tapchiyduoc.com/thuoc-gia-dinh/tu-thuoc-gia-dinh.html',
         ];
 
          foreach ($urls as $key => $url) {
                 $array=[];
 
                $array= $this->lay_link_full($url);
-            $this->line("Start Crawler");
+            $this->line("Start Crawler ".$url);
                for($i=0;$i<sizeof($array);$i++){ //link full 1 url
                
                     $this->get_link_bai_viet($array[$i]);
@@ -99,10 +98,18 @@ class CrawlerTintuc extends Command
              }else{
                 $description=$value->find('p',1)->plaintext;
                 $tenanhthumb = $this->tai_anh_thumb('http://tapchiyduoc.com'.$value->find('.crop img',0)->src);
+                if(!$tenanhthumb){
+                  continue;
+                }
                 $html2 = HtmlDomparser::file_get_html('http://tapchiyduoc.com'.$value->find('.contentheading a',0)->href);
-                $content= $html2->find('#page .full-text > div ',5)->innertext;
+              
+                if(empty($html2->find('#page .full-text > div ',5)->innertext)){
+                   continue;
+                }
+                $content = $html2->find('#page .full-text > div ',5)->innertext;
                 $content=$this->xu_ly_hinh_chi_tiet_bai_viet($content); // xu ly anh trong bai viet
 
+               
                 $blog1=new Blog;
                 $blog1->title=$title;
                 $blog1->description=$description;
@@ -119,14 +126,18 @@ class CrawlerTintuc extends Command
     }
    
     public function xu_ly_hinh_chi_tiet_bai_viet($noi_dung){
+        
         $html = HtmlDomParser::str_get_html($noi_dung);
+       
         foreach($html->find('img') as $img)
-        {
+            {
 
-            $link_hinh = $this->tai_anh_detail('http://tapchiyduoc.com'.$img->src, $ten_hinh = '');
-            $noi_dung = str_replace($img->src, $link_hinh, $noi_dung);
-        }
-        return $noi_dung;
+                $link_hinh = $this->tai_anh_detail('http://tapchiyduoc.com'.$img->src, $ten_hinh = '');
+                $noi_dung = str_replace($img->src, $link_hinh, $noi_dung);
+            }
+          return $noi_dung;
+      
+       
     }
 
 
@@ -147,7 +158,7 @@ class CrawlerTintuc extends Command
         
         $img_binary = @file_get_contents($url);
         if ($img_binary == false) {
-            $this->error('Something went wrong! Can\'t dowload image');
+            $this->error('ko the tai anh thumb');
             return false;
         }
 
@@ -174,7 +185,7 @@ class CrawlerTintuc extends Command
         
         $img_binary = @file_get_contents($url);
         if ($img_binary == false) {
-            $this->error('Something went wrong! Can\'t dowload image');
+            $this->error('ko the tai anh detail');
             return false;
         }
 
