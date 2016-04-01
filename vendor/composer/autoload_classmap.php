@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-
     'App\\Blog' => $baseDir . '/app/Blog.php',
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Commands\\CrawlerMuathuoc' => $baseDir . '/app/Console/Commands/CrawLerMuathuoc.php',
@@ -62,10 +61,7 @@ return array(
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/Parser/NodeTraverser.php',
     'ClassPreloader\\Parser\\StrictTypesVisitor' => $vendorDir . '/classpreloader/classpreloader/src/Parser/StrictTypesVisitor.php',
-    'CreateBlogTable' => $baseDir . '/database/migrations/2016_03_08_143142_create_blog_table.php',
-
     'CreateBlogTable' => $baseDir . '/database/migrations/2016_03_25_153347_create_blog_table.php',
-
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2016_01_28_161939_create_categories_table.php',
     'CreateFailedJobsTable' => $baseDir . '/database/migrations/2016_03_22_160150_create_failed_jobs_table.php',
     'CreateJobsTable' => $baseDir . '/database/migrations/2016_03_22_155816_create_jobs_table.php',
@@ -2758,9 +2754,6 @@ return array(
     'Psy\\VarDumper\\Dumper' => $vendorDir . '/psy/psysh/src/Psy/VarDumper/Dumper.php',
     'Psy\\VarDumper\\Presenter' => $vendorDir . '/psy/psysh/src/Psy/VarDumper/Presenter.php',
     'Psy\\VarDumper\\PresenterAware' => $vendorDir . '/psy/psysh/src/Psy/VarDumper/PresenterAware.php',
-    'RobBrazier\\Piwik\\Facades\\Piwik' => $vendorDir . '/robbrazier/piwik/src/RobBrazier/Piwik/Facades/Piwik.php',
-    'RobBrazier\\Piwik\\Piwik' => $vendorDir . '/robbrazier/piwik/src/RobBrazier/Piwik/Piwik.php',
-    'RobBrazier\\Piwik\\PiwikServiceProvider' => $vendorDir . '/robbrazier/piwik/src/RobBrazier/Piwik/PiwikServiceProvider.php',
     'SebastianBergmann\\Comparator\\ArrayComparator' => $vendorDir . '/sebastian/comparator/src/ArrayComparator.php',
     'SebastianBergmann\\Comparator\\Comparator' => $vendorDir . '/sebastian/comparator/src/Comparator.php',
     'SebastianBergmann\\Comparator\\ComparisonFailure' => $vendorDir . '/sebastian/comparator/src/ComparisonFailure.php',
@@ -3331,6 +3324,7 @@ return array(
     'Symfony\\Component\\Yaml\\Parser' => $vendorDir . '/symfony/yaml/Parser.php',
     'Symfony\\Component\\Yaml\\Unescaper' => $vendorDir . '/symfony/yaml/Unescaper.php',
     'Symfony\\Component\\Yaml\\Yaml' => $vendorDir . '/symfony/yaml/Yaml.php',
+    'Symfony\\Polyfill\\Mbstring\\Mbstring' => $vendorDir . '/symfony/polyfill-mbstring/Mbstring.php',
     'Symfony\\Polyfill\\Php56\\Php56' => $vendorDir . '/symfony/polyfill-php56/Php56.php',
     'Symfony\\Polyfill\\Util\\Binary' => $vendorDir . '/symfony/polyfill-util/Binary.php',
     'Symfony\\Polyfill\\Util\\BinaryNoFuncOverload' => $vendorDir . '/symfony/polyfill-util/BinaryNoFuncOverload.php',

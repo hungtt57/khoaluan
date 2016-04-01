@@ -51,7 +51,7 @@
     <script src="{{asset('public/admin/js/jquery.customSelect.min.js')}}" ></script>
     <script src="{{asset('public/admin/js/respond.min.js')}}" ></script>
 
-    <script class="include" type="text/javascript" src="{{asset('public/admin/js/jquery.dcjqaccordion.2.7.js')}}"></script>
+   
 
     <!--common script for all pages-->
     <script src="{{asset('public/admin/js/common-scripts.js')}}"></script>

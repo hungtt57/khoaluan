@@ -34,6 +34,11 @@ Route::get('/gioi-thieu','HomeController@about');
 Route::get('/lien-he','HomeController@contact');
 // end frontend
 //admin
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+
+
+
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'category'], function() { // category
         Route::get('/create','CategoryController@create');

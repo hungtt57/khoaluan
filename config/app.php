@@ -147,9 +147,6 @@ return [
        
         Intervention\Image\ImageServiceProvider::class,
 
-    
-        'RobBrazier\Piwik\PiwikServiceProvider',
-
       
         'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
 
@@ -206,7 +203,6 @@ return [
         'Image'     => Intervention\Image\Facades\Image::class,
       
         'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
-         'Piwik' => 'RobBrazier\Piwik\Facades\Piwik',
     ],
 
 ];
