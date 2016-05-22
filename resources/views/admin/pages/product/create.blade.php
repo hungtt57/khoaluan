@@ -36,7 +36,7 @@
 				<div class="form-group">
 				<label class="col-md-2 control-label" for="name_category">Giá</label>
 					<div class="col-md-6">
-						<input class="form-control" tabindex="1" placeholder="" type="number" name="masp" id="masp">
+						<input class="form-control" tabindex="1" placeholder="" type="number" name="gia" id="gia">
 					</div>
 				</div>
 				<div class="form-group">

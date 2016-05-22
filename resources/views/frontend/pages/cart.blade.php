@@ -147,7 +147,7 @@
                                         </table>
                                         <ul class="checkout-types">
                                             <li>
-                                            <a href="{{asset('/thanhtoan')}}">
+                                            <a href="{{asset('/thanh-toan')}}">
                                                 <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout"><span><span>Đặt Hàng</span></span>
                                                 </button>
                                                 </a>

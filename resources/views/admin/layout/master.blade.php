@@ -21,12 +21,8 @@
     <link href="{{asset('public/admin/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('public/admin/css/style-responsive.css')}}" rel="stylesheet" />
     <link href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-     
+  
+
     @yield('css')
   </head>
   <section id="container">
@@ -51,8 +47,6 @@
     <script src="{{asset('public/admin/js/jquery.customSelect.min.js')}}" ></script>
     <script src="{{asset('public/admin/js/respond.min.js')}}" ></script>
 
-   
-
     <!--common script for all pages-->
     <script src="{{asset('public/admin/js/common-scripts.js')}}"></script>
 
@@ -60,7 +54,6 @@
    
     <script src="{{asset('public/admin/js/count.js')}}"></script>
 
-   
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
   <script>
 
@@ -82,7 +75,6 @@
       $(function(){
           $('select.styled').customSelect();
       });
-
   </script>
   @yield('js')
   </body>

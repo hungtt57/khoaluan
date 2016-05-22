@@ -8,7 +8,7 @@
                                     <ul>
                                         <li class="home"> <a href="{{asset('/')}}" title="Go to Home Page"><span >Trang chủ</span></a> <span class="separator">/ </span>
                                         </li>
-                                        <li class="blog"> <a href="{{asset('/tintuc')}}" title="Go to Blog"><span >Tin tức</span></a> <span class="separator">/ </span>
+                                        <li class="blog"> <a href="{{asset('/tin-tuc')}}" title="Go to Blog"><span >Tin tức</span></a> <span class="separator">/ </span>
                                         </li>
                                         <li class="post"><strong>{{$blog_detail->title}}</strong>
                                         </li>
@@ -42,9 +42,23 @@
                                             </div>
                                             
                                             <div class="comments">
-                                                
+                                                <?php
+                                                function curPageURL() {
+                                                        $pageURL = 'http';
+                                                        if (isset( $_SERVER["HTTPS"] ) && strtolower( $_SERVER["HTTPS"] ) == "on" ) {
+                                                        $pageURL .= 's';
+                                                        }
+                                                        $pageURL .= '://';
+                                                        if ($_SERVER['SERVER_PORT'] != '80') {
+                                                        $pageURL .= $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
+                                                        } else {
+                                                        $pageURL .= $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+                                                        }
+                                                        return $pageURL;
+                                                        } 
+                                                ?>
                                                 <div class="article-comments">
-                                                    <div class="fb-comments" data-href="khoaluan.com/blog" data-colorscheme="light" data-numposts="10" data-width="850"></div>
+                                                    <div class="fb-comments" data-href="<?php echo curPageURL();?>" data-colorscheme="light" data-numposts="10" data-width="850"></div>
                                                     
                                                 </div>
                                                
@@ -61,7 +75,7 @@
                                                 <ul class="em-recent-post">
                                                 @foreach($recent_blogs as $key => $recent_blog)
                                                     <li class="item">
-                                                        <a href="{{asset('/blog_detail/'.$recent_blog->id.'/'.$recent_blog->alias)}}"> <img alt="" src="{{asset($recent_blog->image)}}" /> </a> <a class="post-title em-blog-title" href="blog-detail.html">{{$recent_blog->title}}</a>
+                                                        <a href="{{asset('/bai-viet/'.$recent_blog->alias)}}"> <img alt="" src="{{asset($recent_blog->image)}}" style="width:100%;"/> </a> <a class="post-title em-blog-title" href="{{asset('/bai-viet/'.$recent_blog->alias)}}">{{$recent_blog->title}}</a>
                                                         <p class="intro">
                                                             <p><span>{{$recent_blog->description}}</span>
                                                             </p>

@@ -9,16 +9,7 @@
                           <span>Dashboard</span>
                       </a>
                   </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="icon-list-ul"></i>
-                          <span>User</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="{{asset('/admin/user/create')}}">New User</a></li>
-                          <li><a  href="{{asset('/admin/user/list')}}">List User</a></li>
-                      </ul>
-                  </li>
+                 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="icon-list-ul"></i>

@@ -4,9 +4,17 @@
     <link rel="stylesheet" type="text/css')}}" href="{{asset('public/frontend/css/em_cloudzoom.css')}}" media="all" />
 <!-- Blog Style CSS -->
     <link rel="stylesheet" type="text/css')}}" href="{{asset('public/frontend/css/blog-styles.css')}}" media="all" />
-    <link rel="stylesheet" type="text/css')}}" href="{{asset('public/frontend/css/em_quickshop.css')}}" media="all" />
+ 
      <!-- Lightbox CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('public/frontend/css/lightbox.css')}}" media="all" />
+    <style type="text/css">
+    .fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style], .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style]
+{
+
+       width: 100% !important;
+
+}
+</style>
 @endsection
 
 
@@ -19,7 +27,7 @@
                                     <ul>
                                         <li class="home"> <a href="{{asset('/')}}" title="Home"><span>Trang chủ</span></a> <span class="separator">/ </span>
                                         </li>
-                                        <li class="category36"> <a href="{{asset('/loaisanpham/'.$category->id.'/'.$category->alias)}}"><span>{{$category->ten}}</span></a> <span class="separator">/ </span>
+                                        <li class="category36"> <a href="{{asset('/loai-san-pham/'.$category->alias)}}"><span>{{$category->ten}}</span></a> <span class="separator">/ </span>
                                         </li>
                                         <li class="product"> <strong>{{$product_detail->ten}}</strong>
                                         </li>
@@ -41,7 +49,7 @@
                                         <div id="messages_product_view"></div>
                                         <div class="product-view">
                                             <div class="product-essential">
-                                                <form method="post" id="product_addtocart_form" action="{{asset('/muahang/'.$product_detail->id.'/'.$product_detail->alias)}}">
+                                                <form method="post" id="product_addtocart_form" action="{{asset('/mua-hang/'.$product_detail->id.'/'.$product_detail->alias)}}">
                                                 {!! csrf_field() !!}
                                                     <input name="form_key" type="hidden" value="N4DL2crX27DuHSDk" />
                                                     <div class="product-view-detail">
@@ -91,7 +99,7 @@
                                                                             <div class="std">{{$product_detail->donggoi}}</div>
                                                                         </div>
                                                                         <div class="em-addthis-plug"> <span>Chia Sẻ</span>
-                                                                            <div class="fb-like" data-href=""  data-action="like" data-show-faces="true" data-share="true"></div>
+                                                                            <div class="fb-like" data-href="<?php echo curPageURL();?>"  data-action="like" data-show-faces="true" data-share="true"></div>
                                                         
                                                                         </div><!-- /.em-addthis-plug -->
                                                                         <div>
@@ -121,7 +129,7 @@
                                                                                     </li> -->
                                                                                 </ul>
                                                                                 <div class="button_addto">
-                                                                                    <button  title="Add to Cart" type ="Submit" id="em-buy-now" class="button btn-em-buy-now"><span><span style="font-size: 15px;">Thêm vào giỏ hàng</span></span>
+                                                                                    <button  title="Add to Cart" type ="Submit" id="em-buy-now" class="button btn-em-buy-now"><span><span style="font-size: 80%;">Thêm vào giỏ hàng</span></span>
                                                                                     </button>
                                                                                     
                                                                                 </div>
@@ -164,9 +172,23 @@
                                                             <div class="box-collateral box-reviews em-line-01" id="customer-reviews">
                                                                 
                                                                 <div class="comments">
-                                                
+                                                <?php
+                                                function curPageURL() {
+														$pageURL = 'http';
+														if (isset( $_SERVER["HTTPS"] ) && strtolower( $_SERVER["HTTPS"] ) == "on" ) {
+														$pageURL .= 's';
+														}
+														$pageURL .= '://';
+														if ($_SERVER['SERVER_PORT'] != '80') {
+														$pageURL .= $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
+														} else {
+														$pageURL .= $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+														}
+														return $pageURL;
+														} 
+                                                ?>
                                                 <div class="article-comments">
-                                                    <div class="fb-comments" data-href="khoaluan.com/chitietsanpham" data-colorscheme="light" data-numposts="10" data-width="750"></div>
+                                                    <div class="fb-comments" data-href="<?php echo curPageURL();?>" data-colorscheme="light" data-numposts="10" data-width="750"></div>
                                                     
                                                 </div>
                                                

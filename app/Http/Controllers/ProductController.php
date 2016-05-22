@@ -51,6 +51,7 @@ class ProductController extends Controller
         
         $product= new Product;
         $product->ten = $request->input('ten');
+          $product->gia = $request->input('gia');
         $product->masp = $request->input('masp');
         $product->congdung = $request->input('congdung');
         $product->cachdung = $request->input('cachdung');
@@ -116,7 +117,7 @@ class ProductController extends Controller
         $product->cachdung = $request->input('cachdung');
         $product->donggoi = $request->input('donggoi');
         $product->category_id = $request->input('category_id');
-
+        $product->gia = $request->input('gia');
 
           if(!empty($request->file('anhdaidien'))){
             $anhdaidien=$request->file('anhdaidien');

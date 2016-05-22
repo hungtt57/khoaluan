@@ -29,7 +29,7 @@
                         <div class="page-title">
                             <h1>Thanh Toán</h1>
                         </div>
-                        <form id="co-billing-form" action="{{asset('/thanhtoan')}}" method="POST">
+                        <form id="co-billing-form" action="{{asset('/thanh-toan')}}" method="POST">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <ol class="opc" id="checkoutSteps">

@@ -3,7 +3,11 @@
 <link rel='stylesheet' type='text/css' media='all' href="{{asset('public/frontend/css/mediaelementplayer.css')}}" />
 @endsection
 @section('content')
-
+@if (Session::has('message'))
+<script type="text/javascript">
+  alert('Mua hàng thành công,Vui lòng kiểm tra email để xem lại đơn hàng.Chúng tôi sẽ liên hệ với bạn qua số điện thoại để giao hàng.Xin cám ơn')
+</script>
+@endif    
 <div class="em-wrapper-main">
     <div class="container container-main">
         <div class="em-inner-main">
@@ -68,260 +72,345 @@
                         <div class="std"></div>
                         <div class="row hidden-xs">
                             <div class="em-wrapper-banners">
-                                                <!-- <div class="col-sm-8  text-center">
-                                                    <div class="img-banner">
-                                                        <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_06.jpg')}}" /> </a>
-                                                        <a class="banner-text effect-line" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_01.png')}}" /> </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-8  img-banner text-center">
-                                                    <div class="effect-hover-text4">
-                                                        <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_07.jpg')}}" /> </a>
-                                                        <a class="banner-text effect-line" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_02.png')}}" /> </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-8 text-center">
-                                                    <div class="img-banner">
-                                                        <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_08.jpg')}}" /> </a>
-                                                        <a class="banner-text effect-line" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_03.png')}}" /> </a>
-                                                    </div>
-                                                </div> -->
-                                            </div><!-- /.em-wrapper-banners -->
+
+                            </div><!-- /.em-wrapper-banners -->
+                        </div>
+
+                        <div class="em-wrapper-new-arrivals-tabs">
+                            <div class="em-new-arrivals-tabs em-line-01">
+                                <div class="emtabs-ajaxblock-loaded">
+                                    <div class="em-tabs-widget tabs-widget ">
+                                        <div class="widget-title em-widget-title">
+                                            <h3><span>Sản Phẩm Mới</span></h3>
                                         </div>
+                                        <div id="emtabs_1" class="em-tabs emtabs r-tabs">
+                                            <ul class="em-tabs-control tabs-control r-tabs-nav">
+                                                <li class="r-tabs-tab r-tabs-state-active">
+                                                    <a class="r-tabs-anchor active" href="#tab_emtabs_1_1" data-hover="Shirt"> <span class="icon"></span>Sản Phẩm Mới</a>
+                                                </li>
 
-                                        <div class="em-wrapper-new-arrivals-tabs">
-                                            <div class="em-new-arrivals-tabs em-line-01">
-                                                <div class="emtabs-ajaxblock-loaded">
-                                                    <div class="em-tabs-widget tabs-widget ">
-                                                        <div class="widget-title em-widget-title">
-                                                            <h3><span>Sản Phẩm Mới</span></h3>
+                                            </ul>
+                                            <div class="em-tabs-content tab-content">
+                                               
+                                                <div id="tab_emtabs_1_1" class="tab-pane tab-item content_tab_emtabs_1_1 r-tabs-panel r-tabs-state-active">
+                                                    <div class="wrapper button-show01 button-hide-text em-wrapper-loaded">
+                                                        <div class="emfilter-ajaxblock-loaded">
+                                                            <div id="em_fashion_new_arrivals_tab01" class="em-grid-20 ">
+
+                                                                <div class="widget em-filterproducts-grid">
+                                                                    <div class="widget-products em-widget-products">
+                                                                        <div class="emcatalog-desktop-4" id="em-grid-mode-em_fashion_new_arrivals_tab01">
+                                                                            <div class="products-grid ">
+
+
+                                                                                @foreach($new_products as $key => $new_product)
+                                                                                <div class="item" style="  ">
+                                                                                    <div class="product-item">
+                                                                                        <div class="product-shop-top">
+                                                                                            <a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress" class="product-image"><img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                            </a>
+                                                                                            <div class="em-element-display-hover bottom">
+
+                                                                                                <div class="quickshop-link-container">
+                                                                                                    <a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div><!-- /.product-shop-top -->
+
+                                                                                        <div class="product-shop">
+                                                                                            <div class="f-fix">
+                                                                                                <!--product name-->
+                                                                                                <h3 style="min-height: 19px;" class="product-name"><a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress">{{$new_product->ten}}</a></h3>
+                                                                                                <!--product description-->
+                                                                                                <!--product reviews-->
+
+                                                                                                <!--product price-->
+
+
+
+                                                                                                <div class="price-box">
+                                                                                                    <span class="regular-price" id="product-price-177-emprice-659da6b027ea5433ad0a985675d8fd89">
+                                                                                                        <span class="price">{{$new_product->gia}}</span> </span>
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                            </div><!-- /.product-shop -->
+                                                                                        </div>
+                                                                                    </div><!-- item -->
+                                                                                    @endforeach
+                                                                                </div><!-- /.products-grid -->
+                                                                            </div><!-- /.emcatalog-desktop-4 -->
+                                                                        </div><!-- /.widget-products -->
+                                                                    </div><!-- /.widget -->
+
+                                                                </div><!-- /#em_fashion_new_arrivals_tab01 -->
+                                                            </div>
                                                         </div>
-                                                        <div id="emtabs_1" class="em-tabs emtabs r-tabs">
-                                                            <ul class="em-tabs-control tabs-control r-tabs-nav">
-                                                                <li class="r-tabs-tab r-tabs-state-active">
-                                                                    <a class="r-tabs-anchor active" href="#tab_emtabs_1_1" data-hover="Shirt"> <span class="icon"></span>Sản Phẩm Mới</a>
-                                                                </li>
-                                                                
-                                                            </ul>
-                                                            <div class="em-tabs-content tab-content">
-                                                                <div class="r-tabs-accordion-title active">
-                                                                    <a class="r-tabs-anchor" href="#tab_emtabs_1_1"> <span class="icon tab_emtabs_1_1"></span>Sản Phẩm Mới</a>
-                                                                </div>
-                                                                <div id="tab_emtabs_1_1" class="tab-pane tab-item content_tab_emtabs_1_1 r-tabs-panel r-tabs-state-active">
-                                                                    <div class="wrapper button-show01 button-hide-text em-wrapper-loaded">
-                                                                        <div class="emfilter-ajaxblock-loaded">
-                                                                            <div id="em_fashion_new_arrivals_tab01" class="em-grid-20 ">
+                                                    </div><!-- /#tab_emtabs_1_1 -->
+                                                </div><!-- /.tab-content -->
+                                            </div><!-- /#emtabs_1 -->
+                                        </div>
+                                    </div>
+                                </div><!-- /.em-new-arrivals-tabs -->
+                            </div><!-- /.em-wrapper-new-arrivals-tabs -->
+                            <!-- sản phẩm mua nhiều nhất -->
+                            <div class="em-wrapper-new-arrivals-tabs">
+                                <div class="em-new-arrivals-tabs em-line-01">
+                                    <div class="emtabs-ajaxblock-loaded">
+                                        <div class="em-tabs-widget tabs-widget ">
+                                            <div class="widget-title em-widget-title">
+                                                <h3><span>Sản Phẩm Được Mua Nhiều Nhất</span></h3>
+                                            </div>
+                                            <div id="emtabs_1" class="em-tabs emtabs r-tabs">
+                                                <ul class="em-tabs-control tabs-control r-tabs-nav">
+                                                    <li class="r-tabs-tab r-tabs-state-active">
+                                                        <a class="r-tabs-anchor active" href="#tab_emtabs_1_1" data-hover="Shirt"> <span class="icon"></span>Sản Phẩm Được Mua Nhiều Nhất</a>
+                                                    </li>
 
-                                                                                <div class="widget em-filterproducts-grid">
-                                                                                    <div class="widget-products em-widget-products">
-                                                                                        <div class="emcatalog-desktop-4" id="em-grid-mode-em_fashion_new_arrivals_tab01">
-                                                                                            <div class="products-grid ">
+                                                </ul>
+                                                <div class="em-tabs-content tab-content">
+                                                    <div class="r-tabs-accordion-title active">
+                                                        <a class="r-tabs-anchor" href="#tab_emtabs_1_1"> <span class="icon tab_emtabs_1_1"></span>Sản Phẩm Được Mua Nhiều Nhất</a>
+                                                    </div>
+                                                    <div id="tab_emtabs_1_1" class="tab-pane tab-item content_tab_emtabs_1_1 r-tabs-panel r-tabs-state-active">
+                                                        <div class="wrapper button-show01 button-hide-text em-wrapper-loaded">
+                                                            <div class="emfilter-ajaxblock-loaded">
+                                                                <div id="em_fashion_new_arrivals_tab01" class="em-grid-20 ">
 
-
-                                                                                                @foreach($new_products as $key => $new_product)
-                                                                                                <div class="item" style="  ">
-                                                                                                    <div class="product-item">
-                                                                                                        <div class="product-shop-top">
-                                                                                                            <a href="{{asset('/chitietsanpham/'.$new_product->id.'/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress" class="product-image"><img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
-                                                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
-                                                                                                            </a>
-                                                                                                            <div class="em-element-display-hover bottom">
-
-                                                                                                                <div class="quickshop-link-container">
-                                                                                                                    <a href="{{asset('/chitietsanpham/'.$new_product->id.'/'.$new_product->alias)}}" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div><!-- /.product-shop-top -->
-
-                                                                                                        <div class="product-shop">
-                                                                                                            <div class="f-fix">
-                                                                                                                <!--product name-->
-                                                                                                                <h3 style="min-height: 19px;" class="product-name"><a href="#" title=" Metallic Midi Cut Out Midi Dress">{{$new_product->ten}}</a></h3>
-                                                                                                                <!--product description-->
-                                                                                                                <!--product reviews-->
-                                                                                                                
-                                                                                                                <!--product price-->
+                                                                    <div class="widget em-filterproducts-grid">
+                                                                        <div class="widget-products em-widget-products">
+                                                                            <div class="emcatalog-desktop-4" id="em-grid-mode-em_fashion_new_arrivals_tab01">
+                                                                                <div class="products-grid ">
 
 
+                                                                                    @foreach($products_popular as $key => $new_product)
+                                                                                    <div class="item" style="  ">
+                                                                                        <div class="product-item">
+                                                                                            <div class="product-shop-top">
+                                                                                                <a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress" class="product-image"><img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                                    <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                                </a>
+                                                                                                <div class="em-element-display-hover bottom">
 
-                                                                                                                <div class="price-box">
-                                                                                                                    <span class="regular-price" id="product-price-177-emprice-659da6b027ea5433ad0a985675d8fd89">
-                                                                                                                        <span class="price">{{$new_product->gia}}</span> </span>
-                                                                                                                    </div>
+                                                                                                    <div class="quickshop-link-container">
+                                                                                                        <a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div><!-- /.product-shop-top -->
 
-                                                                                                                </div>
-                                                                                                            </div><!-- /.product-shop -->
+                                                                                            <div class="product-shop">
+                                                                                                <div class="f-fix">
+                                                                                                    <!--product name-->
+                                                                                                    <h3 style="min-height: 19px;" class="product-name"><a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress">{{$new_product->tensp}}</a></h3>
+                                                                                                    <!--product description-->
+                                                                                                    <!--product reviews-->
+
+                                                                                                    <!--product price-->
+
+
+
+                                                                                                    <div class="price-box">
+                                                                                                        <span class="regular-price" id="product-price-177-emprice-659da6b027ea5433ad0a985675d8fd89">
+                                                                                                            <span class="price">{{$new_product->giasp}}</span> </span>
                                                                                                         </div>
-                                                                                                    </div><!-- item -->
-                                                                                                    @endforeach
-                                                                                                </div><!-- /.products-grid -->
-                                                                                            </div><!-- /.emcatalog-desktop-4 -->
-                                                                                        </div><!-- /.widget-products -->
-                                                                                    </div><!-- /.widget -->
 
-                                                                                </div><!-- /#em_fashion_new_arrivals_tab01 -->
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><!-- /#tab_emtabs_1_1 -->
-                                                                </div><!-- /.tab-content -->
-                                                            </div><!-- /#emtabs_1 -->
-                                                        </div>
-                                                    </div>
-                                                </div><!-- /.em-new-arrivals-tabs -->
-                                            </div><!-- /.em-wrapper-new-arrivals-tabs -->
+                                                                                                    </div>
+                                                                                                </div><!-- /.product-shop -->
+                                                                                            </div>
+                                                                                        </div><!-- item -->
+                                                                                        @endforeach
+                                                                                    </div><!-- /.products-grid -->
+                                                                                </div><!-- /.emcatalog-desktop-4 -->
+                                                                            </div><!-- /.widget-products -->
+                                                                        </div><!-- /.widget -->
 
-                                            <div class="em-wrapper-new-arrivals-tabs">
-                                            <div class="em-new-arrivals-tabs em-line-01">
-                                                <div class="emtabs-ajaxblock-loaded">
-                                                    <div class="em-tabs-widget tabs-widget ">
-                                                        <div class="widget-title em-widget-title">
-                                                            <h3><span>Sản Phẩm Được Mua Nhiều Nhất</span></h3>
-                                                        </div>
-                                                        <div id="emtabs_1" class="em-tabs emtabs r-tabs">
-                                                            <ul class="em-tabs-control tabs-control r-tabs-nav">
-                                                                <li class="r-tabs-tab r-tabs-state-active">
-                                                                    <a class="r-tabs-anchor active" href="#tab_emtabs_1_1" data-hover="Shirt"> <span class="icon"></span>Sản Phẩm Được Mua Nhiều Nhất</a>
-                                                                </li>
-                                                                
-                                                            </ul>
-                                                            <div class="em-tabs-content tab-content">
-                                                                <div class="r-tabs-accordion-title active">
-                                                                    <a class="r-tabs-anchor" href="#tab_emtabs_1_1"> <span class="icon tab_emtabs_1_1"></span>Sản Phẩm Được Mua Nhiều Nhất</a>
+                                                                    </div><!-- /#em_fashion_new_arrivals_tab01 -->
                                                                 </div>
-                                                                <div id="tab_emtabs_1_1" class="tab-pane tab-item content_tab_emtabs_1_1 r-tabs-panel r-tabs-state-active">
-                                                                    <div class="wrapper button-show01 button-hide-text em-wrapper-loaded">
-                                                                        <div class="emfilter-ajaxblock-loaded">
-                                                                            <div id="em_fashion_new_arrivals_tab01" class="em-grid-20 ">
+                                                            </div>
+                                                        </div><!-- /#tab_emtabs_1_1 -->
+                                                    </div><!-- /.tab-content -->
+                                                </div><!-- /#emtabs_1 -->
+                                            </div>
+                                        </div>
+                                    </div><!-- /.em-new-arrivals-tabs -->
+                                </div><!-- /.em-wrapper-new-arrivals-tabs -->
+                                <!-- sản phẩm xem nhiều của từng cá nhân -->
+                                @if(!empty($ip_products))
+ <div class="em-wrapper-new-arrivals-tabs">
+                                <div class="em-new-arrivals-tabs em-line-01">
+                                    <div class="emtabs-ajaxblock-loaded">
+                                        <div class="em-tabs-widget tabs-widget ">
+                                            <div class="widget-title em-widget-title">
+                                                <h3><span>Sản Phẩm Được Xem Gần Đây</span></h3>
+                                            </div>
+                                            <div id="emtabs_1" class="em-tabs emtabs r-tabs">
+                                                <ul class="em-tabs-control tabs-control r-tabs-nav">
+                                                    <li class="r-tabs-tab r-tabs-state-active">
+                                                        <a class="r-tabs-anchor active" href="#tab_emtabs_1_1" data-hover="Shirt"> <span class="icon"></span>Sản Phẩm Được Xem Gần Đây</a>
+                                                    </li>
+                                                    
+                                                </ul>
+                                                <div class="em-tabs-content tab-content">
+                                                    <div class="r-tabs-accordion-title active">
+                                                        <a class="r-tabs-anchor" href="#tab_emtabs_1_1"> <span class="icon tab_emtabs_1_1"></span>Sản Phẩm Được Xem Gần Đây</a>
+                                                    </div>
+                                                    <div id="tab_emtabs_1_1" class="tab-pane tab-item content_tab_emtabs_1_1 r-tabs-panel r-tabs-state-active">
+                                                        <div class="wrapper button-show01 button-hide-text em-wrapper-loaded">
+                                                            <div class="emfilter-ajaxblock-loaded">
+                                                                <div id="em_fashion_new_arrivals_tab01" class="em-grid-20 ">
 
-                                                                                <div class="widget em-filterproducts-grid">
-                                                                                    <div class="widget-products em-widget-products">
-                                                                                        <div class="emcatalog-desktop-4" id="em-grid-mode-em_fashion_new_arrivals_tab01">
-                                                                                            <div class="products-grid ">
+                                                                    <div class="widget em-filterproducts-grid">
+                                                                        <div class="widget-products em-widget-products">
+                                                                            <div class="emcatalog-desktop-4" id="em-grid-mode-em_fashion_new_arrivals_tab01">
+                                                                                <div class="products-grid ">
 
 
-                                                                                                @foreach($products_popular as $key => $new_product)
-                                                                                                <div class="item" style="  ">
-                                                                                                    <div class="product-item">
-                                                                                                        <div class="product-shop-top">
-                                                                                                            <a href="{{asset('/chitietsanpham/'.$new_product->id.'/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress" class="product-image"><img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
-                                                                                                                <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
-                                                                                                            </a>
-                                                                                                            <div class="em-element-display-hover bottom">
+                                                                                    @foreach($ip_products as $key => $new_product)
+                                                                                    <div class="item" style="  ">
+                                                                                        <div class="product-item">
+                                                                                            <div class="product-shop-top">
+                                                                                                <a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress" class="product-image"><img style="" class="em-alt-hover img-responsive em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                                    <img class="img-responsive em-alt-org em-lazy-loaded" src="{{asset($new_product->anhdaidien)}}" data-original="{{asset($new_product->anhdaidien)}}" alt=" Metallic Midi Cut Out Midi Dress" height="350" width="350">
+                                                                                                </a>
+                                                                                                <div class="em-element-display-hover bottom">
 
-                                                                                                                <div class="quickshop-link-container">
-                                                                                                                    <a href="{{asset('/chitietsanpham/'.$new_product->id.'/'.$new_product->alias)}}" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div><!-- /.product-shop-top -->
+                                                                                                    <div class="quickshop-link-container">
+                                                                                                        <a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" class="quickshop-link" title="Chi tiết sản phẩm" >Chi tiết sản phẩm</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div><!-- /.product-shop-top -->
 
-                                                                                                        <div class="product-shop">
-                                                                                                            <div class="f-fix">
-                                                                                                                <!--product name-->
-                                                                                                                <h3 style="min-height: 19px;" class="product-name"><a href="#" title=" Metallic Midi Cut Out Midi Dress">{{$new_product->tensp}}</a></h3>
-                                                                                                                <!--product description-->
-                                                                                                                <!--product reviews-->
-                                                                                                                
-                                                                                                                <!--product price-->
+                                                                                            <div class="product-shop">
+                                                                                                <div class="f-fix">
+                                                                                                    <!--product name-->
+                                                                                                    <h3 style="min-height: 19px;" class="product-name"><a href="{{asset('/chi-tiet-san-pham/'.$new_product->alias)}}" title=" Metallic Midi Cut Out Midi Dress">{{$new_product->ten}}</a></h3>
+                                                                                                    <!--product description-->
+                                                                                                    <!--product reviews-->
+                                                                                                    
+                                                                                                    <!--product price-->
 
 
 
-                                                                                                                <div class="price-box">
-                                                                                                                    <span class="regular-price" id="product-price-177-emprice-659da6b027ea5433ad0a985675d8fd89">
-                                                                                                                        <span class="price">{{$new_product->giasp}}</span> </span>
-                                                                                                                    </div>
-
-                                                                                                                </div>
-                                                                                                            </div><!-- /.product-shop -->
+                                                                                                    <div class="price-box">
+                                                                                                        <span class="regular-price" id="product-price-177-emprice-659da6b027ea5433ad0a985675d8fd89">
+                                                                                                            <span class="price">{{$new_product->gia}}</span> </span>
                                                                                                         </div>
-                                                                                                    </div><!-- item -->
-                                                                                                    @endforeach
-                                                                                                </div><!-- /.products-grid -->
-                                                                                            </div><!-- /.emcatalog-desktop-4 -->
-                                                                                        </div><!-- /.widget-products -->
-                                                                                    </div><!-- /.widget -->
 
-                                                                                </div><!-- /#em_fashion_new_arrivals_tab01 -->
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><!-- /#tab_emtabs_1_1 -->
-                                                                </div><!-- /.tab-content -->
-                                                            </div><!-- /#emtabs_1 -->
-                                                        </div>
-                                                    </div>
-                                                </div><!-- /.em-new-arrivals-tabs -->
-                                            </div><!-- /.em-wrapper-new-arrivals-tabs -->
+                                                                                                    </div>
+                                                                                                </div><!-- /.product-shop -->
+                                                                                            </div>
+                                                                                        </div><!-- item -->
+                                                                                        @endforeach
+                                                                                    </div><!-- /.products-grid -->
+                                                                                </div><!-- /.emcatalog-desktop-4 -->
+                                                                            </div><!-- /.widget-products -->
+                                                                        </div><!-- /.widget -->
 
-
-
-
-                                            </div><!-- /.em-col-main -->
-
-                                            <div class="col-sm-6 col-sm-pull-18 em-col-left em-sidebar">
-                                                <div class="em-wrapper-area02">
-                                                    <div class="menu-wrapper hidden-xs">
-                                                        <div id="menuleftText" class="all_categories">
-                                                            <div class="menuleftText-title">
-                                                                <div class="menuleftText"><span class="em-text-upercase">DANH MỤC</span>
+                                                                    </div><!-- /#em_fashion_new_arrivals_tab01 -->
                                                                 </div>
                                                             </div>
-                                                        </div><!-- /.menuleftText -->
-                                                        <div class="menuleft">
-                                                            <div id="menu-default" class="mega-menu em-menu-icon">
-                                                                <div class="megamenu-wrapper wrapper-5_4607">
-                                                                    <div class="em_nav" id="toogle_menu_5_4607">
-                                                                        <ul class="vnav em-menu-icon effect-menu em-menu-long">
-                                                                            @foreach ($allCategories as $key => $category)
-                                                                            <li class="menu-item-link menu-item-depth-0 fa fa-leaf hidden-sm ">
-                                                                                <a class="em-menu-link" href="{{asset('/loaisanpham/'.$category->id.'/'.$category->alias)}}"> <span> {{ $category->ten }} </span> </a>
-                                                                            </li><!-- /.menu-item-link -->
-                                                                            @endforeach   
-                                                                        </ul><!-- /.vnav -->
-                                                                    </div>
-                                                                </div><!-- /.megamenu-wrapper -->
-                                                            </div>
-                                                        </div><!-- /.menuleft -->
-                                                    </div>
-                                                </div><!-- /.em-wrapper-area02 -->
+                                                        </div><!-- /#tab_emtabs_1_1 -->
+                                                    </div><!-- /.tab-content -->
+                                                </div><!-- /#emtabs_1 -->
+                                            </div>
+                                        </div>
+                                    </div><!-- /.em-new-arrivals-tabs -->
+                                </div><!-- /.em-wrapper-new-arrivals-tabs -->
 
-                                                <div class="row">
-                                                    <div class="col-sm-24">
-                                                        <div class="em-wrapper-ads-15">
-                                                        
-                                                       <video width="280" height="250" id="youtube1" preload="none" controls autoplay>
-                                                    <source type="video/youtube" src="https://www.youtube.com/watch?v=2NR_2_NhclQ" />
-                                                        </video>
-                                                        </div>
-                                                    </div>
-                                                </div><!-- /.row -->
-                                                <div class="row">
-                                                    <div class="col-sm-24">
-                                                        <div class="em-wrapper-ads-10 em-line-01">
-                                                            <div class="em-block-title">
-                                                                <h2><span>TIN TỨC</span></h2>
-                                                            </div>
-                                                            <div class="em-blog-style01">
-                                                                <div class="em-from-our-blog">
-                                                                    @foreach($blogs as $key => $blog)
-                                                                    <div class="em-blog-item em-effect-13">
-                                                                        <div class="em-blog-content bkg-top">
-                                                                            <a title="em-sample-title" class="img-banner-small" href="{{asset('/baiviet/'.$blog->id.'/'.$blog->alias)}}"> <img alt="em_blog" class="img-responsive" src="{{asset($blog->image)}}" /> </a>
+                                @endif
 
-                                                                            <div class="hov">&nbsp;</div>
-                                                                        </div>
-                                                                        <div class="em-box bkg-bottom">
-                                                                            <h4 class="em-blog-title"><a href="{{asset('/baiviet/'.$blog->id.'/'.$blog->alias)}}">{{$blog->title}}</a></h4>
-                                                                            <p class="em-blog-des">{{$blog->description}}&hellip;</p>
-                                                                            <p><a class="link-more" href="{{asset('/baiviet/'.$blog->id.'/'.$blog->alias)}}">Đọc thêm</a>
-                                                                            </p>
-                                                                        </div>
-                                                                    </div><!-- /.em-blog-item -->
-                                                                    @endforeach
-                                                                </div>
-                                                            </div><!-- /.em-blog-style01 -->
-                                                        </div>
+                            </div><!-- /.em-col-main -->
+
+                            <div class="col-sm-6 col-sm-pull-18 em-col-left em-sidebar">
+                                <div class="em-wrapper-area02">
+                                    <div class="menu-wrapper hidden-xs">
+                                        <div id="menuleftText" class="all_categories">
+                                            <div class="menuleftText-title">
+                                                <div class="menuleftText"><span class="em-text-upercase">DANH MỤC</span>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.menuleftText -->
+                                        <div class="menuleft">
+                                            <div id="menu-default" class="mega-menu em-menu-icon">
+                                                <div class="megamenu-wrapper wrapper-5_4607">
+                                                    <div class="em_nav" id="toogle_menu_5_4607">
+                                                        <ul class="vnav em-menu-icon effect-menu em-menu-long">
+                                                            @foreach ($allCategories as $key => $category)
+                                                            <li class="menu-item-link menu-item-depth-0 fa fa-leaf hidden-sm ">
+                                                                <a class="em-menu-link" href="{{asset('/loai-san-pham/'.$category->alias)}}"> <span> {{ $category->ten }} </span> </a>
+                                                            </li><!-- /.menu-item-link -->
+                                                            @endforeach   
+                                                        </ul><!-- /.vnav -->
                                                     </div>
-                                                </div><!-- /.row -->
-                                                <div class="img-banner hidden-xs">
+                                                </div><!-- /.megamenu-wrapper -->
+                                            </div>
+                                        </div><!-- /.menuleft -->
+                                    </div>
+                                </div><!-- /.em-wrapper-area02 -->
+
+                                <div class="row">
+                                    <div class="col-sm-24">
+                                        <div class="em-wrapper-ads-15">
+
+                                      <!--    <video width="100%" id="youtube1" preload="none" controls autoplay>
+                                            <source type="video/youtube" src="https://www.youtube.com/watch?v=2NR_2_NhclQ" />
+                                        </video> -->
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-sm-24">
+                                    <div class="em-wrapper-ads-10 em-line-01">
+                                        <div class="em-block-title">
+                                            <h2><span>TIN TỨC XEM GẦN ĐÂY</span></h2>
+                                        </div>
+                                        <div class="em-blog-style01">
+                                            <div class="em-from-our-blog">
+                                                @foreach($blogs as $key => $blog)
+                                                <div class="em-blog-item em-effect-13">
+                                                    <div class="em-blog-content bkg-top">
+                                                        <a title="em-sample-title" class="img-banner-small" href="{{asset('/bai-viet/'.$blog->alias)}}"> <img alt="em_blog" class="img-responsive" src="{{asset($blog->image)}}" /> </a>
+
+                                                        <div class="hov">&nbsp;</div>
+                                                    </div>
+                                                    <div class="em-box bkg-bottom">
+                                                        <h4 class="em-blog-title"><a href="{{asset('/bai-viet/'.$blog->alias)}}">{{$blog->title}}</a></h4>
+                                                        <p class="em-blog-des">{{$blog->description}}&hellip;</p>
+                                                        <p><a class="link-more" href="{{asset('/bai-viet/'.$blog->alias)}}">Đọc thêm</a>
+                                                        </p>
+                                                    </div>
+                                                </div><!-- /.em-blog-item -->
+                                                @endforeach
+                                            </div>
+                                        </div><!-- /.em-blog-style01 -->
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            @if(!empty($keysearch_ip))
+                             <div class="row">
+                                <div class="col-sm-24">
+                                    <div class="em-wrapper-ads-10 em-line-01">
+                                        <div class="em-block-title">
+                                            <h2><span>Từ khóa tìm kiếm gần đây</span></h2>
+                                        </div>
+                                        <div class="em-blog-style01">
+                                            <div class="em-from-our-blog">
+                                             @foreach($keysearch_ip as $key => $value)
+                                               <a style="background: #ec6a54;
+                                                padding: 5px;
+                                                border-radius: 5px !important;
+                                                margin-right: 5px;
+                                                color: #fff;
+                                                float: left;" href="{{asset('tim-kiem?search='.$value->key_word)}}">{{$value->key_word}}</a>
+                                             @endforeach
+                                            </div>
+                                        </div><!-- /.em-blog-style01 -->
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            @endif
+                            <div class="img-banner hidden-xs">
                                            <!--  <div class="effect-hover-text2">
                                                 <a class="banner-img" title="em-sample-title" href="#"> <img class="img-responsive retina-img" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_05.jpg')}}" /> </a>
                                                 <a class="banner-text" title="em-sample-title" href="#"> <img class="img-responsive" alt="em-sample-alt" src="{{asset('public/frontend/images/wysiwyg/em_ads_text_05.png')}}" /> </a>
@@ -415,9 +504,9 @@
                     </div><!-- /.container -->
                 </div><!-- /.em-wrapper-main -->
                 @endsection
-                @section('js')
+               <!--  @section('js')
                 <script type="text/javascript">
-                jQuery(document).ready(function($) {
-    $('#youtube1').mediaelementplayer();
-});</script>
-                @endsection
+                    jQuery(document).ready(function($) {
+                        $('#youtube1').mediaelementplayer();
+                    });</script>
+                    @endsection -->

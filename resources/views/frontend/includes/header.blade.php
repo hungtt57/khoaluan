@@ -8,10 +8,10 @@
             <div class="col-xs-20">
                 <div class="em-top-search">
                     <div class="em-header-search-mobile">
-                        <form method="get">
+                        <form method="get" action="{{asset('tim-kiem')}}">
                             <div class="form-search no_cate_search">
                                 <div class="text-search">
-                                    <input id="search-mobile" type="text" name="q" value="" class="input-text" maxlength="128" />
+                                    <input id="search-mobile" type="text" name="search" value="" class="input-text" maxlength="128" />
                                     <button type="submit" title="Search" class="button"><span><span>Tìm Kiếm</span></span>
                                     </button>
                                     <div id="search_autocomplete_mobile" class="search-autocomplete"></div>
@@ -24,7 +24,7 @@
                     <div class="em-wrapper-topcart-mobile em-no-quickshop">
                         <div class="em-container-topcart">
                             <div class="em-summary-topcart">
-                                <a id="em-amount-cart-link" title="Shopping Cart" class="em-amount-topcart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
+                                <a id="em-amount-cart-link" title="Shopping Cart" class="em-amount-topcart" href="{{asset('/gio-hang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                                                                  <?php $categories = category_menu();?>
                                                                @foreach($categories as $key => $value)
                                                                     <li class="level0 nav-1 ">
-                                                                        <a href="{{asset('/loaisanpham/'.$value->id.'/'.$value->alias)}}"> <span>{{$value->ten}}</span> </a>
+                                                                        <a href="{{asset('/loai-san-pham/'.$value->alias)}}"> <span>{{$value->ten}}</span> </a>
                                                                       
                                                                     </li><!-- /.nav-1 -->
                                                                    
@@ -93,19 +93,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-24">
-                        <div class="f-left">
-                            <div class="em-language-currency">
-                                <div class="form-language toolbar-switch em-language-style01">
-                                    <div class="toolbar-title">
-
-                                    </div>
-                                </div><!-- /.em-language-style01 -->
-                                <div class="toolbar-switch em-currency-style01">
-                                    <div class="toolbar-title">
-
-                                    </div>
-                                </div><!-- /.em-currency-style01 -->
-                            </div><!-- /.em-language-currency -->
+                        <div class="f-left col-sm-12">
+                            <marquee  style="color: #ec6a54;margin-top: 15px;">Sự tin tưởng của khách hàng là thành công của chúng tôi.Nơi mua thuốc của mọi gia đình</marquee>
                         </div><!-- /.f-left -->
                         <div class="">
                             <div class="em-search f-right">
@@ -113,7 +102,7 @@
                                     <div class="em-wrapper-js-search em-search-style01">
                                         <div class="em-wrapper-search em-no-category-search"> <a class="em-search-icon" title="Search" href="javascript:void(0);"><span>Search</span></a>
                                             <div class="em-container-js-search" style="display: none;">
-                                                <form id="search_mini_form" method="get" action="{{asset('timkiem')}}">
+                                                <form id="search_mini_form" method="get" action="{{asset('tim-kiem')}}">
                                                     <div class="form-search no_cate_search">
                                                         <div class="text-search">
                                                             <label for="search">Tìm Kiếm:</label>
@@ -142,7 +131,7 @@
                         <div class="em-logo f-left"><a href="{{asset('/')}}"  class="logo"><strong>Chemist's</strong><img class="retina-img" src="{{asset('public/frontend/images/logo_small.png')}}" alt="Fashion Commerce" /></a>
                         </div>
                         <div class="em-logo-sticky f-left">
-                            <a href="asset('/')" title="Fashion Commerce" class="logo"><img src="{{asset('public/frontend/images/logo_small.png')}}" alt="Fashion Commerce" />
+                            <a href="{{asset('/')}}" title="Fashion Commerce" class="logo"><img src="{{asset('public/frontend/images/logo_small.png')}}" alt="Fashion Commerce" />
                             </a>
                         </div>
                         <div class="em-search em-search-sticky f-right">
@@ -150,7 +139,7 @@
                                 <div class="em-wrapper-js-search em-search-style01">
                                     <div class="em-wrapper-search"> <a class="em-search-icon" title="Search" href="javascript:void(0);"><span>Tìm Kiếm</span></a>
                                         <div class="em-container-js-search" style="display: none;">
-                                            <form id="search_mini_form" method="get" action="{{asset('timkiem')}}">
+                                            <form id="search_mini_form" method="get" action="{{asset('tim-kiem')}}">
                                                     <div class="form-search no_cate_search">
                                                         <div class="text-search">
                                                             <label for="search">Tìm Kiếm:</label>
@@ -171,7 +160,7 @@
                                     <?php $giohang = Cart::content();?>
                                     @if(isset($giohang) && count($giohang)>0)
                                     <div class="em-summary-topcart">
-                                        <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty"><?php echo count($giohang);?></span> </a>
+                                        <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/gio-hang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty"><?php echo count($giohang);?></span> </a>
                                     </div>
                                     <div class="em-container-js-topcart topcart-popup" style="display:none">
                                         <div class="topcart-popup-content">
@@ -202,7 +191,7 @@
                                     </div>
                                     @else
                                     <div class="em-summary-topcart">
-                                        <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/giohang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
+                                        <a class="em-amount-js-topcart em-amount-topcart" title="Shopping Cart" href="{{asset('/gio-hang')}}"> <span class="em-topcart-text">My Cart:</span> <span class="em-topcart-qty">0</span> </a>
                                     </div>
                                     <div class="em-container-js-topcart topcart-popup" style="display:none">
                                         <div class="topcart-popup-content">
@@ -238,7 +227,7 @@
                                                                <?php $categories = category_menu();?>
                                                                @foreach($categories as $key => $value)
                                                                <li class="menu-item-vbox menu-item-depth-2 col-sm-6 menu-item-parent list-group-item" style="border:none !important;">
-                                                                <a href="{{asset('/loaisanpham/'.$value->id.'/'.$value->alias)}}}">{{$value->ten}}</a>
+                                                                <a href="{{asset('/loai-san-pham/'.$value->alias)}}">{{$value->ten}}</a>
                                                             </li><!-- /.menu-item-vbox -->
                                                             @endforeach
                                                         </ul><!-- /.menu-container -->

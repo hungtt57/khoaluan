@@ -56,7 +56,7 @@
 				<div class="form-group">
 				<label class="col-md-3 control-label" for="name_category">Ngày Ship</label>
 					<div class="col-md-9">
-						  <input type="date" class="form-control" min="{{date('Y-m-d')}}" name="ngaynhankh" id="ngaynhankh" value="{{$order->ngaynhankh}}" > 
+						  <input type="date" class="form-control" min="{{$order->ngaynhankh}}" name="ngaynhankh" id="ngaynhankh" value="{{$order->ngaynhankh}}" > 
 					</div>
 				</div>
 

@@ -7,7 +7,7 @@
      
          <table border="1">
             <tr>
-               <th >Ảnh</th>
+               
                <th >Tên</th>
               
                <th >Số lượng</th>
@@ -16,9 +16,7 @@
             </tr>
             @foreach($orderdetail as $item)
             <tr>
-               <td >
-                 <img width="40px" height="40px" src="<?php echo $message->embed($item['anh']); ?>">
-               </td>
+              
                <td >
                   {{$item['tensp']}}
                </td>
